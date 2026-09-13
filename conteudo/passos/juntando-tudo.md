@@ -81,5 +81,5 @@ Só tem um probleminha: você está jogando sozinho. O computador ainda nem acor
 - [ ] Só dá pra mover pra casas com bolinha
 - [ ] Clicar numa casa sem bolinha solta o Esquisito
 - [ ] Fiz todos os testes da tabela
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

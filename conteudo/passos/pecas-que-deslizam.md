@@ -102,5 +102,5 @@ Achou rápido ou devagar demais? Brinque com o tempo do [[movimento: deslize por
 - [ ] O clone da casa de saída some durante o voo
 - [ ] O bloco `deslizar` substituiu o `mover` no clique e no computador
 - [ ] Os Esquisitos deslizam pelo tabuleiro
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

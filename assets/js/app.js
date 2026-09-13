@@ -269,11 +269,8 @@
       var legenda = typeof item === "string" ? "" : (item.legenda || "");
       var html;
       var yt = /(?:youtu\.be\/|youtube\.com\/(?:watch\?v=|shorts\/|embed\/))([\w-]{11})/.exec(src);
-      var scratch = /scratch\.mit\.edu\/projects\/(\d+)/.exec(src);
       if (yt) {
         html = '<div class="midia-video"><iframe src="https://www.youtube-nocookie.com/embed/' + yt[1] + '" title="Vídeo do passo" allowfullscreen loading="lazy"></iframe></div>';
-      } else if (scratch) {
-        html = '<div class="midia-video midia-scratch"><iframe src="https://scratch.mit.edu/projects/' + scratch[1] + '/embed" title="Projeto no Scratch" allowfullscreen loading="lazy"></iframe></div>';
       } else if (/\.(mp4|webm|mov)(\?|$)/i.test(src)) {
         html = '<video src="' + src + '" controls loop muted playsinline preload="metadata"></video>';
       } else {

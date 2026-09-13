@@ -121,5 +121,5 @@ Faça o Narrador gritar "TROCA-TROCA!" no roque e toque um som de mola. E, se qu
 - [ ] A Geladeira pula junto no `mover`
 - [ ] Testei os roques dos dois lados
 - [ ] Testei os casos proibidos
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

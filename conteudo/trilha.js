@@ -124,7 +124,7 @@ window.ZADREX = {
       emoji: "🚀",
       titulo: "Próximas aventuras",
       passos: [
-        { id: "publicar", titulo: "Publicar e desafiar a família", nivel: 1, status: "falta", midia: [] },
+        { id: "grande-estreia", titulo: "A grande estreia e o desafio da família", nivel: 1, status: "falta", midia: [] },
         { id: "computador-guloso", titulo: "Computador guloso", nivel: 2, status: "falta", midia: [] },
         { id: "quanto-vale-cada-um", titulo: "Quanto vale cada Esquisito?", nivel: 3, status: "falta", midia: [] },
         { id: "ideias-malucas", titulo: "Ideias malucas", nivel: 1, status: "falta", midia: [] }

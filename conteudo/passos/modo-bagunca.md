@@ -69,5 +69,5 @@ O computador ainda não joga, e os Esquisitos ainda não têm regras. Mas o jogo
 - [ ] Consigo mover um Esquisito para uma casa vazia
 - [ ] Consigo capturar um Esquisito do computador
 - [ ] Bagunçei bastante o tabuleiro 😄
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

@@ -96,5 +96,5 @@ Os programas que vencem os campeões mundiais usam essa mesma ideia de notas, s�
 - [ ] O computador sempre escolhe a captura mais valiosa
 - [ ] Sem capturas, ele continua sorteando entre todas
 - [ ] (Chefão) Tentei o computador medroso
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

@@ -1,18 +1,12 @@
 Hora de sujar as mãos (de pixels). Neste passo a gente cria o projeto e deixa tudo pronto pra começar.
 
-## 1. Entre no Scratch
+## 1. Abra o Scratch
 
-Abra o site **[scratch.mit.edu](https://scratch.mit.edu)** e entre na sua conta. Estar logado é importante: é assim que o Scratch **salva** o projeto na nuvem.
+O Scratch que a gente vai usar fica **instalado no computador**. Procure o ícone do gatinho laranja na área de trabalho ou no menu Iniciar e abra.
 
-## 2. Crie um projeto novo
+Ele já começa com um projeto novinho e um gato olhando pra você.
 
-Clique em **Criar** lá no alto. Vai abrir o editor com um gato olhando pra você.
-
-No campo de nome do projeto (em cima, do lado do menu), apague o nome que estiver lá e escreva:
-
-> **Zadrex: Guerra dos Esquisitos**
-
-## 3. Tchau, gato 🐱👋
+## 2. Tchau, gato 🐱👋
 
 O gato é simpático, mas não tem vaga pra ele no Zadrex. Na área dos atores (embaixo, à direita), clique com o botão direito no gato e escolha **apagar**.
 
@@ -20,7 +14,7 @@ O gato é simpático, mas não tem vaga pra ele no Zadrex. Na área dos atores (
 Apagou sem querer? *Editar → Restaurar* traz de volta a última coisa apagada.
 :::
 
-## 4. Conheça seu local de trabalho
+## 3. Conheça seu local de trabalho
 
 | Parte da tela | Pra que serve |
 |---|---|
@@ -31,21 +25,50 @@ Apagou sem querer? *Editar → Restaurar* traz de volta a última coisa apagada.
 
 As cores dos blocos vão ser suas amigas. Nesta página, sempre que aparecer um bloco, ele vai ter a mesma cor que tem no Scratch. Por exemplo: [[eventos: quando ⚑ for clicado]] é amarelo, então mora em **Eventos**. Já [[controle: repita (10) vezes]] é laranja-claro, de **Controle**.
 
-## 5. Salve!
+## 4. Salve!
 
-Clique em **Arquivo → Salvar agora**. Pronto: o projeto existe.
+Como esse Scratch mora no computador, e não na internet, ele **não salva sozinho**. Se fechar o Scratch sem salvar, tudo o que você fez desde a última vez some. 😱
 
-:::atencao Combinado importante
-De vez em quando, faça também **Arquivo → Baixar para o seu computador**. Assim, se alguma coisa der muito errado, a gente tem uma cópia de segurança.
+Pra salvar, clique em **Arquivo → Baixar para o seu computador**. O nome é meio esquisito, mas esse é o botão de salvar. Na janela que abrir:
+
+1. Entre na pasta **Documentos** e crie uma pasta nova chamada **Zadrex**.
+2. Dentro dela, dê o nome **Zadrex** pro arquivo e clique em **Salvar**.
+
+Pronto: o projeto existe! É o arquivo `Zadrex.sb3`, que mora na pasta Zadrex.
+
+:::dica Salve toda hora
+Terminou uma parte que deu trabalho? Salve. Vai fazer um lanche? Salve. Salvar é de graça, e refazer um passo inteiro não tem graça nenhuma. Quando o computador perguntar se quer **substituir** o arquivo, pode dizer que sim: é assim que a versão nova fica guardada por cima da antiga.
+:::
+
+## 5. Da próxima vez
+
+Quando voltar pra construir o Zadrex outro dia:
+
+1. Abra o Scratch.
+2. Clique em **Arquivo → Carregar do seu computador**.
+3. Entre em **Documentos → Zadrex** e escolha o arquivo `Zadrex`.
+
+E o jogo aparece do jeitinho que você deixou.
+
+:::atencao Combinado importante: cópia de segurança
+Às vezes a gente apaga um script sem querer e só percebe depois de salvar por cima. Por isso, no fim de cada passo grande, guarde uma **cópia de segurança**:
+
+1. **Arquivo → Baixar para o seu computador**, com um nome diferente, tipo `Zadrex cópia passo 12`.
+2. Logo depois, salve de novo com o nome de sempre, `Zadrex`, e aceite substituir.
+
+Assim o `Zadrex` continua sendo o arquivo do dia a dia, e as cópias ficam guardadinhas na pasta. Se alguma coisa der muito errado, é só carregar a última cópia.
 :::
 
 :::adulto
-Para criar conta no Scratch, menores de 13 anos precisam de um e-mail de um responsável para confirmar. Se preferir não usar conta, dá para usar o **Scratch App** offline (scratch.mit.edu/download) e salvar o arquivo `.sb3` no computador.
+O Scratch offline é o **Scratch App**, oficial e gratuito, baixado em [scratch.mit.edu/download](https://scratch.mit.edu/download) (no Windows, pela Microsoft Store ou pelo instalador direto). Ele não pede conta nem internet: os projetos ficam só no computador, como arquivos `.sb3`.
+
+- Se abrir em inglês, clique no globo 🌐 no alto da tela e escolha **Português Brasileiro**.
+- De vez em quando, vale copiar a pasta **Documentos → Zadrex** pra um pen drive ou HD externo.
 :::
 
 :::missao Checklist
-- [ ] Entrei na minha conta do Scratch
-- [ ] Criei o projeto com o nome "Zadrex: Guerra dos Esquisitos"
+- [ ] Abri o Scratch instalado no computador
 - [ ] Apaguei o gato
-- [ ] Salvei o projeto
+- [ ] Salvei o arquivo `Zadrex` na pasta Documentos → Zadrex
+- [ ] Sei abrir o projeto de novo com *Carregar do seu computador*
 :::

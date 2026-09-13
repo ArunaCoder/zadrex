@@ -113,5 +113,5 @@ Monte situações mudando a lista na mão (é bem mais rápido). Por exemplo: de
 - [ ] Criei o bloco `anunciar xeque`
 - [ ] O Narrador avisa o xeque dos dois times
 - [ ] Testei o xeque com cada tipo de Esquisito
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

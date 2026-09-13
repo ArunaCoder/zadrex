@@ -93,5 +93,5 @@ Quer conferir se cada clone recebeu o crachá certo? Faça o clone **dizer** o n
 - [ ] Montei a fábrica com dois "repita" um dentro do outro
 - [ ] O tabuleiro aparece quadriculado quando clico na bandeira
 - [ ] Não tem frestinha entre as casas
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

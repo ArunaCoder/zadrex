@@ -76,7 +76,7 @@ Agora é pra valer. Clique na bandeira e jogue uma partida inteira contra o comp
 Esse é um grande momento: é o primeiro jogo **completo** do Zadrex. Grave um vídeo ou um GIF da partida (ou pelo menos da vitória!) pra colocar aqui em **Olha só como ficou**.
 
 :::adulto
-No Windows, **Win + Alt + R** grava a janela ativa (Xbox Game Bar); no Mac, **Cmd + Shift + 5**. Para GIF, o ScreenToGif (Windows) é ótimo. Também dá para publicar o projeto no Scratch e colar o link dele em `midia` na trilha: a página vai embutir o jogo jogável.
+No Windows, **Win + Alt + R** grava a janela ativa (Xbox Game Bar); no Mac, **Cmd + Shift + 5**. Para GIF, o ScreenToGif (Windows) é ótimo.
 :::
 
 :::missao Checklist
@@ -86,5 +86,5 @@ No Windows, **Win + Alt + R** grava a janela ativa (Xbox Game Bar); no Mac, **Cm
 - [ ] Joguei uma partida inteira contra o computador
 - [ ] Ganhei do computador pelo menos uma vez 😎
 - [ ] Gravei um vídeo ou GIF
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

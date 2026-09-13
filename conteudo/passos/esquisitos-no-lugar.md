@@ -59,5 +59,5 @@ Neste momento o palco tem **128 clones** trabalhando juntos: 64 casas e 64 peça
 - [ ] Cada clone veste a fantasia do item da sua casa
 - [ ] Os 32 Esquisitos aparecem na posição inicial
 - [ ] Fiz o experimento de mudar a lista e ver o tabuleiro mudar
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

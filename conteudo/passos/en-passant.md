@@ -84,5 +84,5 @@ A simulação do filtro de lances legais não remove o peão capturado *en passa
 - [ ] O Zé mostra a bolinha do Pega no Pulo
 - [ ] Testei capturar e deixar passar a chance
 - [ ] Comemorei ter programado o xadrez inteiro 🎉
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

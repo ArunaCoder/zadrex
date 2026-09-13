@@ -70,5 +70,5 @@ Faça o Narrador comentar a jogada do computador. Por exemplo, se o `capturado` 
 - [ ] O computador faz a lista, sorteia e joga
 - [ ] Dá pra ver qual jogada o computador escolheu antes dele mover
 - [ ] Joguei várias rodadas e o computador sempre seguiu as regras
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

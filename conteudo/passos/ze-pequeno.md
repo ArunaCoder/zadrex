@@ -100,5 +100,5 @@ Sim, ainda tem mais! Quando chega do outro lado, o Zé **cresce** e vira Super-B
 - [ ] O Zé anda 1 ou 2 na largada e só 1 depois
 - [ ] O Zé só captura na diagonal
 - [ ] Testei os Zés das colunas 1 e 8
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

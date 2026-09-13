@@ -106,5 +106,5 @@ Invente outros laboratórios: um xeque-mate com a Mola, um em que o computador c
 - [ ] Xeque-mate mostra vitória ou derrota
 - [ ] Afogamento mostra o Empate Sonolento
 - [ ] Testei os dois tabuleiros deste passo
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

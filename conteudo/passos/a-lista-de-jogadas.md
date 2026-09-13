@@ -88,5 +88,5 @@ Com 20 jogadas pra cada lado, depois de só **uma rodada** (você e o computador
 - [ ] Criei as variáveis `i` e `k`
 - [ ] Criei o bloco `listar jogadas do time (time)`
 - [ ] No começo da partida, o Computador tem 20 jogadas
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

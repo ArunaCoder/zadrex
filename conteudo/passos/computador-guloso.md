@@ -74,5 +74,5 @@ Isso se chama **isca**, e os jogadores de xadrez de verdade usam o tempo todo.
 - [ ] O computador sorteia entre as capturas quando existem
 - [ ] Testei deixando um Esquisito ameaçado
 - [ ] Armei uma isca e o computador caiu
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

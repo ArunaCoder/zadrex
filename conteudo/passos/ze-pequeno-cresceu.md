@@ -61,5 +61,5 @@ Faça o jogo **perguntar** pro jogador em que ele quer transformar o Zé: [[sens
 - [ ] O Zé do Computador vira `CB` na linha 8
 - [ ] O Narrador comemora
 - [ ] Testei mudando a lista na mão
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

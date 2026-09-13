@@ -108,5 +108,5 @@ Deu tudo certo? **Parabéns**: o bloco mais difícil do capítulo está pronto. 
 - [ ] Criei as variáveis `meu time`, `l`, `c`, `passos`, `alvo` e `quem está lá`
 - [ ] O teste da tecla **t** mostra bolinhas em 28 e 20 e marca o 12
 - [ ] Testei outras direções e outros máximos
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

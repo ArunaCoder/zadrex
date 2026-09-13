@@ -119,5 +119,5 @@ Crie as variáveis `vitórias` e `derrotas`, mostre elas no cantinho do Narrador
 - [ ] O Cérebro só monta o tabuleiro uma vez
 - [ ] A Placa aparece no fim com a fantasia certa
 - [ ] Clicar na Placa começa outra partida
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::

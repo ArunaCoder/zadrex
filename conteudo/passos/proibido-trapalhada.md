@@ -87,5 +87,5 @@ Agora o computador faz **muitas** jogadas de mentirinha antes de sortear. Se fic
 - [ ] A Almofada não anda mais pra casas atacadas
 - [ ] Em xeque, só aparecem jogadas que salvam a Almofada
 - [ ] Esquisitos cravados não podem sair
-- [ ] Salvei (e baixei uma cópia!)
+- [ ] Salvei (e guardei uma cópia de segurança!)
 :::
