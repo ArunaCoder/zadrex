@@ -1,4 +1,4 @@
-Uma jogada de xadrez tem dois cliques: primeiro você **escolhe** o Esquisito, depois escolhe **pra onde** ele vai. Neste passo a gente faz o primeiro clique: escolher. E a casa escolhida vai ficar **amarelinha** pra você não esquecer.
+Uma jogada do Zadrex tem dois cliques: primeiro você **escolhe** o Esquisito, depois escolhe **pra onde** ele vai. Neste passo a gente faz o primeiro clique: escolher. E a casa escolhida vai ficar **amarelinha** pra você não esquecer.
 
 ## 1. A variável origem
 

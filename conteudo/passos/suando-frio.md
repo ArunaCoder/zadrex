@@ -1,6 +1,6 @@
-No xadrez de verdade, ninguém captura o rei. Antes disso, alguém avisa: **"Xeque!"** — que quer dizer "cuidado, sua Almofada está em perigo". Neste passo o jogo aprende a perceber quando uma Almofada está ameaçada.
+No Zadrex, a Almofada nunca é pega de surpresa. Quando alguém ameaça capturar ela, o jogo avisa: **"Suando Frio!"** — que quer dizer "cuidado, sua Almofada está em perigo". Neste passo o jogo aprende a perceber quando uma Almofada está ameaçada.
 
-<z-diagrama pecas="5:CA 37:JG" destacar="5" marcar="13 21 29" legenda="Xeque! A Geladeira ameaça a Almofada pela coluna."></z-diagrama>
+<z-diagrama pecas="5:CA 37:JG" destacar="5" marcar="13 21 29" legenda="Suando Frio! A Geladeira ameaça a Almofada pela coluna."></z-diagrama>
 
 ## Pensando ao contrário 🔄
 
@@ -82,36 +82,36 @@ Onde está escrito "pulos em L" e "vizinhas", monte os 16 blocos `espiar` seguin
 Um Zé do **Computador** anda pra baixo, então ele ataca as diagonais **de baixo** dele. Isso quer dizer que, olhando **da sua Almofada**, ele está numa diagonal **de cima** (linha − 1). Por isso, quando o time é `J`, a gente espia com -1.
 :::
 
-## 3. Anunciar o xeque
+## 3. Anunciar o Suando Frio
 
-Crie a variável `casa da almofada` e o bloco **`anunciar xeque no time (time)`**. O truque é o bloco [[listas: item # de [CA] em [tabuleiro ▾]]], que diz **em qual casa** está um item da lista:
+Crie a variável `casa da almofada` e o bloco **`anunciar perigo no time (time)`**. O truque é o bloco [[listas: item # de [CA] em [tabuleiro ▾]]], que diz **em qual casa** está um item da lista:
 
 ```blocos
-meusblocos: defina anunciar xeque no time {meusblocos: time}
+meusblocos: defina anunciar perigo no time {meusblocos: time}
 variaveis: mude [casa da almofada ▾] para {listas: item # de {operadores: junte {meusblocos: time} com [A]} em [tabuleiro ▾]}
 meusblocos: verificar perigo na casa {casa da almofada} do time {meusblocos: time}
 controle: se <operadores: {perigo} = [sim]> então
-  eventos: transmita [xeque ▾]
+  eventos: transmita [suando frio ▾]
 ```
 
-Chame [[meusblocos: anunciar xeque no time [C]]] depois da **sua** jogada (antes de passar a vez) e [[meusblocos: anunciar xeque no time [J]]] depois da jogada do **computador**.
+Chame [[meusblocos: anunciar perigo no time [C]]] depois da **sua** jogada (antes de passar a vez) e [[meusblocos: anunciar perigo no time [J]]] depois da jogada do **computador**.
 
 E o Narrador:
 
 ```blocos
-eventos: quando eu receber [xeque ▾]
-aparencia: diga [XEQUE! A Almofada tá suando frio!] por (2) segundos
+eventos: quando eu receber [suando frio ▾]
+aparencia: diga [SUANDO FRIO! A Almofada tá em perigo!] por (2) segundos
 ```
 
 ## Teste!
 
-Monte situações mudando a lista na mão (é bem mais rápido). Por exemplo: deixe a coluna 5 livre entre a Almofada do computador (casa 5) e uma Geladeira sua, e faça uma jogada qualquer. O Narrador grita "Xeque"? Teste com uma Sombra, uma Mola, um Zé e o Super-Bobo também.
+Monte situações mudando a lista na mão (é bem mais rápido). Por exemplo: deixe a coluna 5 livre entre a Almofada do computador (casa 5) e uma Geladeira sua, e faça uma jogada qualquer. O Narrador grita "Suando Frio"? Teste com uma Sombra, uma Mola, um Zé e o Super-Bobo também.
 
 :::missao Checklist
 - [ ] Criei o bloco `espiar` (duplicando o `andar`)
 - [ ] Criei o bloco `verificar perigo` com as 26 espiadas
-- [ ] Criei o bloco `anunciar xeque`
-- [ ] O Narrador avisa o xeque dos dois times
-- [ ] Testei o xeque com cada tipo de Esquisito
+- [ ] Criei o bloco `anunciar perigo`
+- [ ] O Narrador avisa o Suando Frio dos dois times
+- [ ] Testei o Suando Frio com cada tipo de Esquisito
 - [ ] Salvei (e guardei uma cópia de segurança!)
 :::

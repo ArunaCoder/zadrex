@@ -34,7 +34,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
 No começo do jogo a Almofada está cercada de amigos: nenhuma bolinha. Abra espaço com o Modo Bagunça e confira se aparecem bolinhas **só nas casas vizinhas**.
 
 :::atencao A Almofada ainda não tem medo de nada
-No xadrez de verdade, a Almofada **não pode** andar pra uma casa onde seria capturada. Por enquanto, a nossa pode — ela é corajosa demais (ou preguiçosa demais pra pensar). No capítulo **Nível Chefão** a gente ensina ela a ter medo. 😱
+Nas regras completas do Zadrex, a Almofada **não pode** andar pra uma casa onde seria capturada. Por enquanto, a nossa pode — ela é corajosa demais (ou preguiçosa demais pra pensar). No capítulo **Nível Chefão** a gente ensina ela a ter medo. 😱
 :::
 
 :::desafio Desafio do programador preguiçoso

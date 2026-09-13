@@ -1,4 +1,4 @@
-Até agora você jogou sozinho, uma jogada atrás da outra. No xadrez de verdade, cada um joga **uma vez**. Neste passo o jogo aprende a **passar a vez** — mesmo que o computador ainda não saiba fazer nada com ela.
+Até agora você jogou sozinho, uma jogada atrás da outra. Mas no Zadrex cada time joga **uma vez**. Neste passo o jogo aprende a **passar a vez** — mesmo que o computador ainda não saiba fazer nada com ela.
 
 ## A ideia
 
@@ -59,7 +59,7 @@ aparencia: pense [Hmm... deixa eu pensar...]
 Faça uma jogada. O Narrador pensa por um segundo, depois diz "Sua vez!"? E, **durante** esse segundo, tente clicar nos seus Esquisitos: nada acontece, certo? É a variável `vez` protegendo o turno do computador.
 
 :::curiosidade
-Todo jogo de turnos funciona assim: xadrez, damas, jogo da velha, Pokémon, Uno. Sempre existe algum lugar guardando **de quem é a vez**. No nosso jogo, é uma variável com uma palavra dentro.
+Todo jogo de turnos funciona assim: jogo da velha, dominó, Pokémon, Uno. Sempre existe algum lugar guardando **de quem é a vez**. No nosso jogo, é uma variável com uma palavra dentro.
 :::
 
 :::missao Checklist

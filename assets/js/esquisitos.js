@@ -32,12 +32,12 @@
   };
 
   var ELENCO = [
-    { tipo: "Z", nome: "Zé-Pequeno", xadrez: "Peão", anda: "Anda 1 casa pra frente (2 na primeira vez). Só captura na diagonal.", bio: "Pequeno, corajoso e com uma hélice que não serve pra nada." },
-    { tipo: "G", nome: "Geladeira Voadora", xadrez: "Torre", anda: "Voa em linha reta: pra cima, pra baixo e pros lados, quantas casas quiser.", bio: "Ninguém sabe como ela voa. Nem ela." },
-    { tipo: "M", nome: "Mola Maluca", xadrez: "Cavalo", anda: "Pula em L: 2 casas pra um lado e 1 pro outro. Salta por cima de todo mundo.", bio: "Boing. Boing. BOING." },
-    { tipo: "S", nome: "Sombra", xadrez: "Bispo", anda: "Desliza na diagonal, quantas casas quiser.", bio: "Nunca pisa numa casa de outra cor. Coisa de sombra." },
-    { tipo: "B", nome: "Super-Bobo", xadrez: "Dama", anda: "Anda reto ou na diagonal, quantas casas quiser.", bio: "O mais poderoso do tabuleiro. Pena que é bobo." },
-    { tipo: "A", nome: "Grande Almofada", xadrez: "Rei", anda: "Anda 1 casa em qualquer direção. Se ficar encurralada, acabou!", bio: "Muito importante. Muito macia. Muito preguiçosa." }
+    { tipo: "Z", nome: "Zé-Pequeno", anda: "Anda 1 casa pra frente (2 na primeira vez). Só captura na diagonal.", bio: "Pequeno, corajoso e com uma hélice que não serve pra nada." },
+    { tipo: "G", nome: "Geladeira Voadora", anda: "Voa em linha reta: pra cima, pra baixo e pros lados, quantas casas quiser.", bio: "Ninguém sabe como ela voa. Nem ela." },
+    { tipo: "M", nome: "Mola Maluca", anda: "Pula em L: 2 casas pra um lado e 1 pro outro. Salta por cima de todo mundo.", bio: "Boing. Boing. BOING." },
+    { tipo: "S", nome: "Sombra", anda: "Desliza na diagonal, quantas casas quiser.", bio: "Nunca pisa numa casa de outra cor. Coisa de sombra." },
+    { tipo: "B", nome: "Super-Bobo", anda: "Anda reto ou na diagonal, quantas casas quiser.", bio: "O mais poderoso do tabuleiro. Pena que é bobo." },
+    { tipo: "A", nome: "Grande Almofada", anda: "Anda 1 casa em qualquer direção. Se ficar encurralada, acabou!", bio: "Muito importante. Muito macia. Muito preguiçosa." }
   ];
 
   function traco(largura) {
@@ -237,7 +237,7 @@
         '<div class="elenco-foto">' + svg(p.tipo, { tamanho: 96 }) + "</div>" +
         '<div class="elenco-texto">' +
         '<h4>' + p.nome + '</h4>' +
-        '<p class="elenco-xadrez">No xadrez: <b>' + p.xadrez + '</b> · letra <code>' + p.tipo + "</code></p>" +
+        '<p class="elenco-letra">Letra <code>' + p.tipo + "</code></p>" +
         '<p class="elenco-anda">' + p.anda + "</p>" +
         '<p class="elenco-bio">“' + p.bio + "”</p>" +
         "</div></article>";

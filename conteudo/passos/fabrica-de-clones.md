@@ -78,7 +78,7 @@ Clique na bandeira verde. O tabuleiro apareceu? 🎉
 - **Tem frestinha entre as casas?** Aumente um pouco o **Tamanho** do ator Casa (embaixo do palco).
 - **As casas estão umas por cima das outras?** Diminua o Tamanho.
 - **Apareceu tudo numa casa só?** Confira se a fórmula do "vá para" usa `minha coluna` no x e `minha linha` no y.
-- **O xadrez ficou listrado em vez de quadriculado?** Confira o "resto de (linha + coluna) por 2".
+- **O tabuleiro ficou listrado em vez de quadriculado?** Confira o "resto de (linha + coluna) por 2".
 
 :::curiosidade
 Toda vez que você clica na bandeira verde, o Scratch **apaga todos os clones antigos** automaticamente. Por isso não aparecem 128, 192, 256 casas…

@@ -52,8 +52,8 @@ Em forma de lista, os 64 itens são:
 - **Casas 49 a 56:** oito `JZ`
 - **Casas 57 a 64:** `JG` `JM` `JS` `JB` `JA` `JS` `JM` `JG`
 
-:::curiosidade Regra de ouro do xadrez
-O Super-Bobo (a dama) começa sempre **na casa da cor dele**… no xadrez de verdade, "dama branca em casa branca". No nosso tabuleiro, os dois Super-Bobos ficam na **coluna 4**, bem de frente um pro outro.
+:::curiosidade Regra de ouro do Zadrex
+Pra nunca errar a arrumação, decore: **Bobo na 4, Almofada na 5**. Nos dois times, o Super-Bobo fica na **coluna 4** e a Grande Almofada na **coluna 5**, bem de frente pra dupla do outro time.
 :::
 
 ## ⚠️ O mistério da Almofada Fantasma

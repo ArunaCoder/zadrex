@@ -111,12 +111,12 @@ window.ZADREX = {
       emoji: "👑",
       titulo: "Nível Chefão: regras especiais",
       passos: [
-        { id: "ze-pequeno-cresceu", titulo: "Zé-Pequeno cresceu! (promoção)", nivel: 2, status: "falta", midia: [] },
-        { id: "xeque", titulo: "Xeque! A Almofada em perigo", nivel: 3, status: "falta", midia: [] },
+        { id: "ze-pequeno-cresceu", titulo: "O Estirão do Zé-Pequeno", nivel: 2, status: "falta", midia: [] },
+        { id: "suando-frio", titulo: "Suando Frio! A Almofada em perigo", nivel: 3, status: "falta", midia: [] },
         { id: "proibido-trapalhada", titulo: "Proibido fazer trapalhada", nivel: 3, status: "falta", midia: [] },
-        { id: "xeque-mate-e-empate", titulo: "Xeque-mate e empate", nivel: 2, status: "falta", midia: [] },
-        { id: "roque", titulo: "Roque: o troca-troca", nivel: 3, status: "falta", midia: [] },
-        { id: "en-passant", titulo: "En passant: pega no pulo", nivel: 3, status: "falta", midia: [] }
+        { id: "almofada-amassada", titulo: "Almofada Amassada e Empate Sonolento", nivel: 2, status: "falta", midia: [] },
+        { id: "troca-troca", titulo: "O Troca-Troca", nivel: 3, status: "falta", midia: [] },
+        { id: "pega-no-pulo", titulo: "Pega no Pulo", nivel: 3, status: "falta", midia: [] }
       ]
     },
     {

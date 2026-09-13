@@ -1,8 +1,8 @@
-Bem-vindo ao **Nível Chefão**! 👑 Aqui ficam as regras especiais do xadrez — as que muita gente que joga nem conhece. A primeira é a mais feliz de todas: o **Zé-Pequeno cresce**.
+Bem-vindo ao **Nível Chefão**! 👑 Aqui ficam as regras mais especiais do Zadrex — e as mais esquisitas também. A primeira é a mais feliz de todas: o **Zé-Pequeno cresce**.
 
 ## A regra
 
-Quando um Zé-Pequeno consegue atravessar o tabuleiro inteiro e chegar na **última linha** do outro lado, ele é **promovido**: vira um **Super-Bobo**! Isso vale mesmo que o time já tenha um Super-Bobo. Dá pra ter dois, três, nove…
+Quando um Zé-Pequeno consegue atravessar o tabuleiro inteiro e chegar na **última linha** do outro lado, ele dá um **estirão**: vira um **Super-Bobo**! Isso vale mesmo que o time já tenha um Super-Bobo. Dá pra ter dois, três, nove…
 
 - Zé do **Jogador** cresce quando chega na **linha 1** (casas 1 a 8).
 - Zé do **Computador** cresce quando chega na **linha 8** (casas 57 a 64).
@@ -10,7 +10,7 @@ Quando um Zé-Pequeno consegue atravessar o tabuleiro inteiro e chegar na **últ
 <z-diagrama pecas="12:JZ 3:CS" mover="12" legenda="Andando pra casa 4 ou capturando a Sombra na casa 3: nos dois casos o Zé cresce!"></z-diagrama>
 
 :::curiosidade
-No xadrez de verdade, o peão pode virar dama, torre, bispo ou cavalo — quem escolhe é o jogador. Quase todo mundo escolhe a dama, porque é a mais forte. No Zadrex, a gente começa simples: sempre Super-Bobo.
+Por que Super-Bobo? Porque ele é o Esquisito mais forte, e todo Zé-Pequeno sonha em ser forte. A gente começa simples, com o estirão sempre virando Super-Bobo. Mas, se quiser deixar o jogador escolher, tem um desafio lá embaixo.
 :::
 
 ## Um atalho esperto
@@ -49,9 +49,9 @@ Que tal um som de "crescendo" também? (Tipo um apito subindo: *fiuuuuuu*!)
 
 Levar um Zé até o outro lado demora. Truque de programador: **mude a lista na mão**! Com o jogo rodando e a caixinha do `tabuleiro` à mostra, coloque `JZ` no item 12 e `livre` no item 4. Depois é só avançar o Zé. Ele virou Super-Bobo?
 
-Teste também capturando na diagonal até a linha 1. E espere o computador conseguir promover um Zé dele (pode demorar, ele é sorteador…).
+Teste também capturando na diagonal até a linha 1. E espere o computador conseguir dar um estirão num Zé dele (pode demorar, ele é sorteador…).
 
-:::desafio Escolha a promoção
+:::desafio Estirão à escolha
 Faça o jogo **perguntar** pro jogador em que ele quer transformar o Zé: [[sensores: pergunte [Virar o quê? B, G, S ou M] e espere]]. Dica: faça a pergunta **fora** do bloco `mover` (ele roda sem atualizar a tela, e perguntar lá dentro trava o jogo). O computador pode continuar escolhendo sempre Super-Bobo.
 :::
 

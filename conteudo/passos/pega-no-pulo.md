@@ -1,10 +1,10 @@
-Esta é a regra mais esquisita do xadrez — perfeita pra um jogo de Esquisitos. Ela tem um nome em francês, ***en passant*** (se fala "an passân"), que quer dizer **"de passagem"**. No Zadrex a gente chama de **Pega no Pulo**. 🐸
+Esta é a regra mais esquisita do Zadrex — perfeita pra um jogo de Esquisitos. O nome dela é **Pega no Pulo**, porque é exatamente isso que acontece: um Zé pega o outro no meio do pulo. 🐸
 
 ## A história
 
 Lembra que o Zé-Pequeno pode andar **2 casas** na largada? Imagine um Zé do computador que usa esse pulo duplo pra passar **do lado** do seu Zé, escapando da captura.
 
-Pois o xadrez diz: **não vale fugir assim!** Na jogada **logo em seguida**, o seu Zé pode capturar o espertinho como se ele tivesse andado só **uma** casa — indo pra casa que ele pulou.
+Pois o Zadrex diz: **não vale fugir assim!** Na jogada **logo em seguida**, o seu Zé pode capturar o espertinho como se ele tivesse andado só **uma** casa — indo pra casa que ele pulou.
 
 <z-diagrama pecas="28:JZ 29:CZ" destacar="29" marcar="21" legenda="O Zé do computador pulou da casa 13 pra 29. O seu Zé pode ir pra 21 e capturar ele!"></z-diagrama>
 
@@ -66,16 +66,16 @@ Mudando a lista na mão: coloque seu Zé na casa 28 e deixe o Zé do computador 
 - Capture: o Zé da casa 29 some? ✅
 - Faça outra jogada em vez de capturar: na próxima vez a chance sumiu? ✅
 
-## 🏆 Você programou o xadrez inteiro
+## 🏆 Você programou o Zadrex inteiro
 
-Com o Pega no Pulo, o Zadrex tem **todas as regras de movimento do xadrez**: movimentos de cada peça, capturas, promoção, xeque, jogadas proibidas, xeque-mate, afogamento, roque e *en passant*. Tem muito adulto que joga xadrez há anos e não sabe todas essas regras. Você não só sabe: você **ensinou** elas pro computador.
+Com o Pega no Pulo, o Zadrex tem **todas as suas regras**: o jeito de andar de cada Esquisito, as capturas, o Estirão do Zé, o Suando Frio, as trapalhadas proibidas, a Almofada Amassada, o Empate Sonolento, o Troca-Troca e o Pega no Pulo. É regra que não acaba mais! E você não só sabe todas: você **ensinou** elas pro computador.
 
 :::curiosidade As regras que ficaram de fora
-Existem umas regras de empate raríssimas que nem os campeonatos de escola usam muito: empate quando a mesma posição se repete 3 vezes, empate depois de 50 jogadas sem captura e sem mexer Zé, e empate quando não sobram Esquisitos suficientes pra dar xeque-mate. Se um dia der vontade, fica de desafio!
+Ainda dá pra inventar uns empates raríssimos: o **Empate Papagaio**, quando o tabuleiro fica igualzinho 3 vezes; o **Empate Bocejo**, depois de 50 jogadas sem captura e sem mexer Zé; e o **Empate Faltou Gente**, quando não sobram Esquisitos suficientes pra amassar a Almofada de ninguém. Se um dia der vontade, fica de desafio!
 :::
 
 :::adulto
-A simulação do filtro de lances legais não remove o peão capturado *en passant*. Isso só importa num caso raríssimo (rei e torre adversária na mesma fileira dos dois peões, com o *en passant* expondo o rei). Para um projeto desses, dá para ignorar tranquilamente — ou tratar como desafio extra.
+A jogada de mentirinha do filtro não remove o Zé capturado no Pega no Pulo. Isso só importa num caso raríssimo (Almofada e Geladeira inimiga na mesma linha dos dois Zés, com o Pega no Pulo deixando a Almofada suando frio). Para um projeto desses, dá para ignorar tranquilamente — ou tratar como desafio extra.
 :::
 
 :::missao Checklist
@@ -83,6 +83,6 @@ A simulação do filtro de lances legais não remove o peão capturado *en passa
 - [ ] O `mover` faz o Pega no Pulo e guarda os pulos
 - [ ] O Zé mostra a bolinha do Pega no Pulo
 - [ ] Testei capturar e deixar passar a chance
-- [ ] Comemorei ter programado o xadrez inteiro 🎉
+- [ ] Comemorei ter programado o Zadrex inteiro 🎉
 - [ ] Salvei (e guardei uma cópia de segurança!)
 :::

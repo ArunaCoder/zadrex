@@ -90,7 +90,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
 - Teste um Zé da coluna 1 e um da coluna 8: nada de capturas malucas do outro lado? ✅
 
 :::curiosidade O Zé tem mais duas manias
-Sim, ainda tem mais! Quando chega do outro lado, o Zé **cresce** e vira Super-Bobo. E existe uma captura esquisitíssima chamada ***en passant***. As duas ficaram guardadas para o **Nível Chefão**.
+Sim, ainda tem mais! Quando chega do outro lado, o Zé **cresce** e vira Super-Bobo. E existe uma captura esquisitíssima chamada **Pega no Pulo**. As duas ficaram guardadas para o **Nível Chefão**.
 :::
 
 :::missao Checklist

@@ -67,7 +67,7 @@ Ser guloso tem um problema: ele captura **qualquer coisa**, mesmo quando é uma 
 2. Coloque ele onde o Super-Bobo do computador possa capturar.
 3. O computador guloso vai lá, captura o Zé… e você captura o Super-Bobo dele! Trocou um Zé por um Super-Bobo. 😈
 
-Isso se chama **isca**, e os jogadores de xadrez de verdade usam o tempo todo.
+Isso se chama **isca**. É um truque velho de guerra… da Guerra dos Esquisitos! 😏
 
 :::missao Checklist
 - [ ] Criei as listas de capturas e o bloco `separar capturas`

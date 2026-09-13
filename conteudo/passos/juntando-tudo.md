@@ -70,9 +70,9 @@ Faça esta lista de testes com calma. Se algum falhar, volte no passo daquele Es
 - **"Nada tem bolinha"** → confira se o `calcular destinos` apaga a lista **no começo**, não no fim.
 :::
 
-## Você acabou de programar as regras do xadrez 🏆
+## Você acabou de programar as regras do Zadrex 🏆
 
-Pense no que você fez: **todas** as regras de movimento das peças do xadrez, com capturas e bloqueios, funcionando no Scratch. Ainda faltam umas regras especiais (elas estão no Nível Chefão), mas o coração do jogo está pronto.
+Pense no que você fez: **todas** as regras de movimento dos Esquisitos, com capturas e bloqueios, funcionando no Scratch. Ainda faltam umas regras especiais (elas estão no Nível Chefão), mas o coração do jogo está pronto.
 
 Só tem um probleminha: você está jogando sozinho. O computador ainda nem acordou. Próximo capítulo! 🤖
 

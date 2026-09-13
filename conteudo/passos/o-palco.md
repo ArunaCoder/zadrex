@@ -14,7 +14,7 @@ Então o palco tem 480 passos de largura e 360 de altura.
 
 Cada casa do nosso tabuleiro vai ter **40 passos** de lado. Oito casas × 40 passos = **320 passos**. Isso cabe direitinho na altura do palco (que tem 360), sobrando um pouquinho em cima e embaixo.
 
-Vamos colocar o tabuleiro **encostado na esquerda**. Assim sobra um cantinho à direita pra um personagem que vai narrar o jogo ("Sua vez!", "Xeque!", "A Geladeira voou!").
+Vamos colocar o tabuleiro **encostado na esquerda**. Assim sobra um cantinho à direita pra um personagem que vai narrar o jogo ("Sua vez!", "Suando Frio!", "A Geladeira voou!").
 
 Olhe no mapa acima: o centro da **casa 1** (a do canto de cima, na esquerda) fica em **x: -200, y: 140**. O centro da **casa 64** (canto de baixo, na direita) fica em **x: 80, y: -140**. No passo seguinte a gente descobre como calcular o centro de qualquer casa.
 

@@ -225,9 +225,9 @@
       '<div class="painel">' +
       '<section class="heroi">' +
       '<div class="heroi-texto">' +
-      '<p class="heroi-sobre">Um xadrez maluco feito no Scratch</p>' +
+      '<p class="heroi-sobre">Um jogo de tabuleiro inédito feito no Scratch</p>' +
       '<h1 class="heroi-titulo">Zadrex<span>Guerra dos Esquisitos</span></h1>' +
-      '<p class="heroi-lead">Aqui fica o mapa da nossa construção: cada passo tem a missão, o diário do que a gente fez e um vídeo mostrando como ficou. No final, você vai jogar xadrez contra o computador — com geladeiras voadoras.</p>' +
+      '<p class="heroi-lead">Aqui fica o mapa da nossa construção: cada passo tem a missão, o diário do que a gente fez e um vídeo mostrando como ficou. No final, você vai jogar Zadrex contra o computador — com geladeiras voadoras.</p>' +
       botao +
       "</div>" +
       '<div class="heroi-arte" aria-hidden="false">' + arte + "</div>" +

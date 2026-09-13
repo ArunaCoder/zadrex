@@ -1,15 +1,15 @@
 Bem-vindo, construtor de jogos! 👋
 
-Nesta aventura a gente vai criar, **do zero, no Scratch**, um jogo de xadrez completo. Só que não é um xadrez qualquer. É o **Zadrex: Guerra dos Esquisitos** — um xadrez onde as torres são geladeiras que voam, os cavalos são molas malucas e o rei é… uma almofada. Uma almofada muito importante.
+Nesta aventura a gente vai criar, **do zero, no Scratch**, um jogo de tabuleiro completamente novo. Novo mesmo: ele nunca existiu antes. É o **Zadrex: Guerra dos Esquisitos** — um jogo onde as geladeiras voam, as molas pulam em L e o Esquisito mais importante do time é… uma almofada. Uma almofada muito importante.
 
 No final você vai poder jogar uma partida inteira **contra o computador**, direto no Scratch.
 
-## As regras são as do xadrez de verdade
+## Um jogo inventado aqui em casa
 
-As peças têm nomes e caras diferentes, mas cada uma se mexe **igualzinho** a uma peça do xadrez. Quem aprende a jogar Zadrex, aprende xadrez de brinde.
+O Zadrex tem um tabuleiro de 64 casas e dois times com 16 Esquisitos cada. Cada Esquisito tem o seu jeito maluco de andar, e o objetivo é deixar a **Grande Almofada** do outro time sem ter pra onde fugir.
 
-:::curiosidade
-O xadrez tem mais de 1.400 anos! Ele nasceu na Índia com o nome de *chaturanga*, passou pela Pérsia, chegou na Europa… e agora chegou no Scratch com uma geladeira voadora. A história é longa mesmo.
+:::curiosidade Um jogo de grande originalidade
+Pode procurar no mundo inteiro: não existe outro jogo com Geladeira Voadora, Mola Maluca, Super-Bobo e Grande Almofada. O Zadrex é único. E foi inventado aqui mesmo, pela gente.
 :::
 
 ## E o computador? Ele é esperto?

@@ -60,7 +60,7 @@ Essa é boa: **não precisa de bagunça**! A Mola é a única peça (além dos Z
 <z-diagrama inicial mover="58" numeros></z-diagrama>
 
 :::curiosidade
-Os jogadores de xadrez dizem que o cavalo (a nossa Mola) é a peça mais **traiçoeira**, porque ela ataca de um jeito que ninguém espera. Quem tem Mola Maluca perto da Almofada inimiga é perigoso!
+A Mola é o Esquisito mais **traiçoeiro** do tabuleiro, porque ataca de um jeito que ninguém espera. Quem tem Mola Maluca perto da Almofada inimiga é perigoso!
 :::
 
 :::missao Checklist

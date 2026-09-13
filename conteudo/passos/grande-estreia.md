@@ -1,10 +1,10 @@
-O jogo está pronto. Você programou um xadrez inteiro, com Esquisitos, sons, animações e um computador que joga (mal, mas joga). Agora é hora da parte mais gostosa: a **grande estreia** do Zadrex e o desafio pra família inteira. 🚀
+O jogo está pronto. Você programou um jogo inteiro, com Esquisitos, sons, animações e um computador que joga (mal, mas joga). Agora é hora da parte mais gostosa: a **grande estreia** do Zadrex e o desafio pra família inteira. 🚀
 
 ## 1. O jogo explica como se joga
 
 Quem vai jogar não viu você programar. Então o próprio jogo precisa ensinar! Num cantinho do cenário `tela inicial`, escreva com letras pequenas algo assim:
 
-> Clique em JOGAR. Você é o time de baixo. Clique num Esquisito seu pra ver pra onde ele pode ir e clique numa bolinha pra jogar. Dê xeque-mate na Grande Almofada do computador!
+> Clique em JOGAR. Você é o time de baixo. Clique num Esquisito seu pra ver pra onde ele pode ir e clique numa bolinha pra jogar. Amasse a Grande Almofada do computador!
 
 ## 2. Os créditos
 
@@ -39,12 +39,12 @@ Agora, o desafio. Monte uma tabela na geladeira (uma geladeira de verdade, que n
 Algumas regras sugeridas pro torneio:
 
 - Cada pessoa joga 3 partidas contra o computador.
-- Quem der mais xeque-mates ganha.
+- Quem amassar mais Almofadas ganha.
 - Empate Sonolento vale meio ponto.
 - O campeão escolhe a sobremesa. 🍨
 
 :::desafio O desafio do criador
-Você conhece o jogo por dentro. Consegue dar xeque-mate no computador em **menos de 15 jogadas**? E em menos de 10?
+Você conhece o jogo por dentro. Consegue amassar a Almofada do computador em **menos de 15 jogadas**? E em menos de 10?
 :::
 
 :::missao Checklist

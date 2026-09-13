@@ -56,7 +56,7 @@ listas: apague todos os itens de [destinos ▾]
 ```
 
 :::dica Por que o time é uma entrada?
-Hoje a gente só precisa das jogadas do Computador. Mas no Nível Chefão vamos precisar saber se **você** ainda tem jogadas (pra descobrir o xeque-mate). Com o time como entrada, o mesmo bloco serve pros dois!
+Hoje a gente só precisa das jogadas do Computador. Mas no Nível Chefão vamos precisar saber se **você** ainda tem jogadas (pra descobrir a Almofada Amassada). Com o time como entrada, o mesmo bloco serve pros dois!
 :::
 
 ## Teste!
@@ -73,14 +73,14 @@ Mostre as duas listas no palco, rode o jogo e aperte **l** logo no começo da pa
 <details>
 <summary><b>👀 Quantas deveriam ser?</b></summary>
 
-**20 jogadas.** Cada um dos 8 Zés pode andar 1 ou 2 casas (8 × 2 = 16) e cada uma das 2 Molas tem 2 pulos (2 × 2 = 4). 16 + 4 = 20. É exatamente o número de primeiros lances possíveis no xadrez de verdade!
+**20 jogadas.** Cada um dos 8 Zés pode andar 1 ou 2 casas (8 × 2 = 16) e cada uma das 2 Molas tem 2 pulos (2 × 2 = 4). 16 + 4 = 20. São vinte jeitos diferentes de começar uma partida!
 
 </details>
 
 Agora faça umas jogadas e aperte **l** de novo: o número mudou? Troque o `[C]` por `[J]` e veja as **suas** jogadas. Depois pode apagar o teste.
 
 :::curiosidade Números gigantes
-Com 20 jogadas pra cada lado, depois de só **uma rodada** (você e o computador) já existem 400 partidas diferentes. Depois de 5 rodadas, são quase **70 trilhões**. É por isso que o xadrez nunca fica repetido.
+Com 20 jogadas pra cada lado, depois de só **uma rodada** (você e o computador) já existem 400 partidas diferentes. Depois de 5 rodadas, são quase **70 trilhões**. É por isso que uma partida de Zadrex nunca é igual à outra.
 :::
 
 :::missao Checklist

@@ -1,4 +1,4 @@
-Agora o jogo sabe quando uma Almofada está em perigo. Só que ainda deixa você fazer **trapalhadas**: andar com a Almofada pra uma casa perigosa, ou ignorar um xeque. No xadrez de verdade isso é **proibido**. Nenhuma jogada pode deixar a sua própria Almofada em perigo.
+Agora o jogo sabe quando uma Almofada está em perigo. Só que ainda deixa você fazer **trapalhadas**: andar com a Almofada pra uma casa perigosa, ou ignorar um Suando Frio. No Zadrex completo isso é **proibido**. Nenhuma jogada pode deixar a sua própria Almofada em perigo.
 
 ## As três trapalhadas proibidas
 
@@ -6,11 +6,11 @@ Agora o jogo sabe quando uma Almofada está em perigo. Só que ainda deixa você
 
 <z-diagrama pecas="60:JA 43:CG" destacar="60" marcar="52 53 61" legenda="A Geladeira vigia a coluna 3: as casas 51 e 59 ficaram proibidas."></z-diagrama>
 
-**2. Ignorar o xeque.** Se a sua Almofada está em xeque, a sua jogada **tem** que resolver isso: fugir, bloquear o ataque ou capturar quem está atacando.
+**2. Ignorar o Suando Frio.** Se a sua Almofada está suando frio, a sua jogada **tem** que resolver isso: fugir, bloquear o ataque ou capturar quem está atacando.
 
-**3. Abandonar o posto.** Às vezes um Esquisito está bem na frente da Almofada, protegendo ela de um ataque. Se ele sair dali, a Almofada fica exposta. Os jogadores de xadrez dizem que ele está **cravado**.
+**3. Abandonar o posto.** Às vezes um Esquisito está bem na frente da Almofada, protegendo ela de um ataque. Se ele sair dali, a Almofada fica exposta. No Zadrex, a gente diz que ele virou **chiclete**: tá grudado ali.
 
-<z-diagrama pecas="61:JA 45:JM 13:CG" destacar="45" legenda="A Mola está cravada: se ela pular, a Geladeira captura a Almofada."></z-diagrama>
+<z-diagrama pecas="61:JA 45:JM 13:CG" destacar="45" legenda="A Mola virou chiclete: se ela pular, a Geladeira captura a Almofada."></z-diagrama>
 
 ## O truque: jogada de mentirinha 🤞
 
@@ -73,8 +73,8 @@ Pronto! Como tanto o seu clique quanto a lista de jogadas do computador usam o `
 ## Teste!
 
 - Deixe uma Geladeira inimiga vigiando uma coluna do lado da sua Almofada: as bolinhas da Almofada somem daquela coluna? ✅
-- Faça um xeque na sua Almofada (mudando a lista): só aparecem bolinhas nas jogadas que salvam ela? ✅
-- Monte uma Mola cravada: ela fica sem bolinha nenhuma? ✅
+- Deixe a sua Almofada suando frio (mudando a lista): só aparecem bolinhas nas jogadas que salvam ela? ✅
+- Monte uma Mola-chiclete: ela fica sem bolinha nenhuma? ✅
 - Jogue uma partida normal: o computador nunca mais faz trapalhada? ✅
 
 :::atencao O jogo ficou lento?
@@ -85,7 +85,7 @@ Agora o computador faz **muitas** jogadas de mentirinha antes de sortear. Se fic
 - [ ] Criei a lista `destinos seguros` e o bloco `filtrar destinos`
 - [ ] O `calcular destinos` chama o filtro no final
 - [ ] A Almofada não anda mais pra casas atacadas
-- [ ] Em xeque, só aparecem jogadas que salvam a Almofada
-- [ ] Esquisitos cravados não podem sair
+- [ ] Com a Almofada suando frio, só aparecem jogadas que salvam a Almofada
+- [ ] Esquisitos-chiclete não podem sair
 - [ ] Salvei (e guardei uma cópia de segurança!)
 :::

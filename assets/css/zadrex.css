@@ -388,7 +388,7 @@ z-elenco { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,
 .elenco-card:hover .elenco-foto svg { transform: rotate(-8deg) scale(1.08); }
 .elenco-texto h4 { margin: 0; font-family: var(--fonte-titulo); font-weight: 700; font-size: 1.2rem; line-height: 1.2; }
 .elenco-texto p { margin: 4px 0 0; font-size: .9rem; line-height: 1.45; }
-.elenco-xadrez { color: var(--tinta-2); }
+.elenco-letra { color: var(--tinta-2); }
 .elenco-bio { font-style: italic; color: var(--tinta-2); }
 .md .elenco-texto code { font-size: .8rem; }
 .md .elenco-texto h4 { margin: 0; font-size: 1.2rem; }

@@ -2,7 +2,7 @@ Você e o computador já jogam. Mas a partida nunca acaba! Neste passo a gente c
 
 ## Uma regra de fim provisória
 
-No xadrez de verdade, a partida acaba no **xeque-mate**: quando a Almofada está ameaçada e não tem mais como escapar. Programar isso é coisa de Nível Chefão (e a gente vai chegar lá!).
+Nas regras completas do Zadrex, a partida acaba na **Almofada Amassada**: quando a Almofada está ameaçada e não tem mais como escapar. Programar isso é coisa de Nível Chefão (e a gente vai chegar lá!).
 
 Por enquanto, vamos usar uma regra mais simples: **quem capturar a Grande Almofada do outro, vence**. Ela funciona muito bem pra jogar e testar tudo.
 

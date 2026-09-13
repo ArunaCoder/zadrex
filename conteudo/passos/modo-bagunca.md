@@ -58,7 +58,7 @@ Clique na bandeira. Escolha um Esquisito e clique em qualquer outra casa:
 - Leve uma Geladeira pra lá e pra cá, faça a Almofada atravessar o tabuleiro, capture o Super-Bobo do computador com um Zé-Pequeno. Hoje pode tudo.
 
 :::curiosidade Por que não dá pra capturar os seus próprios Esquisitos?
-Olha o script de novo: se você clica numa casa com `J`, o Cérebro acha que você quer **trocar** a escolha. Sem querer, a gente já criou a primeira regra do xadrez: ninguém captura o próprio time!
+Olha o script de novo: se você clica numa casa com `J`, o Cérebro acha que você quer **trocar** a escolha. Sem querer, a gente já criou a primeira regra do Zadrex: ninguém captura o próprio time!
 :::
 
 O computador ainda não joga, e os Esquisitos ainda não têm regras. Mas o jogo já **mexe**. Guarde bem o bloco `mover`: ele vai trabalhar até o último passo.

@@ -2,7 +2,7 @@ O computador guloso captura qualquer coisa. Mas capturar um Zé-Pequeno e captur
 
 ## A tabela de valores
 
-Os jogadores de xadrez usam uma tabela famosa pra comparar as peças. Traduzida pro Zadrex:
+Pra comparar os Esquisitos, a gente inventou uma tabela de valores:
 
 | Esquisito | Valor |
 |---|---|
@@ -86,8 +86,8 @@ O computador agora captura o que vale mais… mas ainda cai em isca! Pra ficar e
 
 Ideia: na nota de cada jogada, faça uma **jogada de mentirinha** (igual no filtro), use o `verificar perigo` na casa de chegada e, se ela ficar em perigo, **tire da nota** o valor do Esquisito que se mexeu. Assim, capturar um Zé (+1) com o Super-Bobo numa casa vigiada (−9) dá nota **−8**. Nem pensar!
 
-:::curiosidade Como os computadores campeões pensam
-Os programas que vencem os campeões mundiais usam essa mesma ideia de notas, só que olham **milhões** de jogadas pra frente, imaginando as respostas do adversário, e as respostas das respostas… O nome disso é **minimax**. Você acabou de dar o primeiro passo nessa direção.
+:::curiosidade Como os computadores craques pensam
+Os programas que jogam jogos de tabuleiro melhor que qualquer pessoa usam essa mesma ideia de notas, só que olham **milhões** de jogadas pra frente, imaginando as respostas do adversário, e as respostas das respostas… O nome disso é **minimax**. Você acabou de dar o primeiro passo nessa direção.
 :::
 
 :::missao Checklist

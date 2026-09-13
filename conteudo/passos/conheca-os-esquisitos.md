@@ -55,10 +55,10 @@ Nesta página o seu time aparece em **azul** e o do computador em **vermelho**, 
 
 :::missao Checklist
 - [ ] Conheço os seis Esquisitos pelo nome
-- [ ] Sei qual peça do xadrez cada um é
+- [ ] Sei como cada um se mexe
 - [ ] Já escolhi as cores dos dois times
 :::
 
 :::desafio
-Pegue um tabuleiro de xadrez de verdade (ou desenhe um num papel) e jogue uma partida com alguém usando os nomes dos Esquisitos. "Minha Mola Maluca captura seu Super-Bobo!" soa bem melhor que "cavalo toma dama".
+Desenhe um tabuleiro de 8 × 8 casas num papel, faça os Esquisitos com papeizinhos e jogue uma partida com alguém. Vale anunciar cada captura bem alto: "Minha Mola Maluca captura seu Super-Bobo!"
 :::

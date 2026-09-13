@@ -1,17 +1,17 @@
 # Zadrex: Guerra dos Esquisitos
 
-Diário de construção de um **xadrez maluco no Scratch**, feito em família. A página mostra uma trilha de passos: cada passo tem a missão (explicada para uma criança de 9 anos), um diário do que foi feito e um espaço para GIF/vídeo do resultado.
+Diário de construção do **Zadrex**, um jogo de tabuleiro inédito feito no Scratch, em família. A página mostra uma trilha de passos: cada passo tem a missão (explicada para uma criança de 9 anos), um diário do que foi feito e um espaço para GIF/vídeo do resultado.
 
 O jogo é feito no **Scratch instalado no computador** (o Scratch App offline), sem conta no Scratch e sem internet: o projeto é um arquivo `.sb3` salvo no próprio computador. Por isso a trilha não usa nada que dependa de conta, como salvar na nuvem, compartilhar ou embutir projetos do site do Scratch.
 
-| Peça do xadrez | No Zadrex | Código |
-|---|---|---|
-| Peão | Zé-Pequeno | `Z` |
-| Torre | Geladeira Voadora | `G` |
-| Cavalo | Mola Maluca | `M` |
-| Bispo | Sombra | `S` |
-| Dama | Super-Bobo | `B` |
-| Rei | Grande Almofada | `A` |
+| Esquisito | Código |
+|---|---|
+| Zé-Pequeno | `Z` |
+| Geladeira Voadora | `G` |
+| Mola Maluca | `M` |
+| Sombra | `S` |
+| Super-Bobo | `B` |
+| Grande Almofada | `A` |
 
 ## Como atualizar o progresso
 

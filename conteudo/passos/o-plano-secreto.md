@@ -53,7 +53,7 @@ Na vez do computador, o Cérebro faz uma lista gigante com **todas as jogadas po
 | **Meus Blocos** | Blocos que **a gente inventa**, juntando outros blocos. |
 
 :::adulto
-A arquitetura aqui é o clássico *modelo → visão*: a lista `tabuleiro` é o estado, os clones são uma visão que só lê o estado, e o ator Cérebro concentra a lógica. A geração de lances é pseudo-legal nos capítulos 4 e 5 (vitória por captura da Almofada) e vira legal no capítulo 7, com detecção de xeque. Assim a criança tem um jogo jogável cedo, e as regras difíceis ficam como "nível chefão".
+A arquitetura aqui é o clássico *modelo → visão*: a lista `tabuleiro` é o estado, os clones são uma visão que só lê o estado, e o ator Cérebro concentra a lógica. Até a primeira partida, a geração de jogadas não confere o perigo da própria Almofada (vence quem capturar a Almofada); no Nível Chefão entra o filtro que descarta as jogadas que deixariam a própria Almofada em perigo. Assim a criança tem um jogo jogável cedo, e as regras difíceis ficam como "nível chefão".
 :::
 
 :::missao Checklist
