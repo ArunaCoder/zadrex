@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zadrex: Guerra dos Esquisitos</title>
+  <meta name="description" content="O diário de construção do Zadrex, um jogo de xadrez maluco feito no Scratch.">
+  <meta property="og:title" content="Zadrex: Guerra dos Esquisitos">
+  <meta property="og:description" content="Passo a passo para criar um xadrez maluco no Scratch — e jogar contra o computador.">
+  <meta name="theme-color" content="#2B2141">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Nunito:ital,wght@0,500;0,700;0,800;1,500&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/zadrex.css">
+  <link rel="stylesheet" href="assets/css/blocos-e-tabuleiros.css">
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="topo">
+    <button class="topo-menu" id="botao-menu" aria-label="Abrir a trilha" aria-expanded="false" aria-controls="trilha">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="topo-marca" href="#/">
+      <span class="topo-logo" aria-hidden="true"></span>
+      <span class="topo-nome">Zadrex<small>Guerra dos Esquisitos</small></span>
+    </a>
+    <div class="topo-progresso" id="topo-progresso" aria-live="polite"></div>
+  </header>
+
+  <div class="layout">
+    <nav class="trilha" id="trilha" aria-label="Trilha de passos">
+      <div class="trilha-cabeca">
+        <a class="trilha-inicio" href="#/">🏠 Painel da missão</a>
+        <div class="trilha-legenda" aria-hidden="true">
+          <span><i class="st st-feito"></i>feito</span>
+          <span><i class="st st-fazendo"></i>fazendo</span>
+          <span><i class="st st-falta"></i>falta</span>
+        </div>
+      </div>
+      <ol class="trilha-lista" id="trilha-lista"></ol>
+    </nav>
+    <div class="trilha-fundo" id="trilha-fundo" hidden></div>
+
+    <main class="palco" id="conteudo" tabindex="-1">
+      <div class="carregando">Carregando os Esquisitos…</div>
+    </main>
+  </div>
+
+  <noscript><p class="sem-js">Esta página precisa de JavaScript ligado para mostrar a trilha. 🙃</p></noscript>
+
+  <script src="assets/vendor/marked.umd.js"></script>
+  <script src="conteudo/trilha.js"></script>
+  <script src="assets/js/esquisitos.js"></script>
+  <script src="assets/js/blocos.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
