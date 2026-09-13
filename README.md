@@ -1,6 +1,6 @@
 # Zadrex: Guerra dos Esquisitos
 
-Diário de construção do **Zadrex**, um jogo de tabuleiro inédito feito no Scratch, em família. A página mostra uma trilha de passos: cada passo tem a missão (explicada para uma criança de 9 anos), um diário do que foi feito e um espaço para GIF/vídeo do resultado.
+Diário de construção do **Zadrex**, um jogo de tabuleiro inédito feito no Scratch, em família. A página mostra uma trilha de passos: cada passo tem a missão (explicada para uma criança de 9 anos) e, nos passos com mão na massa, um diário do que foi feito e GIFs ou prints da tela mostrando o resultado.
 
 O jogo é feito no **Scratch instalado no computador** (o Scratch App offline), sem conta no Scratch e sem internet: o projeto é um arquivo `.sb3` salvo no próprio computador. Por isso a trilha não usa nada que dependa de conta, como salvar na nuvem, compartilhar ou embutir projetos do site do Scratch.
 
@@ -23,11 +23,10 @@ Tudo fica em [`conteudo/trilha.js`](conteudo/trilha.js). Para cada passo:
 
 - **`status`**: `"falta"`, `"fazendo"` ou `"feito"`. A barra de progresso, a árvore e o painel se atualizam sozinhos.
 - **Diário de bordo**: crie `conteudo/diario/<id>.md` (copie o [`_modelo.md`](conteudo/diario/_modelo.md)). Ele só é carregado quando o status é `"fazendo"` ou `"feito"`; antes disso aparece "Ainda não chegamos aqui!".
-- **Mídia**: coloque o arquivo em `midia/` e liste em `midia`. Aceita:
-  - imagens e GIFs (`.gif`, `.png`, `.jpg`, `.webp`)
-  - vídeos (`.mp4`, `.webm`)
-  - links do YouTube (`https://youtu.be/...`)
-  - com legenda: `{ src: "midia/sorteio.gif", legenda: "O computador jogando!" }`
+- **Mídia** ("Olha só como ficou"): coloque o arquivo em `midia/` e liste em `midia`. Aceita GIFs e imagens, como prints da tela (`.gif`, `.png`, `.jpg`, `.webp`):
+  - sem legenda: `"midia/fabrica-de-clones.gif"`
+  - com legenda: `{ src: "midia/sorteio.png", legenda: "O computador jogando!" }`
+- **`leitura: true`**: para passos só de leitura, sem nada pra fazer no Scratch. A página mostra só a missão, sem "Diário de bordo" nem "Olha só como ficou" (e o passo não precisa de `midia`).
 
 As missões ficam em `conteudo/passos/<id>.md`.
 
@@ -113,6 +112,6 @@ assets/vendor/marked.umd.js  Markdown (marked v18, licença MIT)
 conteudo/trilha.js         capítulos, passos e progresso
 conteudo/passos/           missões
 conteudo/diario/           o que a gente fez
-midia/                     GIFs e vídeos
+midia/                     GIFs e prints da tela
 recursos/                  fantasias SVG prontas para carregar no Scratch
 ```

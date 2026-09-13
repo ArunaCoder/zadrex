@@ -22,9 +22,9 @@ Na hora de jogar, use a **tela cheia**: o botão de quadradinho em cima do palco
 
 O Zadrex inteiro cabe num arquivo só: o `Zadrex.sb3`. Quer jogar na casa da vó? Copie o arquivo pra um pen drive. Em qualquer computador com o Scratch instalado, é só abrir o Scratch e usar **Arquivo → Carregar do seu computador**.
 
-## 5. Grave o trailer 🎬
+## 5. O trailer em GIF 📸
 
-Grave um vídeo mostrando o jogo inteiro, da tela inicial até a placa de vitória, pra colocar aqui em **Olha só como ficou**. É o trailer oficial do Zadrex!
+Grave um GIF curtinho mostrando o jogo: a tela inicial, umas jogadas e a placa de vitória. Tire também uns prints da tela das partes mais legais. Tudo isso vem pra cá, em **Olha só como ficou**. É o trailer oficial do Zadrex!
 
 ## 6. O Grande Torneio da Família 🏆
 
@@ -51,7 +51,7 @@ Você conhece o jogo por dentro. Consegue amassar a Almofada do computador em **
 - [ ] A tela inicial explica como jogar
 - [ ] Coloquei os créditos
 - [ ] Joguei em tela cheia
-- [ ] Gravei o trailer do jogo
+- [ ] Fiz o trailer em GIF e tirei uns prints
 - [ ] Desafiei pelo menos 3 pessoas da família
 - [ ] Salvei (e guardei uma cópia de segurança!)
 :::

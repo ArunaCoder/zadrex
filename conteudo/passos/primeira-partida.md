@@ -71,12 +71,12 @@ Agora é pra valer. Clique na bandeira e jogue uma partida inteira contra o comp
 - **Vá atrás da Almofada deles.** Quando ela ficar descoberta, é só capturar.
 :::
 
-## Hora de gravar! 🎬
+## Diga xis! 📸
 
-Esse é um grande momento: é o primeiro jogo **completo** do Zadrex. Grave um vídeo ou um GIF da partida (ou pelo menos da vitória!) pra colocar aqui em **Olha só como ficou**.
+Esse é um grande momento: é o primeiro jogo **completo** do Zadrex. Grave um GIF da partida ou tire um print da tela na hora da vitória pra colocar aqui em **Olha só como ficou**.
 
 :::adulto
-No Windows, **Win + Alt + R** grava a janela ativa (Xbox Game Bar); no Mac, **Cmd + Shift + 5**. Para GIF, o ScreenToGif (Windows) é ótimo.
+No Windows, **Win + Shift + S** tira um print de um pedaço da tela; no Mac, **Cmd + Shift + 4**. Para GIF, o ScreenToGif (Windows) é ótimo.
 :::
 
 :::missao Checklist
@@ -85,6 +85,6 @@ No Windows, **Win + Alt + R** grava a janela ativa (Xbox Game Bar); no Mac, **Cm
 - [ ] O Narrador anuncia quem venceu
 - [ ] Joguei uma partida inteira contra o computador
 - [ ] Ganhei do computador pelo menos uma vez 😎
-- [ ] Gravei um vídeo ou GIF
+- [ ] Gravei um GIF ou tirei um print da vitória
 - [ ] Salvei (e guardei uma cópia de segurança!)
 :::

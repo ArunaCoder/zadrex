@@ -31,11 +31,14 @@ Esta página é o **mapa da nossa construção**. Na esquerda fica a **trilha** 
 | <i class="st st-fazendo"></i> amarela piscando | Estamos fazendo agora |
 | <i class="st st-feito"></i> verde | Pronto! |
 
-E cada passo tem três partes:
+Todo passo tem 🎯 **a missão**: o que a gente precisa fazer e por quê. É onde você está agora.
 
-- 🎯 **A missão** — o que a gente precisa fazer e por quê. É onde você está agora.
+Nos passos em que tem mão na massa no Scratch, embaixo da missão aparecem mais duas partes:
+
 - 📓 **Diário de bordo** — o que a gente realmente fez: os blocos, as descobertas e as trapalhadas. Começa vazio e vai enchendo conforme a gente avança.
-- 🎬 **Olha só como ficou** — um GIF ou vídeo mostrando o resultado.
+- 📸 **Olha só como ficou** — GIFs e prints da tela mostrando o resultado.
+
+Passos como este, que são só pra ler e entender, têm só a missão.
 
 :::dica Atalho secreto
 No computador, as setas **←** e **→** do teclado pulam para o passo anterior e para o próximo.

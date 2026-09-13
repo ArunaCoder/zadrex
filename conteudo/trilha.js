@@ -9,15 +9,18 @@
  *    "fazendo" → estamos nele agora    (🔨)
  *    "feito"   → terminado!            (✅)
  *
+ *  Passo só de leitura (sem nada pra fazer no Scratch):
+ *    marque com  leitura: true  e a página mostra só a missão,
+ *    sem "Diário de bordo" e sem "Olha só como ficou".
+ *
  *  Diário de bordo ("O que a gente fez"):
  *    crie o arquivo  conteudo/diario/<id-do-passo>.md
  *    (ele só é carregado quando o status é "fazendo" ou "feito").
  *
- *  Vídeo / GIF ("Olha só como ficou"):
+ *  GIF / print da tela ("Olha só como ficou"):
  *    coloque o arquivo na pasta midia/ e adicione em "midia", por exemplo:
  *      midia: ["midia/fabrica-de-clones.gif"]
- *      midia: ["midia/primeira-partida.mp4"]
- *      midia: ["https://youtu.be/xxxxxxxxxxx"]
+ *      midia: ["midia/primeira-partida.png"]
  *      midia: [{ src: "midia/sorteio.gif", legenda: "O computador jogando!" }]
  *
  *  nivel = dificuldade, de 1 a 3 pimentas 🌶️
@@ -30,9 +33,9 @@ window.ZADREX = {
       emoji: "🎬",
       titulo: "Bem-vindo ao Zadrex",
       passos: [
-        { id: "o-que-e-o-zadrex", titulo: "O que é o Zadrex?", nivel: 1, status: "falta", midia: [] },
-        { id: "conheca-os-esquisitos", titulo: "Conheça os Esquisitos", nivel: 1, status: "falta", midia: [] },
-        { id: "o-plano-secreto", titulo: "O plano secreto", nivel: 1, status: "falta", midia: [] }
+        { id: "o-que-e-o-zadrex", titulo: "O que é o Zadrex?", nivel: 1, status: "falta", leitura: true },
+        { id: "conheca-os-esquisitos", titulo: "Conheça os Esquisitos", nivel: 1, status: "falta", leitura: true },
+        { id: "o-plano-secreto", titulo: "O plano secreto", nivel: 1, status: "falta", leitura: true }
       ]
     },
     {
@@ -42,7 +45,7 @@ window.ZADREX = {
       passos: [
         { id: "criando-o-projeto", titulo: "Criando o projeto", nivel: 1, status: "falta", midia: [] },
         { id: "o-palco", titulo: "O palco e o mapa do x e y", nivel: 1, status: "falta", midia: [] },
-        { id: "endereco-das-casas", titulo: "O endereço de cada casa", nivel: 2, status: "falta", midia: [] },
+        { id: "endereco-das-casas", titulo: "O endereço de cada casa", nivel: 2, status: "falta", leitura: true },
         { id: "o-ator-casa", titulo: "O ator Casa", nivel: 1, status: "falta", midia: [] },
         { id: "fabrica-de-clones", titulo: "A fábrica de clones", nivel: 2, status: "falta", midia: [] }
       ]
@@ -52,7 +55,7 @@ window.ZADREX = {
       emoji: "👾",
       titulo: "Os Esquisitos chegam",
       passos: [
-        { id: "o-codigo-secreto", titulo: "O código secreto das peças", nivel: 1, status: "falta", midia: [] },
+        { id: "o-codigo-secreto", titulo: "O código secreto das peças", nivel: 1, status: "falta", leitura: true },
         { id: "desenhando-os-esquisitos", titulo: "Desenhando os Esquisitos", nivel: 1, status: "falta", midia: [] },
         { id: "a-memoria-do-jogo", titulo: "A memória do jogo", nivel: 2, status: "falta", midia: [] },
         { id: "esquisitos-no-lugar", titulo: "Cada Esquisito no seu lugar", nivel: 2, status: "falta", midia: [] }
@@ -127,7 +130,7 @@ window.ZADREX = {
         { id: "grande-estreia", titulo: "A grande estreia e o desafio da família", nivel: 1, status: "falta", midia: [] },
         { id: "computador-guloso", titulo: "Computador guloso", nivel: 2, status: "falta", midia: [] },
         { id: "quanto-vale-cada-um", titulo: "Quanto vale cada Esquisito?", nivel: 3, status: "falta", midia: [] },
-        { id: "ideias-malucas", titulo: "Ideias malucas", nivel: 1, status: "falta", midia: [] }
+        { id: "ideias-malucas", titulo: "Ideias malucas", nivel: 1, status: "falta", leitura: true }
       ]
     }
   ]
