@@ -8,6 +8,23 @@ No script da bandeira do Cérebro, logo depois de [[variaveis: mude [vez ▾] pa
 
 [[variaveis: mude [origem ▾] para (0)]]
 
+<details>
+<summary><b>📋 Como o script da bandeira do Cérebro fica agora</b></summary>
+
+```blocos
+eventos: quando ⚑ for clicado
+aparencia: esconda
+variaveis: mude [vez ▾] para [fim]
+variaveis: mude [origem ▾] para (0)
+meusblocos: arrumar os esquisitos
+eventos: transmita [montar tabuleiro ▾] e espere
+eventos: transmita [boas-vindas ▾] e espere
+variaveis: mude [vez ▾] para [jogador]
+eventos: transmita [vez do jogador ▾]
+```
+
+</details>
+
 ## 2. O Cérebro decide
 
 Quando alguém clica, o Cérebro precisa fazer duas perguntas:
@@ -16,6 +33,8 @@ Quando alguém clica, o Cérebro precisa fazer duas perguntas:
 2. **Tem um Esquisito do time do Jogador nessa casa?** Se tiver, ele passa a ser a origem.
 
 Pra segunda pergunta, lembra do código secreto? A letra 1 do item diz o time!
+
+No **Cérebro**, crie este script:
 
 ```blocos
 eventos: quando eu receber [clique ▾]

@@ -20,7 +20,7 @@ Só isso! Quatro direções da tabela, cada uma até 7 passos.
 
 ## 2. O bloco que chama todo mundo
 
-Agora a gente precisa de um bloco que olha **qual Esquisito** está na casa e chama os movimentos certos. Ele vai crescer a cada passo deste capítulo. Crie no Cérebro a variável `peça` e o bloco **`calcular destinos de (casa)`**:
+Agora a gente precisa de um bloco que olha **qual Esquisito** está na casa e chama os movimentos certos. Ele vai crescer a cada passo deste capítulo. Crie no Cérebro a variável `peça` e o bloco **`calcular destinos de (casa)`** (com uma entrada `casa`, e sem atualização de tela):
 
 ```blocos
 meusblocos: defina calcular destinos de {meusblocos: casa}

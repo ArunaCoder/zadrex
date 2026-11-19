@@ -6,7 +6,7 @@ A **Sombra** é quase igual à Geladeira. A diferença? Ela só anda **na diagon
 
 ## 1. O bloco da Sombra
 
-Crie o bloco **`movimentos da sombra (casa)`**. Pegue as quatro diagonais da tabela de direções:
+No **Cérebro**, crie o bloco **`movimentos da sombra (casa)`** (com uma entrada `casa` e sem atualização de tela). Pegue as quatro diagonais da tabela de direções:
 
 | Diagonal | `dl` | `dc` |
 |---|---|---|
@@ -16,7 +16,7 @@ Crie o bloco **`movimentos da sombra (casa)`**. Pegue as quatro diagonais da tab
 | ↘️ | 1 | 1 |
 
 :::dica Não precisa montar do zero
-Clique com o botão direito no bloco `defina movimentos da geladeira` e escolha **Duplicar**. Aí é só colocar o chapéu novo e trocar os números.
+Depois de criar o bloco novo, vá no `defina movimentos da geladeira` e clique com o botão direito no **primeiro** `andar` embaixo dele. Escolha **Duplicar**: vem ele e todos os de baixo. Encaixe a cópia embaixo do `defina movimentos da sombra` e troque os números.
 :::
 
 Tente montar sozinho antes de olhar! Se travar, a resposta está aqui:
@@ -36,12 +36,28 @@ meusblocos: andar de {meusblocos: casa} direção (1) (1) até (7) passos
 
 ## 2. Avise o calcular destinos
 
-No bloco `calcular destinos de (casa)`, adicione mais um "se":
+No bloco `calcular destinos de (casa)`, no Cérebro, adicione mais um "se" no fim:
 
 ```blocos
 controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
   meusblocos: movimentos da sombra {meusblocos: casa}
 ```
+
+<details>
+<summary><b>📋 Como o bloco <code>calcular destinos</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina calcular destinos de {meusblocos: casa}
+listas: apague todos os itens de [destinos ▾]
+variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro ▾]}
+variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
+  meusblocos: movimentos da sombra {meusblocos: casa}
+```
+
+</details>
 
 ## Teste!
 

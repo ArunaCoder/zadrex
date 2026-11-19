@@ -15,7 +15,7 @@ Na aba Fantasias da Peça, clique com o botão direito numa fantasia e escolha *
 
 ## 2. O botão Jogar
 
-Crie um ator **Botão Jogar** (um retângulo arredondado escrito JOGAR, por exemplo):
+Crie um ator **Botão Jogar** (um retângulo arredondado escrito JOGAR, por exemplo). No Botão Jogar:
 
 ```blocos
 eventos: quando ⚑ for clicado
@@ -31,7 +31,7 @@ eventos: transmita [começar ▾]
 
 Até agora, o Cérebro começava a partida assim que a bandeira era clicada. Agora ele vai mostrar a tela inicial e **esperar** o botão.
 
-Crie a variável `tabuleiro montado`. Depois divida o script da bandeira do Cérebro em dois:
+No **Cérebro**, crie a variável `tabuleiro montado`. Depois divida o script da bandeira do Cérebro em dois:
 
 ```blocos
 eventos: quando ⚑ for clicado
@@ -61,11 +61,25 @@ Quando você jogar de novo, o `começar` vai ser transmitido outra vez. Se o `mo
 Mas não precisa montar de novo: o tabuleiro já existe! Como os clones são espelhos da lista, basta **arrumar a lista** e todos os Esquisitos voltam pro lugar sozinhos.
 :::
 
-O **Narrador** também deve ficar escondido na tela inicial: esconda ele na bandeira e mostre quando receber `começar`.
+O **Narrador** também deve ficar escondido na tela inicial. No Narrador, ponha um [[aparencia: esconda]] no script da bandeira e crie um script novo pro `começar`:
+
+```blocos
+eventos: quando ⚑ for clicado
+aparencia: esconda
+movimento: vá para x: (170) y: (-110)
+aparencia: vá para a camada [da frente ▾]
+
+eventos: quando eu receber [começar ▾]
+aparencia: mostre
+```
 
 ## 4. A placa de fim
 
 Crie um ator **Placa** com três fantasias: `vitória`, `derrota` e `empate`. Desenhe placas bem chamativas: "VOCÊ VENCEU!", "O SORTEIO VENCEU…", "EMPATE!". E escreva embaixo, em todas: *clique pra jogar de novo*.
+
+Na Placa, crie em **Meus Blocos → Criar um Bloco** o bloco `aparecer`. Desta vez **não** marque "Executar sem atualização de tela": a placa precisa crescer devagar, na frente de todo mundo.
+
+Agora, os scripts da Placa:
 
 ```blocos
 eventos: quando ⚑ for clicado
@@ -88,7 +102,7 @@ aparencia: esconda
 eventos: transmita [começar ▾]
 ```
 
-E o bloco `aparecer`, que faz a placa "pular" na tela:
+E o que o bloco `aparecer` faz, a placa "pulando" na tela:
 
 ```blocos
 meusblocos: defina aparecer
@@ -103,7 +117,7 @@ controle: repita (10) vezes
 
 ## Teste!
 
-1. Clique na bandeira: aparece a tela inicial e o botão? ✅
+1. Clique na bandeira: aparece a tela inicial e o botão, sem o Narrador? ✅
 2. Clique em Jogar: o tabuleiro aparece e a partida começa? ✅
 3. Jogue até o fim (vale capturar a Almofada rapidinho com a ajuda da sorte): a placa aparece? ✅
 4. Clique na placa: o tabuleiro volta pro começo e dá pra jogar de novo? ✅

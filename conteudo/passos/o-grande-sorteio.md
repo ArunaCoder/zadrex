@@ -10,7 +10,7 @@ No Scratch, o sorteio é o bloco [[operadores: número aleatório entre (1) e (1
 
 ## O script do computador
 
-Crie a variável `sorteio` e **troque** aquele script preguiçoso da vez do computador por este:
+No **Cérebro**, crie a variável `sorteio` e **troque** aquele script preguiçoso da vez do computador por este:
 
 ```blocos
 eventos: quando eu receber [vez do computador ▾]

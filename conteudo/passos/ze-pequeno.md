@@ -26,7 +26,7 @@ E tem um atalho legal: andar uma linha pra frente é o mesmo que somar `frente �
 
 ## O bloco do Zé
 
-Crie as variáveis `frente`, `linha de largada`, `zl`, `zc`, `z alvo` e `z quem` (as do Zé começam com **z** pra não misturar com as do `andar`). Depois crie o bloco **`movimentos do zé (casa)`**.
+No **Cérebro**, crie as variáveis `frente`, `linha de largada`, `zl`, `zc`, `z alvo` e `z quem` (as do Zé começam com **z** pra não misturar com as do `andar`). Depois crie o bloco **`movimentos do zé (casa)`** (entrada `casa`, sem atualização de tela).
 
 :::robo Em português de robô
 1. Descobrir `frente` e `linha de largada` pelo `meu time`.
@@ -74,12 +74,37 @@ controle: se <operadores: {zc} < (8)> então
 Um Zé na coluna 1 não tem diagonal da esquerda. Sem essa checagem, a conta "casa da frente − 1" ia dar numa casa **do outro lado do tabuleiro**, na linha de cima! O Zé ia capturar alguém lá longe. Um Zé teletransportador. 🌀
 :::
 
-E no `calcular destinos de (casa)`:
+E no fim do `calcular destinos de (casa)`:
 
 ```blocos
 controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
   meusblocos: movimentos do zé {meusblocos: casa}
 ```
+
+<details>
+<summary><b>📋 Como o bloco <code>calcular destinos</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina calcular destinos de {meusblocos: casa}
+listas: apague todos os itens de [destinos ▾]
+variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro ▾]}
+variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
+  meusblocos: movimentos da sombra {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+  meusblocos: movimentos da sombra {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
+  meusblocos: movimentos da almofada {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
+  meusblocos: movimentos da mola {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
+  meusblocos: movimentos do zé {meusblocos: casa}
+```
+
+</details>
 
 ## Teste!
 

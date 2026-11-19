@@ -51,6 +51,12 @@ Andando numa direção, um Esquisito para quando:
 
 Todas as casas pra onde o Esquisito escolhido pode ir vão ser guardadas numa lista nova. No **Cérebro**, crie a lista `destinos` (para todos os atores).
 
+Ainda no Cérebro, no script da bandeira, logo depois de [[variaveis: mude [origem ▾] para (0)]], adicione:
+
+[[listas: apague todos os itens de [destinos ▾]]]
+
+Assim cada partida começa sem bolinha nenhuma.
+
 ## Bolinhas no tabuleiro
 
 Pra você ver os destinos, a Casa vai mostrar uma **bolinha**. Dê ao ator **Casa** mais duas fantasias:
@@ -90,6 +96,8 @@ Uma casa clara com bolinha precisa da fantasia `clara-ponto`. Uma escura, de `es
 ## Teste sem regras
 
 Mostre a lista `destinos` no palco, rode o jogo e **digite uns números** na lista (clique no **+** da caixinha): 20, 28, 36. Bolinhas apareceram nessas casas? Então o tabuleiro já sabe mostrar destinos. Agora falta calcular eles de verdade.
+
+Terminou o teste? Clique na bandeira de novo: o script da bandeira apaga a lista e as bolinhas somem.
 
 :::missao Checklist
 - [ ] Entendi que todos os Esquisitos (menos o Zé) andam em linha reta

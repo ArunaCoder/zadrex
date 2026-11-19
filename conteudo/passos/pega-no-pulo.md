@@ -18,13 +18,13 @@ Pois o Zadrex diz: **não vale fugir assim!** Na jogada **logo em seguida**, o s
 
 ## 1. Lembrar do pulo
 
-Crie a variável `casa do pulo`. Ela guarda a casa que foi **pulada** na última jogada (ou `0` se ninguém pulou). Ponha [[variaveis: mude [casa do pulo ▾] para (0)]] no `arrumar os esquisitos`.
+No **Cérebro**, crie a variável `casa do pulo`. Ela guarda a casa que foi **pulada** na última jogada (ou `0` se ninguém pulou). Ponha [[variaveis: mude [casa do pulo ▾] para (0)]] no começo do `arrumar os esquisitos`, junto dos outros "apague".
 
 Se um Zé foi da casa 13 pra casa 29, a casa pulada é a do meio: (13 + 29) ÷ 2 = **21**.
 
 ## 2. O mover faz o Pega no Pulo
 
-No bloco `mover`, depois das substituições e de mudar a `peça movida`, adicione (a ordem dos dois "se" importa!):
+No bloco `mover`, encaixe isto **logo depois** de [[variaveis: mude [peça movida ▾] para ( )]], antes do Estirão do Zé (a ordem das partes A e B importa!):
 
 ```blocos
 // A) foi um Pega no Pulo? Então remove o Zé que pulou
@@ -49,6 +49,53 @@ Se o **seu** Zé (que anda pra cima) capturou de passagem, o Zé inimigo ficou *
 Se você zerar a `casa do pulo` antes de checar o Pega no Pulo, o jogo esquece o pulo antes de usar. O Zé inimigo escapa e ainda ri da sua cara. 😜
 :::
 
+<details>
+<summary><b>📋 Como o bloco <code>mover</code> fica no final (versão completa)</b></summary>
+
+```blocos
+meusblocos: defina mover de {meusblocos: saída} para {meusblocos: chegada}
+variaveis: mude [capturado ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
+listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {listas: item {meusblocos: saída} de [tabuleiro ▾]}
+listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
+variaveis: mude [peça movida ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
+// A) Pega no Pulo
+controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}} = [Z]> e <operadores: {meusblocos: chegada} = {casa do pulo}>> então
+  controle: se <operadores: {operadores: letra (1) de {peça movida}} = [J]> então
+    variaveis: mude [capturado ▾] para {listas: item {operadores: {meusblocos: chegada} + (8)} de [tabuleiro ▾]}
+    listas: substitua o item {operadores: {meusblocos: chegada} + (8)} de [tabuleiro ▾] por [livre]
+  senão
+    variaveis: mude [capturado ▾] para {listas: item {operadores: {meusblocos: chegada} - (8)} de [tabuleiro ▾]}
+    listas: substitua o item {operadores: {meusblocos: chegada} - (8)} de [tabuleiro ▾] por [livre]
+// B) guarda o pulo desta jogada
+variaveis: mude [casa do pulo ▾] para (0)
+controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}} = [Z]> e <operadores: {operadores: [módulo ▾] de {operadores: {meusblocos: chegada} - {meusblocos: saída}}} = (16)>> então
+  variaveis: mude [casa do pulo ▾] para {operadores: {operadores: {meusblocos: saída} + {meusblocos: chegada}} / (2)}
+// Estirão do Zé
+controle: se <operadores: {operadores: letra (2) de {peça movida}} = [Z]> então
+  controle: se <operadores: <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [J]> e <operadores: {meusblocos: chegada} < (9)>> ou <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [C]> e <operadores: {meusblocos: chegada} > (56)>>> então
+    listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {operadores: junte {operadores: letra (1) de {peça movida}} com [B]}
+    eventos: transmita [zé cresceu ▾]
+// Troca-Troca: a Geladeira pula junto
+controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}} = [A]> e <operadores: {operadores: [módulo ▾] de {operadores: {meusblocos: chegada} - {meusblocos: saída}}} = (2)>> então
+  controle: se <operadores: {meusblocos: chegada} > {meusblocos: saída}> então
+    listas: substitua o item {operadores: {meusblocos: saída} + (1)} de [tabuleiro ▾] por {listas: item {operadores: {meusblocos: saída} + (3)} de [tabuleiro ▾]}
+    listas: substitua o item {operadores: {meusblocos: saída} + (3)} de [tabuleiro ▾] por [livre]
+  senão
+    listas: substitua o item {operadores: {meusblocos: saída} - (1)} de [tabuleiro ▾] por {listas: item {operadores: {meusblocos: saída} - (4)} de [tabuleiro ▾]}
+    listas: substitua o item {operadores: {meusblocos: saída} - (4)} de [tabuleiro ▾] por [livre]
+  eventos: transmita [troca-troca ▾]
+// quem já se mexeu
+listas: adicione {meusblocos: saída} a [casas que mexeram ▾]
+listas: adicione {meusblocos: chegada} a [casas que mexeram ▾]
+// sons
+controle: se <operadores: {capturado} = [livre]> então
+  som: toque o som [passo ▾]
+senão
+  som: toque o som {operadores: junte [captura ] com {operadores: letra (2) de {capturado}}}
+```
+
+</details>
+
 ## 3. O Zé enxerga a chance
 
 No bloco `movimentos do zé`, nas **duas** checagens de captura na diagonal, a condição fica um pouco maior: vale capturar se tem inimigo **ou** se a casa é a `casa do pulo`.
@@ -58,13 +105,58 @@ controle: se <operadores: <operadores: <operadores: não <operadores: {z quem} =
   listas: adicione {z alvo} a [destinos ▾]
 ```
 
+<details>
+<summary><b>📋 Como o bloco <code>movimentos do zé</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina movimentos do zé {meusblocos: casa}
+controle: se <operadores: {meu time} = [J]> então
+  variaveis: mude [frente ▾] para (-1)
+  variaveis: mude [linha de largada ▾] para (7)
+senão
+  variaveis: mude [frente ▾] para (1)
+  variaveis: mude [linha de largada ▾] para (2)
+variaveis: mude [zl ▾] para {operadores: {operadores: [arredondamento para baixo de ▾] de {operadores: {operadores: {meusblocos: casa} - (1)} / (8)}} + (1)}
+variaveis: mude [zc ▾] para {operadores: {operadores: resto de {operadores: {meusblocos: casa} - (1)} por (8)} + (1)}
+controle: se <operadores: <operadores: {operadores: {zl} + {frente}} < (1)> ou <operadores: {operadores: {zl} + {frente}} > (8)>> então
+  controle: pare [este script ▾]
+// 1) andar pra frente
+variaveis: mude [z alvo ▾] para {operadores: {meusblocos: casa} + {operadores: {frente} * (8)}}
+controle: se <operadores: {listas: item {z alvo} de [tabuleiro ▾]} = [livre]> então
+  listas: adicione {z alvo} a [destinos ▾]
+  variaveis: mude [z alvo ▾] para {operadores: {meusblocos: casa} + {operadores: {frente} * (16)}}
+  controle: se <operadores: <operadores: {zl} = {linha de largada}> e <operadores: {listas: item {z alvo} de [tabuleiro ▾]} = [livre]>> então
+    listas: adicione {z alvo} a [destinos ▾]
+// 2) capturar na diagonal da esquerda
+controle: se <operadores: {zc} > (1)> então
+  variaveis: mude [z alvo ▾] para {operadores: {operadores: {meusblocos: casa} + {operadores: {frente} * (8)}} - (1)}
+  variaveis: mude [z quem ▾] para {listas: item {z alvo} de [tabuleiro ▾]}
+  controle: se <operadores: <operadores: <operadores: não <operadores: {z quem} = [livre]>> e <operadores: não <operadores: {operadores: letra (1) de {z quem}} = {meu time}>>> ou <operadores: {z alvo} = {casa do pulo}>> então
+    listas: adicione {z alvo} a [destinos ▾]
+// 3) capturar na diagonal da direita
+controle: se <operadores: {zc} < (8)> então
+  variaveis: mude [z alvo ▾] para {operadores: {operadores: {meusblocos: casa} + {operadores: {frente} * (8)}} + (1)}
+  variaveis: mude [z quem ▾] para {listas: item {z alvo} de [tabuleiro ▾]}
+  controle: se <operadores: <operadores: <operadores: não <operadores: {z quem} = [livre]>> e <operadores: não <operadores: {operadores: letra (1) de {z quem}} = {meu time}>>> ou <operadores: {z alvo} = {casa do pulo}>> então
+    listas: adicione {z alvo} a [destinos ▾]
+```
+
+</details>
+
 ## Teste!
 
-Mudando a lista na mão: coloque seu Zé na casa 28 e deixe o Zé do computador na casa 13, com a 21 e a 29 livres. Agora espere o sorteio fazer ele pular pra 29… o que pode demorar! Mais rápido: coloque o `CZ` direto na 29 e mude a `casa do pulo` pra 21 na mão (clicando duas vezes na variável no palco, ou com um bloco solto).
+Mudando a lista na mão: coloque seu Zé na casa 28 e deixe o Zé do computador na casa 13, com a 21 e a 29 livres. Agora espere o sorteio fazer ele pular pra 29… o que pode demorar!
+
+Mais rápido, na sua vez:
+
+1. Mude a lista na mão: `JZ` no item 28 e `CZ` no item 29.
+2. No Cérebro, arraste um bloco [[variaveis: mude [casa do pulo ▾] para (21)]] **solto** na área de código (sem encaixar em nada) e clique nele uma vez. Ele roda sozinho.
 
 - Clique no seu Zé: aparece bolinha na casa 21? ✅
 - Capture: o Zé da casa 29 some? ✅
 - Faça outra jogada em vez de capturar: na próxima vez a chance sumiu? ✅
+
+Testou tudo? **Apague o bloco solto** e esconda a caixinha do `tabuleiro`.
 
 ## 🏆 Você programou o Zadrex inteiro
 

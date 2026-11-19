@@ -27,7 +27,7 @@ Renomeie cada som **exatamente** com os nomes da tabela.
 
 Lembra que os clones vestem a fantasia com o **nome** que está na lista? Com sons dá pra fazer igual! Em vez de seis "se" (um pra cada Esquisito), a gente **monta** o nome do som juntando `captura ` com a letra 2 do capturado.
 
-No fim do bloco `mover` (antes da parte da Almofada), adicione:
+No bloco `mover` do Cérebro, encaixe isto **logo depois das duas substituições**, antes da parte da Almofada:
 
 ```blocos
 controle: se <operadores: {capturado} = [livre]> então
@@ -35,6 +35,30 @@ controle: se <operadores: {capturado} = [livre]> então
 senão
   som: toque o som {operadores: junte [captura ] com {operadores: letra (2) de {capturado}}}
 ```
+
+<details>
+<summary><b>📋 Como o bloco <code>mover</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina mover de {meusblocos: saída} para {meusblocos: chegada}
+variaveis: mude [capturado ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
+listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {listas: item {meusblocos: saída} de [tabuleiro ▾]}
+listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
+// sons
+controle: se <operadores: {capturado} = [livre]> então
+  som: toque o som [passo ▾]
+senão
+  som: toque o som {operadores: junte [captura ] com {operadores: letra (2) de {capturado}}}
+// a Almofada foi capturada? (regra provisória)
+controle: se <operadores: {operadores: letra (2) de {capturado}} = [A]> então
+  variaveis: mude [vez ▾] para [fim]
+  controle: se <operadores: {operadores: letra (1) de {capturado}} = [C]> então
+    eventos: transmita [jogador venceu ▾]
+  senão
+    eventos: transmita [computador venceu ▾]
+```
+
+</details>
 
 :::atencao O espaço escondido
 Repare que é `captura ` **com um espaço** no final, antes de juntar a letra. Sem o espaço, o nome vira `capturaG` e o Scratch não acha o som.

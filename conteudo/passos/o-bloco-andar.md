@@ -101,7 +101,7 @@ Agora brinque de trocar os números do teste:
 - `até (1)` em vez de 7 → só uma casa em cada teste.
 - Troque `meu time` para `C` → agora os inimigos são os seus Zés!
 
-Deu tudo certo? **Parabéns**: o bloco mais difícil do capítulo está pronto. Pode apagar o script de teste. 🎉
+Deu tudo certo? **Parabéns**: o bloco mais difícil do capítulo está pronto. 🎉 Agora **apague o script da tecla t**, senão apertar t no meio de uma partida mostra bolinhas fantasmas.
 
 :::missao Checklist
 - [ ] Criei o bloco `andar de (casa) direção (dl) (dc) até (máx) passos`

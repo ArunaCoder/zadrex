@@ -23,7 +23,7 @@ O mais legal: isso **substitui** o guloso. Quando não tem captura, todas as jog
 
 ## 1. O bloco valor
 
-Crie a variável `valor` e o bloco **`valor de (código)`**, sem atualização de tela:
+No **Cérebro**, crie a variável `valor` e o bloco **`valor de (código)`**, sem atualização de tela:
 
 ```blocos
 meusblocos: defina valor de {meusblocos: código}
@@ -42,7 +42,7 @@ controle: se <operadores: {operadores: letra (2) de {meusblocos: código}} = [B]
 
 ## 2. Guardar só as melhores
 
-Crie as listas `melhores saídas` e `melhores chegadas`, a variável `melhor nota` e o bloco **`escolher melhores jogadas`**:
+Crie as listas `melhores saídas` e `melhores chegadas`, a variável `melhor nota` e o bloco **`escolher melhores jogadas`** (sem atualização de tela):
 
 :::robo Em português de robô
 1. Apagar as listas das melhores. A melhor nota começa em -1.
@@ -74,11 +74,51 @@ controle: repita {listas: tamanho de [todas as saídas ▾]} vezes
 Repare que não tem "senão" ali. Quando o valor é maior, a gente apaga as listas e **muda a melhor nota pra esse valor**. Aí o segundo "se" (valor = melhor nota) fica verdadeiro na hora, e a jogada entra na lista. Dois coelhos, uma cajadada.
 :::
 
-Na vez do computador, troque o `separar capturas` e o sorteio guloso por: [[meusblocos: escolher melhores jogadas]] e um sorteio dentro de `melhores saídas` / `melhores chegadas`.
+Na vez do computador, troque o `separar capturas` e o sorteio guloso por: [[meusblocos: escolher melhores jogadas]] e um sorteio dentro de `melhores saídas` / `melhores chegadas`. O script inteiro fica assim:
 
-## Teste!
+```blocos
+eventos: quando eu receber [vez do computador ▾]
+controle: espere (0.5) seg
+meusblocos: listar jogadas do time [C]
+meusblocos: escolher melhores jogadas
+variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [melhores saídas ▾]}}
+variaveis: mude [sorteio saída ▾] para {listas: item {sorteio} de [melhores saídas ▾]}
+variaveis: mude [sorteio chegada ▾] para {listas: item {sorteio} de [melhores chegadas ▾]}
+variaveis: mude [origem ▾] para {sorteio saída}
+listas: adicione {sorteio chegada} a [destinos ▾]
+controle: espere (0.7) seg
+meusblocos: deslizar de {sorteio saída} para {sorteio chegada}
+variaveis: mude [origem ▾] para (0)
+listas: apague todos os itens de [destinos ▾]
+meusblocos: verificar situação do time [J]
+controle: se <operadores: não <operadores: {vez} = [fim]>> então
+  variaveis: mude [vez ▾] para [jogador]
+  eventos: transmita [vez do jogador ▾]
+```
 
-Com o laboratório (lembra da tecla que monta tabuleiros?), deixe o computador com duas opções: capturar um Zé seu **ou** capturar o seu Super-Bobo. Ele escolhe o Super-Bobo sempre? ✅
+O `defina separar capturas` e as listas de capturas não são mais usados. Pode apagar.
+
+## Teste! Um laboratório novo 🧪
+
+Lembra do laboratório do passo da Almofada Amassada? Monte um novo no **Cérebro**, com a tecla **v** (de valor). Nele, o Super-Bobo do computador (casa 28) pode capturar um Zé seu (casa 36) **ou** o seu Super-Bobo (casa 31):
+
+```blocos
+eventos: quando a tecla [v ▾] for pressionada
+listas: apague todos os itens de [tabuleiro ▾]
+controle: repita (64) vezes
+  listas: adicione [livre] a [tabuleiro ▾]
+listas: substitua o item (5) de [tabuleiro ▾] por [CA]
+listas: substitua o item (28) de [tabuleiro ▾] por [CB]
+listas: substitua o item (31) de [tabuleiro ▾] por [JB]
+listas: substitua o item (36) de [tabuleiro ▾] por [JZ]
+listas: substitua o item (61) de [tabuleiro ▾] por [JA]
+```
+
+<z-diagrama pecas="5:CA 28:CB 31:JB 36:JZ 61:JA" destacar="28" marcar="31 36" legenda="Zé (vale 1) ou Super-Bobo (vale 9)? Fácil!"></z-diagrama>
+
+Comece uma partida, aperte **v** e faça uma jogada com a sua **Almofada** (deixe o Super-Bobo e o Zé onde estão). O computador captura o seu Super-Bobo? Repita umas vezes: ele escolhe o Super-Bobo **sempre**? ✅
+
+Funcionou? **Apague o script da tecla v.**
 
 ## Desafio chefão: o computador medroso 😨
 
