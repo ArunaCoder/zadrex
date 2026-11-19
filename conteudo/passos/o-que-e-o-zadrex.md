@@ -37,13 +37,6 @@ O progresso fica guardado **neste navegador**. Em outro computador, em outro nav
 
 Todo passo tem 🎯 **a missão**: o que a gente precisa fazer e por quê. É onde você está agora.
 
-Nos passos em que tem mão na massa no Scratch, embaixo da missão aparecem mais duas partes:
-
-- 📓 **Diário de bordo** — o que a gente realmente fez: os blocos, as descobertas e as trapalhadas. Começa vazio e vai enchendo conforme a gente avança.
-- 📸 **Olha só como ficou** — GIFs e prints da tela mostrando o resultado.
-
-Passos como este, que são só pra ler e entender, têm só a missão.
-
 :::dica Atalho secreto
 No computador, as setas **←** e **→** do teclado pulam para o passo anterior e para o próximo.
 :::

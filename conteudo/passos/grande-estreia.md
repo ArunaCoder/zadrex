@@ -24,7 +24,7 @@ O Zadrex inteiro cabe num arquivo só: o `Zadrex.sb3`. Quer jogar na casa da vó
 
 ## 5. O trailer em GIF 📸
 
-Grave um GIF curtinho mostrando o jogo: a tela inicial, umas jogadas e a placa de vitória. Tire também uns prints da tela das partes mais legais. Tudo isso vem pra cá, em **Olha só como ficou**. É o trailer oficial do Zadrex!
+Grave um GIF curtinho mostrando o jogo: a tela inicial, umas jogadas e a placa de vitória. Tire também uns prints da tela das partes mais legais. Guarde tudo numa pasta junto com o `Zadrex.sb3`. É o trailer oficial do Zadrex!
 
 ## 6. O Grande Torneio da Família 🏆
 

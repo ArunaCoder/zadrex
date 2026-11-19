@@ -31,7 +31,6 @@
       p.capitulo = cap;
       p.numero = ci + "." + (pi + 1);
       p.indice = passos.length;
-      p.midia = p.midia || [];
       passos.push(p);
     });
   });
@@ -256,7 +255,7 @@
       '<div class="heroi-texto">' +
       '<p class="heroi-sobre">Um jogo de tabuleiro inédito feito no Scratch</p>' +
       '<h1 class="heroi-titulo">Zadrex<span>Guerra dos Esquisitos</span></h1>' +
-      '<p class="heroi-lead">Aqui fica o mapa da nossa construção: cada passo tem a missão e, quando tem mão na massa, o diário do que a gente fez e GIFs ou prints da tela mostrando como ficou. No final, você vai jogar Zadrex contra o computador — com geladeiras voadoras.</p>' +
+      '<p class="heroi-lead">Aqui fica o mapa da nossa construção: cada passo tem a missão, explicada tim-tim por tim-tim, e um checklist pra marcar o que já foi feito. No final, você vai jogar Zadrex contra o computador — com geladeiras voadoras.</p>' +
       botao +
       "</div>" +
       '<div class="heroi-arte" aria-hidden="false">' + arte + "</div>" +
@@ -278,27 +277,6 @@
 
     document.title = "Zadrex: Guerra dos Esquisitos";
     marcarNaTrilha(null);
-  }
-
-  function htmlVazio(titulo, texto, extraClasse) {
-    return '<div class="vazio ' + (extraClasse || "") + '">' +
-      '<div class="vazio-arte" aria-hidden="true">' + Esquisitos.svg("A", { tamanho: 88 }) + '<span class="vazio-zzz">z<span>z</span><span>z</span></span></div>' +
-      '<div><p class="vazio-titulo">' + titulo + "</p><p>" + texto + "</p></div></div>";
-  }
-
-  function htmlMidia(passo) {
-    if (!passo.midia.length) {
-      return '<div class="midia-vazia">' +
-        '<div class="midia-icone" aria-hidden="true">📸</div>' +
-        '<p class="vazio-titulo">Ainda não chegamos aqui!</p>' +
-        "<p>Quando terminarmos este passo, vamos colocar aqui um GIF ou um print da tela mostrando como ficou.</p></div>";
-    }
-    return '<div class="midia-lista">' + passo.midia.map(function (item) {
-      var src = typeof item === "string" ? item : item.src;
-      var legenda = typeof item === "string" ? "" : (item.legenda || "");
-      return '<figure><img src="' + src + '" alt="' + (legenda || "Como ficou o passo " + passo.titulo) + '" loading="lazy">' +
-        (legenda ? "<figcaption>" + legenda + "</figcaption>" : "") + "</figure>";
-    }).join("") + "</div>";
   }
 
   function ativarCheckboxes(container, passo) {
@@ -362,17 +340,6 @@
       '<div class="md" id="md-missao"><p class="carregando">Abrindo o envelope da missão…</p></div>' +
       "</section>" +
 
-      (passo.leitura ? "" :
-        '<section class="secao secao-diario" aria-labelledby="h-diario">' +
-        '<h2 id="h-diario" class="secao-titulo"><span aria-hidden="true">📓</span> Diário de bordo <small>o que a gente fez</small></h2>' +
-        '<div class="md" id="md-diario"></div>' +
-        "</section>" +
-
-        '<section class="secao secao-midia" aria-labelledby="h-midia">' +
-        '<h2 id="h-midia" class="secao-titulo"><span aria-hidden="true">📸</span> Olha só como ficou</h2>' +
-        htmlMidia(passo) +
-        "</section>") +
-
       '<nav class="passo-nav" aria-label="Navegar entre passos">' +
       (anterior ? '<a class="botao botao-contorno" href="#/' + anterior.id + '" rel="prev"><small>← Passo ' + anterior.numero + "</small>" + anterior.titulo + "</a>" : '<a class="botao botao-contorno" href="#/"><small>←</small>Painel da missão</a>') +
       (proximo ? '<a class="botao botao-proximo" href="#/' + proximo.id + '" rel="next"><small>Passo ' + proximo.numero + " →</small>" + proximo.titulo + "</a>" : '<a class="botao botao-proximo" href="#/"><small>Fim da trilha →</small>Voltar ao painel</a>') +
@@ -392,25 +359,6 @@
       missaoEl.innerHTML = '<p class="erro">Ops! Não achei o texto desta missão (<code>conteudo/passos/' + passo.id + ".md</code>). " +
         (location.protocol === "file:" ? "Abrindo direto do computador o navegador bloqueia a leitura: use um servidorzinho local (veja o README)." : "") + "</p>";
     });
-
-    if (passo.leitura) return;
-
-    var diarioEl = document.getElementById("md-diario");
-    var vazioFalta = htmlVazio("Ainda não chegamos aqui!", "Quando a gente fizer este passo, aqui vão aparecer os blocos que montamos, as descobertas e as trapalhadas.");
-    if (passo.statusAutor === "falta") {
-      diarioEl.innerHTML = vazioFalta;
-    } else {
-      diarioEl.innerHTML = '<p class="carregando">Folheando o diário…</p>';
-      buscarTexto("conteudo/diario/" + passo.id + ".md").then(function (texto) {
-        if (rotaAtual !== passo.id) return;
-        diarioEl.innerHTML = md.parse(texto);
-      }).catch(function () {
-        if (rotaAtual !== passo.id) return;
-        diarioEl.innerHTML = passo.statusAutor === "fazendo"
-          ? htmlVazio("Estamos construindo isso agora!", "As mãos estão no teclado. Daqui a pouco tem novidade aqui. 🔨", "vazio-fazendo")
-          : htmlVazio("Feito, mas ninguém escreveu o diário…", "O passo está pronto! Só falta contar aqui como foi.", "vazio-fazendo");
-      });
-    }
   }
 
   function mostrarPerdido() {

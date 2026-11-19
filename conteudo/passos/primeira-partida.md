@@ -142,7 +142,7 @@ Agora é pra valer. Clique na bandeira e jogue uma partida inteira contra o comp
 
 ## Diga xis! 📸
 
-Esse é um grande momento: é o primeiro jogo **completo** do Zadrex. Grave um GIF da partida ou tire um print da tela na hora da vitória pra colocar aqui em **Olha só como ficou**.
+Esse é um grande momento: é o primeiro jogo **completo** do Zadrex. Grave um GIF da partida ou tire um print da tela na hora da vitória pra guardar de lembrança.
 
 :::adulto
 No Windows, **Win + Shift + S** tira um print de um pedaço da tela; no Mac, **Cmd + Shift + 4**. Para GIF, o ScreenToGif (Windows) é ótimo.
