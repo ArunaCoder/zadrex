@@ -31,6 +31,10 @@ Esta página é o **mapa da nossa construção**. Na esquerda fica a **trilha** 
 | <i class="st st-fazendo"></i> amarela piscando | Estamos fazendo agora |
 | <i class="st st-feito"></i> verde | Pronto! |
 
+A bolinha muda sozinha com o **checklist** que fica no fim de cada passo. Marcou alguma caixinha? Ela fica amarela. Marcou todas? Fica verde, e o contador do capítulo (aquele "0/3") anda.
+
+O progresso fica guardado **neste navegador**. Em outro computador, em outro navegador ou numa janela anônima, ele começa do zero.
+
 Todo passo tem 🎯 **a missão**: o que a gente precisa fazer e por quê. É onde você está agora.
 
 Nos passos em que tem mão na massa no Scratch, embaixo da missão aparecem mais duas partes:
@@ -52,7 +56,7 @@ No computador, as setas **←** e **→** do teclado pulam para o passo anterior
 - **Esqueceu um nome?** No fim da trilha tem a [Lista de variáveis, listas e mensagens](#/lista-de-nomes), uma cola com todos os nomes do jogo.
 
 :::missao Checklist
-- [ ] Li como a página funciona
+- [ ] Li como a página funciona (e vi a bolinha deste passo ficar amarela!)
 - [ ] Entendi que o computador vai jogar no sorteio
 - [ ] Estou pronto pra conhecer os Esquisitos
 :::

@@ -27,7 +27,7 @@
   DADOS.capitulos.forEach(function (cap, ci) {
     cap.numero = ci;
     cap.passos.forEach(function (p, pi) {
-      p.status = STATUS[p.status] ? p.status : "falta";
+      p.statusAutor = STATUS[p.status] ? p.status : "falta";
       p.capitulo = cap;
       p.numero = ci + "." + (pi + 1);
       p.indice = passos.length;
@@ -38,6 +38,34 @@
 
   var porId = {};
   passos.forEach(function (p) { porId[p.id] = p; });
+
+  /*
+   * Progresso de quem usa o site: vem das caixinhas do checklist,
+   * salvas no navegador. Todas marcadas → feito; algumas → fazendo.
+   * O "status" do trilha.js também vale: o que estiver mais adiantado ganha.
+   */
+  function chaveChecks(id) { return "zadrex:checks:" + id; }
+
+  function lerChecks(id) {
+    try {
+      var v = JSON.parse(localStorage.getItem(chaveChecks(id)) || "[]");
+      return Array.isArray(v) ? v : [];
+    } catch (e) { return []; }
+  }
+
+  function statusDosChecks(id) {
+    var v = lerChecks(id);
+    var marcadas = v.filter(Boolean).length;
+    if (v.length && marcadas === v.length) return "feito";
+    return marcadas ? "fazendo" : "falta";
+  }
+
+  var ORDEM = { falta: 0, fazendo: 1, feito: 2 };
+  function calcularStatus(p) {
+    var dosChecks = statusDosChecks(p.id);
+    p.status = ORDEM[dosChecks] > ORDEM[p.statusAutor] ? dosChecks : p.statusAutor;
+  }
+  passos.forEach(calcularStatus);
 
   function contar(lista) {
     var c = { feito: 0, fazendo: 0, falta: 0, total: lista.length };
@@ -158,8 +186,9 @@
     }).join("");
 
     listaEl.querySelectorAll(".cap-botao").forEach(function (b) {
+      var id = b.parentElement.getAttribute("data-cap");
+      if (abertos[id]) abrirCapitulo(id, true);
       b.addEventListener("click", function () {
-        var id = b.parentElement.getAttribute("data-cap");
         abrirCapitulo(id, !abertos[id]);
       });
     });
@@ -273,10 +302,16 @@
   }
 
   function ativarCheckboxes(container, passo) {
-    var chave = "zadrex:checks:" + passo.id;
-    var salvos = [];
-    try { salvos = JSON.parse(localStorage.getItem(chave) || "[]"); } catch (e) { salvos = []; }
+    var chave = chaveChecks(passo.id);
+    var salvos = lerChecks(passo.id);
     var caixas = container.querySelectorAll('input[type="checkbox"]');
+
+    function salvar() {
+      var estado = Array.prototype.map.call(caixas, function (c) { return c.checked; });
+      try { localStorage.setItem(chave, JSON.stringify(estado)); } catch (e) { /* sem memória, tudo bem */ }
+      atualizarProgresso(passo);
+    }
+
     caixas.forEach(function (cb, i) {
       cb.disabled = false;
       if (salvos[i]) cb.checked = true;
@@ -287,10 +322,26 @@
       }
       cb.addEventListener("change", function () {
         if (li) li.classList.toggle("tarefa-feita", cb.checked);
-        var estado = Array.prototype.map.call(caixas, function (c) { return c.checked; });
-        try { localStorage.setItem(chave, JSON.stringify(estado)); } catch (e) { /* sem memória, tudo bem */ }
+        salvar();
       });
     });
+    // Se o checklist ganhou ou perdeu itens desde a última visita, acerta o que ficou salvo.
+    if (caixas.length && salvos.length && salvos.length !== caixas.length) salvar();
+  }
+
+  /** Recalcula o status do passo e atualiza o selo, a trilha e o topo. */
+  function atualizarProgresso(passo) {
+    var antes = passo.status;
+    calcularStatus(passo);
+    if (passo.status === antes) return;
+    var st = STATUS[passo.status];
+    var selo = palco.querySelector(".passo-meta .selo");
+    if (selo && rotaAtual === passo.id) {
+      selo.className = "selo selo-" + passo.status;
+      selo.textContent = st.icone + " " + st.rotulo;
+    }
+    montarTrilha();
+    marcarNaTrilha(passo);
   }
 
   function mostrarPasso(passo) {
@@ -346,7 +397,7 @@
 
     var diarioEl = document.getElementById("md-diario");
     var vazioFalta = htmlVazio("Ainda não chegamos aqui!", "Quando a gente fizer este passo, aqui vão aparecer os blocos que montamos, as descobertas e as trapalhadas.");
-    if (passo.status === "falta") {
+    if (passo.statusAutor === "falta") {
       diarioEl.innerHTML = vazioFalta;
     } else {
       diarioEl.innerHTML = '<p class="carregando">Folheando o diário…</p>';
@@ -355,7 +406,7 @@
         diarioEl.innerHTML = md.parse(texto);
       }).catch(function () {
         if (rotaAtual !== passo.id) return;
-        diarioEl.innerHTML = passo.status === "fazendo"
+        diarioEl.innerHTML = passo.statusAutor === "fazendo"
           ? htmlVazio("Estamos construindo isso agora!", "As mãos estão no teclado. Daqui a pouco tem novidade aqui. 🔨", "vazio-fazendo")
           : htmlVazio("Feito, mas ninguém escreveu o diário…", "O passo está pronto! Só falta contar aqui como foi.", "vazio-fazendo");
       });
