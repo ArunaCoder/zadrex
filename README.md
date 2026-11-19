@@ -21,7 +21,8 @@ Tudo fica em [`conteudo/trilha.js`](conteudo/trilha.js). Para cada passo:
 { id: "fabrica-de-clones", titulo: "A fábrica de clones", nivel: 2, status: "feito", midia: ["midia/fabrica-de-clones.gif"] }
 ```
 
-- **`status`**: `"falta"`, `"fazendo"` ou `"feito"`. A barra de progresso, a árvore e o painel se atualizam sozinhos.
+- **Progresso de quem usa o site**: vem do checklist (`:::missao`) de cada passo, salvo no navegador (`localStorage`). Algumas caixinhas marcadas deixam o passo "fazendo"; todas marcadas, "feito". A barra de progresso, a árvore e o contador de cada capítulo se atualizam na hora. Fica só naquele navegador: em outro aparelho começa do zero.
+- **`status`**: `"falta"`, `"fazendo"` ou `"feito"`. É o progresso oficial da família: vale para todo mundo, ganha das caixinhas quando está mais adiantado e é o que libera o diário de bordo.
 - **Diário de bordo**: crie `conteudo/diario/<id>.md` (copie o [`_modelo.md`](conteudo/diario/_modelo.md)). Ele só é carregado quando o status é `"fazendo"` ou `"feito"`; antes disso aparece "Ainda não chegamos aqui!".
 - **Mídia** ("Olha só como ficou"): coloque o arquivo em `midia/` e liste em `midia`. Aceita GIFs e imagens, como prints da tela (`.gif`, `.png`, `.jpg`, `.webp`):
   - sem legenda: `"midia/fabrica-de-clones.gif"`

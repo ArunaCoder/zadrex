@@ -3,7 +3,13 @@
  *  TRILHA DO ZADREX — o mapa de todos os passos
  * ============================================================
  *
- *  Para marcar o progresso, mude o "status" de cada passo:
+ *  O progresso de quem usa o site vem do checklist de cada passo,
+ *  salvo no navegador: algumas caixinhas marcadas → "fazendo",
+ *  todas marcadas → "feito". Não precisa mexer em nada aqui pra isso.
+ *
+ *  O "status" abaixo é o progresso oficial da família. Ele vale pra
+ *  todo mundo que abrir o site (e ganha das caixinhas se estiver mais
+ *  adiantado), e é ele que libera o "Diário de bordo":
  *
  *    "falta"   → ainda não começamos   (💤)
  *    "fazendo" → estamos nele agora    (🔨)

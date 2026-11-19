@@ -110,3 +110,8 @@ Clique com o botão direito no bloco `defina` e escolha **Editar**. A caixinha "
 | Sons do Cérebro | `passo`, `captura Z`, `captura G`, `captura M`, `captura S`, `captura B`, `captura A` |
 | Sons do Narrador | `vitória`, `derrota` |
 | Atores | Casa, Peça, Cérebro, Narrador, Voador, Botão Jogar, Placa |
+
+:::missao Checklist
+- [ ] Sei que esta página existe e onde ela fica
+- [ ] Sei achar o nome exato de uma variável, lista ou mensagem aqui
+:::
