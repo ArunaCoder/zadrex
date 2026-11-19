@@ -18,11 +18,15 @@ Faz sentido: se a Almofada "enxerga" uma Geladeira pela linha reta, a Geladeira 
 
 ## 1. O bloco espiar
 
-Ele é quase igual ao bloco `andar`. Clique com o botão direito no `defina andar…`, escolha **Duplicar** e transforme num bloco novo:
+Tudo deste passo é no **Cérebro**. O primeiro bloco é quase igual ao `andar`. Crie em **Meus Blocos** o bloco novo:
 
 **`espiar de (casa) direção (dl) (dc) até (máx) procurando (tipo 1) (tipo 2)`** — sem atualização de tela.
 
 Crie as variáveis `perigo`, `time amigo`, `el`, `ec`, `epassos`, `ealvo` e `equem` (as do espiar começam com **e**, pra não misturar com as do `andar`).
+
+:::dica Copiando do andar
+No `defina andar…`, clique com o botão direito no **primeiro** bloco embaixo do chapéu e escolha **Duplicar**. Encaixe a cópia embaixo do `defina espiar…`. Depois troque `l` por `el`, `c` por `ec`, `passos` por `epassos`, `alvo` por `ealvo` e `quem está lá` por `equem`. E troque o final, que é diferente. Confira tudo com os blocos abaixo.
+:::
 
 ```blocos
 meusblocos: defina espiar de {meusblocos: casa} direção {meusblocos: dl} {meusblocos: dc} até {meusblocos: máx} procurando {meusblocos: tipo 1} {meusblocos: tipo 2}
@@ -63,8 +67,24 @@ meusblocos: espiar de {meusblocos: casa} direção (-1) (-1) até (7) procurando
 meusblocos: espiar de {meusblocos: casa} direção (-1) (1) até (7) procurando [S] [B]
 meusblocos: espiar de {meusblocos: casa} direção (1) (-1) até (7) procurando [S] [B]
 meusblocos: espiar de {meusblocos: casa} direção (1) (1) até (7) procurando [S] [B]
-// pulos em L: Mola (os mesmos 8 pulos do bloco da Mola, até 1, procurando [M] [M])
-// vizinhas: Almofada (as mesmas 8 direções da Almofada, até 1, procurando [A] [A])
+// pulos em L: Mola
+meusblocos: espiar de {meusblocos: casa} direção (-2) (-1) até (1) procurando [M] [M]
+meusblocos: espiar de {meusblocos: casa} direção (-2) (1) até (1) procurando [M] [M]
+meusblocos: espiar de {meusblocos: casa} direção (-1) (-2) até (1) procurando [M] [M]
+meusblocos: espiar de {meusblocos: casa} direção (-1) (2) até (1) procurando [M] [M]
+meusblocos: espiar de {meusblocos: casa} direção (1) (-2) até (1) procurando [M] [M]
+meusblocos: espiar de {meusblocos: casa} direção (1) (2) até (1) procurando [M] [M]
+meusblocos: espiar de {meusblocos: casa} direção (2) (-1) até (1) procurando [M] [M]
+meusblocos: espiar de {meusblocos: casa} direção (2) (1) até (1) procurando [M] [M]
+// casas vizinhas: Almofada
+meusblocos: espiar de {meusblocos: casa} direção (-1) (0) até (1) procurando [A] [A]
+meusblocos: espiar de {meusblocos: casa} direção (1) (0) até (1) procurando [A] [A]
+meusblocos: espiar de {meusblocos: casa} direção (0) (-1) até (1) procurando [A] [A]
+meusblocos: espiar de {meusblocos: casa} direção (0) (1) até (1) procurando [A] [A]
+meusblocos: espiar de {meusblocos: casa} direção (-1) (-1) até (1) procurando [A] [A]
+meusblocos: espiar de {meusblocos: casa} direção (-1) (1) até (1) procurando [A] [A]
+meusblocos: espiar de {meusblocos: casa} direção (1) (-1) até (1) procurando [A] [A]
+meusblocos: espiar de {meusblocos: casa} direção (1) (1) até (1) procurando [A] [A]
 // Zés inimigos: eles atacam na diagonal da frente DELES
 controle: se <operadores: {meusblocos: time} = [J]> então
   variaveis: mude [frente do inimigo ▾] para (-1)
@@ -74,8 +94,8 @@ meusblocos: espiar de {meusblocos: casa} direção {frente do inimigo} (-1) até
 meusblocos: espiar de {meusblocos: casa} direção {frente do inimigo} (1) até (1) procurando [Z] [Z]
 ```
 
-:::dica Os comentários amarelos
-Onde está escrito "pulos em L" e "vizinhas", monte os 16 blocos `espiar` seguindo as tabelas dos passos da Mola e da Almofada. São 26 blocos `espiar` no total. Use bastante o **Duplicar**!
+:::dica São 26 blocos espiar!
+Monte um, clique com o botão direito nele e use **Duplicar**. Depois é só trocar os números e as letras. Os pulos da Mola e as vizinhas da Almofada são as mesmas tabelas dos passos da Mola e da Almofada.
 :::
 
 :::curiosidade Por que o Zé é "ao contrário"?
@@ -84,7 +104,7 @@ Um Zé do **Computador** anda pra baixo, então ele ataca as diagonais **de baix
 
 ## 3. Anunciar o Suando Frio
 
-Crie a variável `casa da almofada` e o bloco **`anunciar perigo no time (time)`**. O truque é o bloco [[listas: item # de [CA] em [tabuleiro ▾]]], que diz **em qual casa** está um item da lista:
+Crie a variável `casa da almofada` e o bloco **`anunciar perigo no time (time)`** (sem atualização de tela). O truque é o bloco [[listas: item # de [CA] em [tabuleiro ▾]]], que diz **em qual casa** está um item da lista:
 
 ```blocos
 meusblocos: defina anunciar perigo no time {meusblocos: time}
@@ -94,18 +114,75 @@ controle: se <operadores: {perigo} = [sim]> então
   eventos: transmita [suando frio ▾]
 ```
 
-Chame [[meusblocos: anunciar perigo no time [C]]] depois da **sua** jogada (antes de passar a vez) e [[meusblocos: anunciar perigo no time [J]]] depois da jogada do **computador**.
+Agora é chamar o anúncio depois de cada jogada. Ele entra **dentro** do "se o jogo não acabou", logo antes de passar a vez:
 
-E o Narrador:
+- no clique: [[meusblocos: anunciar perigo no time [C]]] (você acabou de jogar, a Almofada em perigo pode ser a do computador);
+- na vez do computador: [[meusblocos: anunciar perigo no time [J]]].
+
+<details>
+<summary><b>📋 Como o script do clique fica agora</b></summary>
+
+```blocos
+eventos: quando eu receber [clique ▾]
+controle: se <operadores: {vez} = [jogador]> então
+  controle: se <operadores: {operadores: letra (1) de {listas: item {casa clicada} de [tabuleiro ▾]}} = [J]> então
+    variaveis: mude [origem ▾] para {casa clicada}
+    meusblocos: calcular destinos de {origem}
+  senão
+    controle: se <operadores: <operadores: {origem} > (0)> e <listas: [destinos ▾] contém {casa clicada}?>> então
+      variaveis: mude [vez ▾] para [computador]
+      meusblocos: deslizar de {origem} para {casa clicada}
+      variaveis: mude [origem ▾] para (0)
+      listas: apague todos os itens de [destinos ▾]
+      controle: se <operadores: não <operadores: {vez} = [fim]>> então
+        meusblocos: anunciar perigo no time [C]
+        eventos: transmita [vez do computador ▾]
+    senão
+      variaveis: mude [origem ▾] para (0)
+      listas: apague todos os itens de [destinos ▾]
+```
+
+</details>
+
+<details>
+<summary><b>📋 Como o script da vez do computador fica agora</b></summary>
+
+```blocos
+eventos: quando eu receber [vez do computador ▾]
+controle: espere (0.5) seg
+meusblocos: listar jogadas do time [C]
+controle: se <operadores: {listas: tamanho de [todas as saídas ▾]} = (0)> então
+  variaveis: mude [vez ▾] para [fim]
+  eventos: transmita [computador sem jogadas ▾]
+  controle: pare [este script ▾]
+variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [todas as saídas ▾]}}
+variaveis: mude [origem ▾] para {listas: item {sorteio} de [todas as saídas ▾]}
+listas: adicione {listas: item {sorteio} de [todas as chegadas ▾]} a [destinos ▾]
+controle: espere (0.7) seg
+meusblocos: deslizar de {origem} para {listas: item {sorteio} de [todas as chegadas ▾]}
+variaveis: mude [origem ▾] para (0)
+listas: apague todos os itens de [destinos ▾]
+controle: se <operadores: não <operadores: {vez} = [fim]>> então
+  meusblocos: anunciar perigo no time [J]
+  variaveis: mude [vez ▾] para [jogador]
+  eventos: transmita [vez do jogador ▾]
+```
+
+</details>
+
+E no **Narrador** (com a mesma esperinha do Estirão, pra fala não ser tampada pelo "Sua vez!"):
 
 ```blocos
 eventos: quando eu receber [suando frio ▾]
+controle: espere (0.1) seg
 aparencia: diga [SUANDO FRIO! A Almofada tá em perigo!] por (2) segundos
 ```
 
 ## Teste!
 
 Monte situações mudando a lista na mão (é bem mais rápido). Por exemplo: deixe a coluna 5 livre entre a Almofada do computador (casa 5) e uma Geladeira sua, e faça uma jogada qualquer. O Narrador grita "Suando Frio"? Teste com uma Sombra, uma Mola, um Zé e o Super-Bobo também.
+
+Terminou? Clique na bandeira pra arrumar o tabuleiro e esconda a caixinha do `tabuleiro`.
 
 :::missao Checklist
 - [ ] Criei o bloco `espiar` (duplicando o `andar`)

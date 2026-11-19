@@ -49,6 +49,7 @@ No computador, as setas **←** e **→** do teclado pulam para o passo anterior
 - **Errar faz parte.** Programador profissional erra o dia inteiro. A diferença é que ele fica curioso pra descobrir *por que* deu errado.
 - **Salve sempre.** O Scratch que a gente usa mora no computador e **não salva sozinho**. Terminou uma parte que deu trabalho? Clique em *Arquivo → Baixar para o seu computador*.
 - **Um passo de cada vez.** Não precisa entender o jogo inteiro agora. Cada passo é pequeno e, quando você perceber, o jogo estará pronto.
+- **Esqueceu um nome?** No fim da trilha tem a [Lista de variáveis, listas e mensagens](#/lista-de-nomes), uma cola com todos os nomes do jogo.
 
 :::missao Checklist
 - [ ] Li como a página funciona

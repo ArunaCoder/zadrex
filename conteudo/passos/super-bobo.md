@@ -10,7 +10,7 @@ Não. É o passo mais **fácil** do capítulo. 😎
 
 Pense bem: o Super-Bobo anda como a Geladeira (reto) **mais** como a Sombra (diagonal). E a gente já tem os dois blocos prontos!
 
-Então, no `calcular destinos de (casa)`, é só adicionar:
+Então, no `calcular destinos de (casa)` do **Cérebro**, é só adicionar mais um "se" no fim:
 
 ```blocos
 controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
@@ -19,6 +19,25 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
 ```
 
 Pronto. Acabou. Pode ir tomar água. 🥤
+
+<details>
+<summary><b>📋 Como o bloco <code>calcular destinos</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina calcular destinos de {meusblocos: casa}
+listas: apague todos os itens de [destinos ▾]
+variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro ▾]}
+variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
+  meusblocos: movimentos da sombra {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+  meusblocos: movimentos da sombra {meusblocos: casa}
+```
+
+</details>
 
 :::curiosidade A regra de ouro dos programadores
 Programadores têm um ditado: **"Não se repita"**. Quando você já resolveu um problema uma vez, não resolva de novo — **reutilize**. Foi exatamente o que você fez aqui: em vez de escrever 8 blocos `andar`, usou dois blocos que já existiam.

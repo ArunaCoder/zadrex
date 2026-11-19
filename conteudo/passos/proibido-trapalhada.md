@@ -25,7 +25,7 @@ Isso tudo acontece dentro de um bloco que roda **sem atualizar a tela**, então 
 
 ## 1. O bloco filtrar
 
-Crie a lista `destinos seguros`, as variáveis `f`, `f chegada` e `f guardado`, e o bloco **`filtrar destinos de (casa)`** — sem atualização de tela:
+No **Cérebro**, crie a lista `destinos seguros`, as variáveis `f`, `f chegada` e `f guardado`, e o bloco **`filtrar destinos de (casa)`** — sem atualização de tela:
 
 ```blocos
 meusblocos: defina filtrar destinos de {meusblocos: casa}
@@ -68,6 +68,32 @@ No **fim** do bloco `calcular destinos de (casa)`, depois de todos os "se", adic
 
 [[meusblocos: filtrar destinos de {meusblocos: casa}]]
 
+<details>
+<summary><b>📋 Como o bloco <code>calcular destinos</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina calcular destinos de {meusblocos: casa}
+listas: apague todos os itens de [destinos ▾]
+variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro ▾]}
+variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
+  meusblocos: movimentos da sombra {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+  meusblocos: movimentos da sombra {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
+  meusblocos: movimentos da almofada {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
+  meusblocos: movimentos da mola {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
+  meusblocos: movimentos do zé {meusblocos: casa}
+meusblocos: filtrar destinos de {meusblocos: casa} // fora de todos os "se"
+```
+
+</details>
+
 Pronto! Como tanto o seu clique quanto a lista de jogadas do computador usam o `calcular destinos`, **os dois times** passam a obedecer a regra de uma vez só.
 
 ## Teste!
@@ -77,8 +103,14 @@ Pronto! Como tanto o seu clique quanto a lista de jogadas do computador usam o `
 - Monte uma Mola-chiclete: ela fica sem bolinha nenhuma? ✅
 - Jogue uma partida normal: o computador nunca mais faz trapalhada? ✅
 
+Depois dos testes com a lista na mão, clique na bandeira pra arrumar o tabuleiro e esconda a caixinha do `tabuleiro`.
+
 :::atencao O jogo ficou lento?
-Agora o computador faz **muitas** jogadas de mentirinha antes de sortear. Se ficar lento, confira se **todos** os blocos inventados estão com "executar sem atualização de tela". E dá pra ligar o **Modo Turbo** no menu Editar.
+Agora o computador faz **muitas** jogadas de mentirinha antes de sortear. Se ficar lento, confira os blocos inventados do **Cérebro** que fazem contas (`andar`, `espiar`, `verificar perigo`, `filtrar destinos`, `calcular destinos`, `listar jogadas`…): eles precisam estar com "executar sem atualização de tela". Pra conferir, clique com o botão direito no `defina` e escolha **Editar**.
+
+**Menos dois!** O `deslizar` (no Cérebro) e o `aparecer` (na Placa) **não** podem ter essa opção. Eles são animações: com ela, o Esquisito pularia direto pro fim do voo e a placa apareceria de uma vez. (O `calcular posição da casa`, do Voador, pode ter: ele só faz contas.)
+
+E dá pra ligar o **Modo Turbo** no menu Editar.
 :::
 
 :::missao Checklist

@@ -42,7 +42,7 @@ Pra passar por todas as casas, a gente usa um [[controle: repita (8) vezes]] (as
    - Linha aumenta 1.
 :::
 
-Aqui vai uma ajuda de como fica em blocos. Tente montar olhando pra ela — e tente entender cada pedaço, principalmente as fórmulas do passo anterior aparecendo ali dentro:
+Aqui vai uma ajuda de como fica em blocos, no ator **Casa**. Tente montar olhando pra ela — e tente entender cada pedaço, principalmente as fórmulas do passo anterior aparecendo ali dentro:
 
 ```blocos
 eventos: quando ⚑ for clicado

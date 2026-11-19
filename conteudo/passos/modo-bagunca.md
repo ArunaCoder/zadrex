@@ -68,6 +68,6 @@ O computador ainda não joga, e os Esquisitos ainda não têm regras. Mas o jogo
 - [ ] Criei a variável `capturado`
 - [ ] Consigo mover um Esquisito para uma casa vazia
 - [ ] Consigo capturar um Esquisito do computador
-- [ ] Bagunçei bastante o tabuleiro 😄
+- [ ] Baguncei bastante o tabuleiro 😄
 - [ ] Salvei (e guardei uma cópia de segurança!)
 :::

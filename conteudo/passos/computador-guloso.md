@@ -23,7 +23,7 @@ Pra cada jogada da lista, a gente olha a chegada. As capturas vão pra duas list
 
 ## 1. Separe as capturas
 
-Crie as listas `capturas saídas` e `capturas chegadas`, as variáveis `j`, `sorteio saída` e `sorteio chegada`, e o bloco **`separar capturas`** (sem atualização de tela):
+No **Cérebro**, crie as listas `capturas saídas` e `capturas chegadas`, as variáveis `j`, `sorteio saída` e `sorteio chegada`, e o bloco **`separar capturas`** (sem atualização de tela):
 
 ```blocos
 meusblocos: defina separar capturas
@@ -39,7 +39,7 @@ controle: repita {listas: tamanho de [todas as saídas ▾]} vezes
 
 ## 2. O sorteio guloso
 
-Na vez do computador, troque a parte do sorteio. Em vez de sortear direto, primeiro separe as capturas e escolha **de qual lista** sortear. As variáveis `sorteio saída` e `sorteio chegada` guardam a jogada escolhida, venha de onde vier:
+Na vez do computador (no Cérebro), troque a parte do sorteio. Em vez de sortear direto, primeiro separe as capturas e escolha **de qual lista** sortear. As variáveis `sorteio saída` e `sorteio chegada` guardam a jogada escolhida, venha de onde vier:
 
 ```blocos
 meusblocos: separar capturas
@@ -53,7 +53,32 @@ senão
   variaveis: mude [sorteio chegada ▾] para {listas: item {sorteio} de [todas as chegadas ▾]}
 ```
 
-Depois, no resto do script, use `sorteio saída` e `sorteio chegada` no lugar dos antigos "item sorteio de…" (pra mostrar a bolinha e pra deslizar).
+Depois, no resto do script, use `sorteio saída` e `sorteio chegada` no lugar dos antigos "item sorteio de…" (pra mostrar a casa amarela, a bolinha e pra deslizar). O script inteiro fica assim:
+
+```blocos
+eventos: quando eu receber [vez do computador ▾]
+controle: espere (0.5) seg
+meusblocos: listar jogadas do time [C]
+meusblocos: separar capturas
+controle: se <operadores: {listas: tamanho de [capturas saídas ▾]} > (0)> então
+  variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [capturas saídas ▾]}}
+  variaveis: mude [sorteio saída ▾] para {listas: item {sorteio} de [capturas saídas ▾]}
+  variaveis: mude [sorteio chegada ▾] para {listas: item {sorteio} de [capturas chegadas ▾]}
+senão
+  variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [todas as saídas ▾]}}
+  variaveis: mude [sorteio saída ▾] para {listas: item {sorteio} de [todas as saídas ▾]}
+  variaveis: mude [sorteio chegada ▾] para {listas: item {sorteio} de [todas as chegadas ▾]}
+variaveis: mude [origem ▾] para {sorteio saída}
+listas: adicione {sorteio chegada} a [destinos ▾]
+controle: espere (0.7) seg
+meusblocos: deslizar de {sorteio saída} para {sorteio chegada}
+variaveis: mude [origem ▾] para (0)
+listas: apague todos os itens de [destinos ▾]
+meusblocos: verificar situação do time [J]
+controle: se <operadores: não <operadores: {vez} = [fim]>> então
+  variaveis: mude [vez ▾] para [jogador]
+  eventos: transmita [vez do jogador ▾]
+```
 
 ## Teste!
 

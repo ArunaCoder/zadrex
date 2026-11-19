@@ -53,7 +53,7 @@ Contornos grossos e escuros deixam os Esquisitos fáceis de ver em casas claras 
 
 ## Kit de emergência 🚑
 
-Sem tempo ou sem inspiração hoje? Dá pra usar os desenhos desta página e trocar por desenhos seus depois (é só substituir a fantasia mantendo o nome). Baixe e use **Carregar Fantasia**:
+Sem tempo ou sem inspiração hoje? Dá pra usar os desenhos desta página e trocar por desenhos seus depois (é só substituir a fantasia mantendo o nome). Baixe e use **Carregar Fantasia**. Eles já vêm do tamanho de uma casa e centralizados:
 
 <p>
 <a class="botao botao-contorno" href="recursos/esquisitos/livre.svg" download>⬇️ livre</a>

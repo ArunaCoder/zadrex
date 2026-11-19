@@ -132,6 +132,14 @@ window.ZADREX = {
         { id: "quanto-vale-cada-um", titulo: "Quanto vale cada Esquisito?", nivel: 3, status: "falta", midia: [] },
         { id: "ideias-malucas", titulo: "Ideias malucas", nivel: 1, status: "falta", leitura: true }
       ]
+    },
+    {
+      id: "consulta",
+      emoji: "📚",
+      titulo: "Consulta rápida",
+      passos: [
+        { id: "lista-de-nomes", titulo: "Lista de variáveis, listas e mensagens", nivel: 1, status: "falta", leitura: true }
+      ]
     }
   ]
 };

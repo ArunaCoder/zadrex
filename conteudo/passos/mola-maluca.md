@@ -27,7 +27,7 @@ E quando o pulo sai do tabuleiro (tipo 2 colunas pra esquerda estando na coluna 
 
 ## O bloco da Mola
 
-Crie **`movimentos da mola (casa)`** com os 8 pulos da tabela, todos **até 1 passo**. Tente montar sozinho!
+No **Cérebro**, crie **`movimentos da mola (casa)`** (entrada `casa`, sem atualização de tela) com os 8 pulos da tabela, todos **até 1 passo**. Tente montar sozinho!
 
 <details>
 <summary><b>👀 Ver os blocos da Mola</b></summary>
@@ -46,12 +46,35 @@ meusblocos: andar de {meusblocos: casa} direção (2) (1) até (1) passos
 
 </details>
 
-E no `calcular destinos de (casa)`:
+E no fim do `calcular destinos de (casa)`:
 
 ```blocos
 controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
   meusblocos: movimentos da mola {meusblocos: casa}
 ```
+
+<details>
+<summary><b>📋 Como o bloco <code>calcular destinos</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina calcular destinos de {meusblocos: casa}
+listas: apague todos os itens de [destinos ▾]
+variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro ▾]}
+variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
+  meusblocos: movimentos da sombra {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
+  meusblocos: movimentos da geladeira {meusblocos: casa}
+  meusblocos: movimentos da sombra {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
+  meusblocos: movimentos da almofada {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
+  meusblocos: movimentos da mola {meusblocos: casa}
+```
+
+</details>
 
 ## Teste!
 

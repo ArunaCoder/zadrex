@@ -10,7 +10,7 @@ Por enquanto, vamos usar uma regra mais simples: **quem capturar a Grande Almofa
 
 Lembra da variável `capturado`, que o bloco `mover` preenche? Ela guarda quem estava na casa de chegada. Se a letra 2 for `A`… uma Almofada acabou de ser capturada!
 
-Adicione no **fim** do bloco `mover`:
+No **Cérebro**, adicione no **fim** do bloco `mover`, embaixo das duas substituições:
 
 ```blocos
 controle: se <operadores: {operadores: letra (2) de {capturado}} = [A]> então
@@ -21,6 +21,24 @@ controle: se <operadores: {operadores: letra (2) de {capturado}} = [A]> então
     eventos: transmita [computador venceu ▾]
 ```
 
+<details>
+<summary><b>📋 Como o bloco <code>mover</code> fica agora</b></summary>
+
+```blocos
+meusblocos: defina mover de {meusblocos: saída} para {meusblocos: chegada}
+variaveis: mude [capturado ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
+listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {listas: item {meusblocos: saída} de [tabuleiro ▾]}
+listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
+controle: se <operadores: {operadores: letra (2) de {capturado}} = [A]> então
+  variaveis: mude [vez ▾] para [fim]
+  controle: se <operadores: {operadores: letra (1) de {capturado}} = [C]> então
+    eventos: transmita [jogador venceu ▾]
+  senão
+    eventos: transmita [computador venceu ▾]
+```
+
+</details>
+
 :::curiosidade Lembra da Almofada Fantasma?
 Se a casa vazia se chamasse `vazio`, a letra 2 seria `a`, e **toda jogada pra uma casa vazia** ia terminar o jogo. Foi pra isso que a gente escolheu `livre` lá no começo!
 :::
@@ -29,7 +47,9 @@ Se a casa vazia se chamasse `vazio`, a letra 2 seria `a`, e **toda jogada pra um
 
 Tem um detalhe: depois de mover, o script do clique muda a `vez` para `computador` — mesmo se o jogo tiver acabado! Isso ia "ressuscitar" a partida.
 
-**No clique**, troque o final da jogada por:
+No **Cérebro**, nos dois scripts que passam a vez, coloque os dois últimos blocos dentro de um "se o jogo não acabou".
+
+**No clique**, o final da jogada fica assim:
 
 ```blocos
 controle: se <operadores: não <operadores: {vez} = [fim]>> então
@@ -45,9 +65,58 @@ controle: se <operadores: não <operadores: {vez} = [fim]>> então
   eventos: transmita [vez do jogador ▾]
 ```
 
+<details>
+<summary><b>📋 Como o script do clique fica agora</b></summary>
+
+```blocos
+eventos: quando eu receber [clique ▾]
+controle: se <operadores: {vez} = [jogador]> então
+  controle: se <operadores: {operadores: letra (1) de {listas: item {casa clicada} de [tabuleiro ▾]}} = [J]> então
+    variaveis: mude [origem ▾] para {casa clicada}
+    meusblocos: calcular destinos de {origem}
+  senão
+    controle: se <operadores: <operadores: {origem} > (0)> e <listas: [destinos ▾] contém {casa clicada}?>> então
+      meusblocos: mover de {origem} para {casa clicada}
+      variaveis: mude [origem ▾] para (0)
+      listas: apague todos os itens de [destinos ▾]
+      controle: se <operadores: não <operadores: {vez} = [fim]>> então
+        variaveis: mude [vez ▾] para [computador]
+        eventos: transmita [vez do computador ▾]
+    senão
+      variaveis: mude [origem ▾] para (0)
+      listas: apague todos os itens de [destinos ▾]
+```
+
+</details>
+
+<details>
+<summary><b>📋 Como o script da vez do computador fica agora</b></summary>
+
+```blocos
+eventos: quando eu receber [vez do computador ▾]
+controle: espere (0.5) seg
+meusblocos: listar jogadas do time [C]
+controle: se <operadores: {listas: tamanho de [todas as saídas ▾]} = (0)> então
+  variaveis: mude [vez ▾] para [fim]
+  eventos: transmita [computador sem jogadas ▾]
+  controle: pare [este script ▾]
+variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [todas as saídas ▾]}}
+variaveis: mude [origem ▾] para {listas: item {sorteio} de [todas as saídas ▾]}
+listas: adicione {listas: item {sorteio} de [todas as chegadas ▾]} a [destinos ▾]
+controle: espere (0.7) seg
+meusblocos: mover de {origem} para {listas: item {sorteio} de [todas as chegadas ▾]}
+variaveis: mude [origem ▾] para (0)
+listas: apague todos os itens de [destinos ▾]
+controle: se <operadores: não <operadores: {vez} = [fim]>> então
+  variaveis: mude [vez ▾] para [jogador]
+  eventos: transmita [vez do jogador ▾]
+```
+
+</details>
+
 ## 3. O Narrador anuncia
 
-No Narrador:
+No **Narrador**:
 
 ```blocos
 eventos: quando eu receber [jogador venceu ▾]

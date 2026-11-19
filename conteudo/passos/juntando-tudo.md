@@ -2,19 +2,15 @@ Os seis Esquisitos já sabem pra onde podem ir. Mas o Modo Bagunça ainda está 
 
 ## 1. Confira o calcular destinos
 
-O bloco que chama todo mundo deve estar assim, com **seis** "se":
+No **Cérebro**, o bloco que chama todo mundo deve estar assim, com **seis** "se":
 
 ```blocos
 meusblocos: defina calcular destinos de {meusblocos: casa}
 listas: apague todos os itens de [destinos ▾]
 variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro ▾]}
 variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
-controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
-  meusblocos: movimentos do zé {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
   meusblocos: movimentos da geladeira {meusblocos: casa}
-controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
-  meusblocos: movimentos da mola {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
   meusblocos: movimentos da sombra {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
@@ -22,7 +18,13 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
   meusblocos: movimentos da sombra {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
   meusblocos: movimentos da almofada {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
+  meusblocos: movimentos da mola {meusblocos: casa}
+controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
+  meusblocos: movimentos do zé {meusblocos: casa}
 ```
+
+(Se os seus "se" estiverem em outra ordem, tudo bem: a ordem deles não muda nada.)
 
 ## 2. Só pode ir onde tem bolinha
 

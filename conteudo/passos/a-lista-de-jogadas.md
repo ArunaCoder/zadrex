@@ -32,7 +32,7 @@ E aqui vem a parte bonita: a gente **já tem** o bloco que descobre os destinos 
 
 ## 1. Crie as listas e variáveis
 
-No Cérebro, crie as listas `todas as saídas` e `todas as chegadas`, e as variáveis `i` e `k`.
+No **Cérebro**, crie as listas `todas as saídas` e `todas as chegadas`, e as variáveis `i` e `k`.
 
 ## 2. Crie o bloco
 
@@ -77,7 +77,9 @@ Mostre as duas listas no palco, rode o jogo e aperte **l** logo no começo da pa
 
 </details>
 
-Agora faça umas jogadas e aperte **l** de novo: o número mudou? Troque o `[C]` por `[J]` e veja as **suas** jogadas. Depois pode apagar o teste.
+Agora faça umas jogadas e aperte **l** de novo: o número mudou? Troque o `[C]` por `[J]` e veja as **suas** jogadas.
+
+Acabou? **Apague o script da tecla l** e esconda as duas listas do palco.
 
 :::curiosidade Números gigantes
 Com 20 jogadas pra cada lado, depois de só **uma rodada** (você e o computador) já existem 400 partidas diferentes. Depois de 5 rodadas, são quase **70 trilhões**. É por isso que uma partida de Zadrex nunca é igual à outra.

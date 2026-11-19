@@ -10,9 +10,13 @@ Com o Cérebro selecionado, vá em **Variáveis → Criar uma Lista**. Dê o nom
 
 Uma caixinha com a lista vai aparecer no palco. Ela está vazia, com "Comprimento 0". Vamos encher!
 
+:::dica A cola dos nomes
+Daqui pra frente vão nascer muitas variáveis, listas e mensagens. Todas estão na página [Lista de variáveis, listas e mensagens](#/lista-de-nomes), com o nome exato, o ator e o passo onde nascem. Esqueceu um nome? Olhe lá.
+:::
+
 ## 3. Seu primeiro bloco inventado
 
-O Scratch deixa a gente **inventar blocos**. Vá em **Meus Blocos → Criar um Bloco**, dê o nome `arrumar os esquisitos` e, antes de clicar em OK, marque a opção **Executar sem atualização de tela** (assim ele trabalha muito rápido).
+O Scratch deixa a gente **inventar blocos**. Ainda no Cérebro, vá em **Meus Blocos → Criar um Bloco**, dê o nome `arrumar os esquisitos` e, antes de clicar em OK, marque a opção **Executar sem atualização de tela** (assim ele trabalha muito rápido).
 
 Vai aparecer um bloco rosa [[meusblocos: defina arrumar os esquisitos]]. Tudo que você encaixar embaixo dele é o que o bloco novo faz.
 
