@@ -21,6 +21,15 @@ Pense assim: pra chegar na linha 4, você passou por **3 linhas inteiras** antes
 
 > **casa = (linha − 1) × 8 + coluna**
 
+Quer ver o Scratch fazendo essa conta? Monte este script em qualquer ator e clique na bandeira: ele tem que dizer **28**. Só falta um número. Qual é?
+
+```blocos
+eventos: quando ⚑ for clicado
+aparencia: diga {operadores: {operadores: {operadores: (4) - (1)} * ??(8)} + (4)} // linha 4, coluna 4
+```
+
+Depois de testar, pode apagar esse script.
+
 ## Fórmula 2: do número da casa para linha e coluna
 
 Agora ao contrário. Pra isso a gente usa uma ideia chamada **resto**.

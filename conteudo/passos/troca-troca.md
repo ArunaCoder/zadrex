@@ -53,7 +53,7 @@ controle: se <operadores: {perigo} = [sim]> então
   controle: pare [este script ▾] // suando frio não pode
 // TROCA-TROCA PEQUENO: Geladeira 3 casas depois
 variaveis: mude [tt ▾] para [sim]
-controle: se <operadores: <operadores: não <operadores: {listas: item {operadores: {meusblocos: casa} + (3)} de [tabuleiro ▾]} = {operadores: junte {meu time} com [G]}>> ou <listas: [casas que mexeram ▾] contém {operadores: {meusblocos: casa} + (3)}?>> então
+controle: se <operadores: <operadores: não <operadores: {listas: item {operadores: {meusblocos: casa} + ??(3)} de [tabuleiro ▾]} = {operadores: junte {meu time} com [G]}>> ou <listas: [casas que mexeram ▾] contém {operadores: {meusblocos: casa} + (3)}?>> então
   variaveis: mude [tt ▾] para [não]
 controle: se <operadores: não <operadores: <operadores: {listas: item {operadores: {meusblocos: casa} + (1)} de [tabuleiro ▾]} = [livre]> e <operadores: {listas: item {operadores: {meusblocos: casa} + (2)} de [tabuleiro ▾]} = [livre]>>> então
   variaveis: mude [tt ▾] para [não]
@@ -120,7 +120,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
   meusblocos: movimentos da sombra {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
   meusblocos: movimentos da almofada {meusblocos: casa}
-  meusblocos: troca-trocas da almofada {meusblocos: casa}
+  ?? meusblocos: troca-trocas da almofada {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
   meusblocos: movimentos da mola {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
@@ -138,7 +138,7 @@ No bloco `mover`, se quem andou foi uma Almofada e ela andou **2 casas**, a Gela
 controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}} = [A]> e <operadores: {operadores: [módulo ▾] de {operadores: {meusblocos: chegada} - {meusblocos: saída}}} = (2)>> então
   controle: se <operadores: {meusblocos: chegada} > {meusblocos: saída}> então
     listas: substitua o item {operadores: {meusblocos: saída} + (1)} de [tabuleiro ▾] por {listas: item {operadores: {meusblocos: saída} + (3)} de [tabuleiro ▾]}
-    listas: substitua o item {operadores: {meusblocos: saída} + (3)} de [tabuleiro ▾] por [livre]
+    ?? listas: substitua o item {operadores: {meusblocos: saída} + (3)} de [tabuleiro ▾] por [livre]
   senão
     listas: substitua o item {operadores: {meusblocos: saída} - (1)} de [tabuleiro ▾] por {listas: item {operadores: {meusblocos: saída} - (4)} de [tabuleiro ▾]}
     listas: substitua o item {operadores: {meusblocos: saída} - (4)} de [tabuleiro ▾] por [livre]
@@ -173,7 +173,7 @@ controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}}
     listas: substitua o item {operadores: {meusblocos: saída} - (4)} de [tabuleiro ▾] por [livre]
   eventos: transmita [troca-troca ▾]
 // quem já se mexeu
-listas: adicione {meusblocos: saída} a [casas que mexeram ▾]
+?? listas: adicione {meusblocos: saída} a [casas que mexeram ▾]
 listas: adicione {meusblocos: chegada} a [casas que mexeram ▾]
 // sons
 controle: se <operadores: {capturado} = [livre]> então

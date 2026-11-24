@@ -35,7 +35,7 @@ listas: adicione [CM] a [tabuleiro ▾]
 listas: adicione [CG] a [tabuleiro ▾]
 controle: repita (8) vezes
   listas: adicione [CZ] a [tabuleiro ▾]
-controle: repita (32) vezes
+controle: repita ??(32) vezes
   listas: adicione [livre] a [tabuleiro ▾]
 controle: repita (8) vezes
   listas: adicione [JZ] a [tabuleiro ▾]
@@ -62,7 +62,7 @@ A solução é o Cérebro ser o **maestro**: primeiro ele arruma a lista, e só 
 ```blocos
 eventos: quando ⚑ for clicado
 aparencia: esconda
-meusblocos: arrumar os esquisitos
+?? meusblocos: arrumar os esquisitos
 eventos: transmita [montar tabuleiro ▾] e espere
 ```
 

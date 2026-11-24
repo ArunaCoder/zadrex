@@ -31,7 +31,7 @@ listas: apague todos os itens de [capturas saídas ▾]
 listas: apague todos os itens de [capturas chegadas ▾]
 variaveis: mude [j ▾] para (1)
 controle: repita {listas: tamanho de [todas as saídas ▾]} vezes
-  controle: se <operadores: não <operadores: {listas: item {listas: item {j} de [todas as chegadas ▾]} de [tabuleiro ▾]} = [livre]>> então
+  controle: se ??<operadores: não <operadores: {listas: item {listas: item {j} de [todas as chegadas ▾]} de [tabuleiro ▾]} = [livre]>> então
     listas: adicione {listas: item {j} de [todas as saídas ▾]} a [capturas saídas ▾]
     listas: adicione {listas: item {j} de [todas as chegadas ▾]} a [capturas chegadas ▾]
   variaveis: adicione (1) a [j ▾]
@@ -43,7 +43,7 @@ Na vez do computador (no Cérebro), troque a parte do sorteio. Em vez de sortear
 
 ```blocos
 meusblocos: separar capturas
-controle: se <operadores: {listas: tamanho de [capturas saídas ▾]} > (0)> então
+controle: se ??<operadores: {listas: tamanho de [capturas saídas ▾]} > (0)> então
   variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [capturas saídas ▾]}}
   variaveis: mude [sorteio saída ▾] para {listas: item {sorteio} de [capturas saídas ▾]}
   variaveis: mude [sorteio chegada ▾] para {listas: item {sorteio} de [capturas chegadas ▾]}
@@ -59,7 +59,7 @@ Depois, no resto do script, use `sorteio saída` e `sorteio chegada` no lugar do
 eventos: quando eu receber [vez do computador ▾]
 controle: espere (0.5) seg
 meusblocos: listar jogadas do time [C]
-meusblocos: separar capturas
+?? meusblocos: separar capturas
 controle: se <operadores: {listas: tamanho de [capturas saídas ▾]} > (0)> então
   variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [capturas saídas ▾]}}
   variaveis: mude [sorteio saída ▾] para {listas: item {sorteio} de [capturas saídas ▾]}

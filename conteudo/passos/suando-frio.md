@@ -45,7 +45,7 @@ controle: repita até que <operadores: {epassos} = {meusblocos: máx}>
   variaveis: mude [equem ▾] para {listas: item {ealvo} de [tabuleiro ▾]}
   controle: se <operadores: não <operadores: {equem} = [livre]>> então
     controle: se <operadores: <operadores: não <operadores: {operadores: letra (1) de {equem}} = {time amigo}>> e <operadores: <operadores: {operadores: letra (2) de {equem}} = {meusblocos: tipo 1}> ou <operadores: {operadores: letra (2) de {equem}} = {meusblocos: tipo 2}>>> então
-      variaveis: mude [perigo ▾] para [sim]
+      ?? variaveis: mude [perigo ▾] para [sim]
     controle: pare [este script ▾] // achou alguém: essa direção acabou
 ```
 
@@ -63,7 +63,7 @@ meusblocos: espiar de {meusblocos: casa} direção (1) (0) até (7) procurando [
 meusblocos: espiar de {meusblocos: casa} direção (0) (-1) até (7) procurando [G] [B]
 meusblocos: espiar de {meusblocos: casa} direção (0) (1) até (7) procurando [G] [B]
 // diagonais: Sombra ou Super-Bobo
-meusblocos: espiar de {meusblocos: casa} direção (-1) (-1) até (7) procurando [S] [B]
+meusblocos: espiar de {meusblocos: casa} direção (-1) (-1) até (7) procurando [S] ??[B]
 meusblocos: espiar de {meusblocos: casa} direção (-1) (1) até (7) procurando [S] [B]
 meusblocos: espiar de {meusblocos: casa} direção (1) (-1) até (7) procurando [S] [B]
 meusblocos: espiar de {meusblocos: casa} direção (1) (1) até (7) procurando [S] [B]
@@ -109,7 +109,7 @@ Crie a variável `casa da almofada` e o bloco **`anunciar perigo no time (time)`
 ```blocos
 meusblocos: defina anunciar perigo no time {meusblocos: time}
 variaveis: mude [casa da almofada ▾] para {listas: item # de {operadores: junte {meusblocos: time} com [A]} em [tabuleiro ▾]}
-meusblocos: verificar perigo na casa {casa da almofada} do time {meusblocos: time}
+?? meusblocos: verificar perigo na casa {casa da almofada} do time {meusblocos: time}
 controle: se <operadores: {perigo} = [sim]> então
   eventos: transmita [suando frio ▾]
 ```
@@ -135,7 +135,7 @@ controle: se <operadores: {vez} = [jogador]> então
       variaveis: mude [origem ▾] para (0)
       listas: apague todos os itens de [destinos ▾]
       controle: se <operadores: não <operadores: {vez} = [fim]>> então
-        meusblocos: anunciar perigo no time [C]
+        ?? meusblocos: anunciar perigo no time [C]
         eventos: transmita [vez do computador ▾]
     senão
       variaveis: mude [origem ▾] para (0)
@@ -163,7 +163,7 @@ meusblocos: deslizar de {origem} para {listas: item {sorteio} de [todas as chega
 variaveis: mude [origem ▾] para (0)
 listas: apague todos os itens de [destinos ▾]
 controle: se <operadores: não <operadores: {vez} = [fim]>> então
-  meusblocos: anunciar perigo no time [J]
+  meusblocos: anunciar perigo no time ??[J]
   variaveis: mude [vez ▾] para [jogador]
   eventos: transmita [vez do jogador ▾]
 ```

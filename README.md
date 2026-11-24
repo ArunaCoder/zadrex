@@ -84,6 +84,24 @@ controle: repita (8) vezes
 - `(10)` espaço branco · `[texto]` campo de texto · `[vez ▾]` menu · `{variável}` bolinha laranja · `{operadores: ...}` bloco redondo · `<operadores: ...>` bloco hexagonal
 - Indentação de 2 espaços coloca o bloco dentro do bloco de cima; linha em branco separa scripts.
 
+**Peça que falta (quebra-cabeça)**
+
+Um `??` na frente de uma peça faz ela virar um buraco tracejado, do formato dela. A pilha ganha os botões **💡 Dica** (o buraco pega a cor da categoria) e **👀 Ver a resposta** (a peça aparece no lugar).
+
+````md
+```blocos
+controle: repita (8) vezes
+  ?? controle: crie clone de [este ator ▾]
+  aparencia: mude para a fantasia ??{listas: item {minha casa} de [tabuleiro ▾]}
+  controle: se ??<operadores: {vez} = [jogador]> então
+    variaveis: mude [valor ▾] para ??(9)
+```
+````
+
+- `?? ` no começo da linha esconde o bloco inteiro (o recadinho `//` continua aparecendo, como pista).
+- `??` colado em `{…}`, `<…>`, `(…)` ou `[…]` esconde só aquela peça.
+- A regra da trilha: uma peça por pilha grande (4 linhas ou mais), escolhida pela ideia principal do passo. Pilhas pequenas de teste ficam inteiras.
+
 **Tabuleiros e personagens**
 
 ```html

@@ -46,7 +46,7 @@ controle: se <operadores: {listas: tamanho de [todas as saídas ▾]} = (0)> ent
     senão
       eventos: transmita [computador venceu ▾]
   senão
-    eventos: transmita [empate ▾]
+    ?? eventos: transmita [empate ▾]
 senão
   controle: se <operadores: {perigo} = [sim]> então
     eventos: transmita [suando frio ▾]
@@ -83,7 +83,7 @@ variaveis: mude [peça movida ▾] para {listas: item {meusblocos: chegada} de [
 controle: se <operadores: {operadores: letra (2) de {peça movida}} = [Z]> então
   controle: se <operadores: <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [J]> e <operadores: {meusblocos: chegada} < (9)>> ou <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [C]> e <operadores: {meusblocos: chegada} > (56)>>> então
     listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {operadores: junte {operadores: letra (1) de {peça movida}} com [B]}
-    eventos: transmita [zé cresceu ▾]
+    ?? eventos: transmita [zé cresceu ▾]
 // sons
 controle: se <operadores: {capturado} = [livre]> então
   som: toque o som [passo ▾]
@@ -108,7 +108,7 @@ controle: se <operadores: {vez} = [jogador]> então
       meusblocos: deslizar de {origem} para {casa clicada}
       variaveis: mude [origem ▾] para (0)
       listas: apague todos os itens de [destinos ▾]
-      meusblocos: verificar situação do time [C]
+      ?? meusblocos: verificar situação do time [C]
       controle: se <operadores: não <operadores: {vez} = [fim]>> então
         eventos: transmita [vez do computador ▾]
     senão
@@ -132,7 +132,7 @@ controle: espere (0.7) seg
 meusblocos: deslizar de {origem} para {listas: item {sorteio} de [todas as chegadas ▾]}
 variaveis: mude [origem ▾] para (0)
 listas: apague todos os itens de [destinos ▾]
-meusblocos: verificar situação do time [J]
+meusblocos: verificar situação do time ??[J]
 controle: se <operadores: não <operadores: {vez} = [fim]>> então
   variaveis: mude [vez ▾] para [jogador]
   eventos: transmita [vez do jogador ▾]

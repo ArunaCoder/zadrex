@@ -43,7 +43,7 @@ controle: repita {listas: tamanho de [destinos ▾]} vezes
   listas: substitua o item {meusblocos: casa} de [tabuleiro ▾] por {listas: item {f chegada} de [tabuleiro ▾]}
   listas: substitua o item {f chegada} de [tabuleiro ▾] por {f guardado}
   // 4) sem perigo? é segura!
-  controle: se <operadores: {perigo} = [não]> então
+  controle: se ??<operadores: {perigo} = [não]> então
     listas: adicione {f chegada} a [destinos seguros ▾]
   variaveis: adicione (1) a [f ▾]
 // troca os destinos pelos seguros
@@ -89,7 +89,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
   meusblocos: movimentos da mola {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
   meusblocos: movimentos do zé {meusblocos: casa}
-meusblocos: filtrar destinos de {meusblocos: casa} // fora de todos os "se"
+?? meusblocos: filtrar destinos de {meusblocos: casa} // fora de todos os "se"
 ```
 
 </details>

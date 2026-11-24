@@ -131,6 +131,106 @@
 .bk-coment::before { content: "💬 "; }
 .bk-coment-solto { margin: 6px 0; }
 
+/* ---------- peça que falta (quebra-cabeça) ---------- */
+
+.bk-quebra {
+  margin: 1.3rem 0;
+  border: 2.5px solid var(--tinta, #2B2141); border-radius: 14px;
+  box-shadow: 3px 3px 0 var(--tinta, #2B2141);
+  background: #F9F9FB; overflow: hidden;
+}
+.bk-quebra > .bk-area { margin: 0; border: 0; border-radius: 0; }
+
+.bk-quebra-barra {
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 16px;
+  padding: 10px 14px;
+  background: var(--ouro-claro, #FFF1C2);
+  border-bottom: 2.5px dashed var(--tinta-3, #8C82A3);
+}
+.bk-quebra-titulo {
+  margin: 0; font-family: var(--fonte-titulo, sans-serif); font-weight: 700; font-size: 1.12rem; line-height: 1.3;
+}
+.bk-quebra-titulo span:last-child {
+  display: block; font-family: var(--fonte-texto, sans-serif); font-size: .9rem; font-weight: 700; color: var(--tinta-2, #5A4F72);
+}
+.bk-quebra-botoes { display: flex; flex-wrap: wrap; gap: 8px; }
+.bk-botao {
+  font: 600 .98rem/1.2 var(--fonte-titulo, sans-serif); color: var(--tinta, #2B2141);
+  padding: 7px 14px; cursor: pointer;
+  background: var(--branco, #fff); border: 2.5px solid var(--tinta, #2B2141); border-radius: 11px;
+  box-shadow: 2px 2px 0 var(--tinta, #2B2141); transition: transform .1s, box-shadow .1s;
+}
+.bk-botao:hover { transform: translate(-1px, -1px); box-shadow: 3px 3px 0 var(--tinta, #2B2141); }
+.bk-botao:active { transform: translate(1px, 1px); box-shadow: 1px 1px 0 var(--tinta, #2B2141); }
+.bk-botao[aria-expanded="true"], .bk-botao[aria-pressed="true"] { background: var(--ouro, #FFC93C); }
+.bk-quebra .bk-quebra-dica {
+  flex-basis: 100%; margin: 2px 0 0; padding: 0; list-style: none;
+  font-size: .95rem; font-weight: 700; line-height: 1.5;
+}
+.bk-quebra .bk-quebra-dica li { margin: 0; }
+.bk-quebra-dica li::before { content: "💡 "; }
+.bk-dica-cat {
+  display: inline-block; padding: 0 8px; border-radius: 6px; line-height: 1.5;
+  color: #fff; background: var(--bk); border: 1px solid var(--bk-borda);
+}
+
+/* o buraco: a peça está lá dentro, invisível, e por cima vai o contorno tracejado */
+.bk-falta { display: inline-flex; vertical-align: middle; }
+.bk-falta-bloco { display: flex; }
+.bk-fantasma { position: relative; display: inline-flex; }
+.bk-fantasma > :not(.bk-interrogacao) { visibility: hidden; }
+.bk-resposta { display: none; }
+
+.bk-fantasma::before, .bk-fantasma::after { content: ""; position: absolute; inset: 0; pointer-events: none; }
+.bk-interrogacao {
+  position: absolute; inset: 0; display: grid; place-items: center; z-index: 1;
+  font: 700 17px/1 var(--fonte-titulo, sans-serif); color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .25);
+}
+
+/* buraco redondo, de menu ou de valor (dentro de um bloco colorido) */
+.bk-falta-rep .bk-fantasma::before, .bk-falta-slot .bk-fantasma::before, .bk-falta-menu .bk-fantasma::before {
+  background: rgba(0, 0, 0, .2); border: 2px dashed #fff; border-radius: 99px;
+}
+.bk-falta-menu .bk-fantasma::before { border-radius: 5px; }
+.bk-falta-slot .bk-fantasma { min-width: 34px; }
+
+/* buraco pontudo: o preenchimento usa o mesmo recorte do bloco, o tracejado vem em três pedaços */
+.bk-falta-bool .bk-fantasma::before {
+  background: rgba(0, 0, 0, .2);
+  clip-path: polygon(11px 0, calc(100% - 11px) 0, 100% 50%, calc(100% - 11px) 100%, 11px 100%, 0 50%);
+}
+.bk-falta-bool .bk-fantasma::after {
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 24' preserveAspectRatio='none'%3E%3Cpolyline points='12,1 1,12 12,23' fill='none' stroke='white' stroke-width='2' stroke-dasharray='5 3' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") left center / 12px 100% no-repeat,
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 24' preserveAspectRatio='none'%3E%3Cpolyline points='0,1 11,12 0,23' fill='none' stroke='white' stroke-width='2' stroke-dasharray='5 3' vector-effect='non-scaling-stroke'/%3E%3C/svg%3E") right center / 12px 100% no-repeat,
+    repeating-linear-gradient(90deg, #fff 0 5px, transparent 5px 9px) 12px 0 / calc(100% - 24px) 2px no-repeat,
+    repeating-linear-gradient(90deg, #fff 0 5px, transparent 5px 9px) 12px 100% / calc(100% - 24px) 2px no-repeat;
+}
+
+/* buraco de um bloco inteiro (em cima do fundo pontilhado) */
+.bk-falta-bloco .bk-fantasma::before {
+  background: rgba(255, 255, 255, .75); border: 2.5px dashed var(--tinta-3, #8C82A3); border-radius: 6px;
+}
+.bk-falta-bloco .bk-interrogacao { font-size: 22px; color: var(--tinta-3, #8C82A3); text-shadow: none; }
+
+/* com a dica, o buraco ganha a cor da categoria */
+.com-dica .bk-falta-rep .bk-fantasma::before,
+.com-dica .bk-falta-bool .bk-fantasma::before { background: var(--bk); }
+.com-dica .bk-falta-bloco .bk-fantasma::before {
+  background: color-mix(in srgb, var(--bk) 30%, #fff); border-color: var(--bk-borda);
+}
+.com-dica .bk-falta-bloco .bk-interrogacao { color: var(--bk-borda); }
+
+/* resposta: a peça aparece com um brilho dourado */
+.revelado .bk-fantasma { display: none; }
+.revelado .bk-resposta {
+  display: inline-flex; flex-direction: column; align-items: flex-start;
+  filter: drop-shadow(0 0 2px #FFC93C) drop-shadow(0 0 2px #FFC93C) drop-shadow(0 0 1px #E0A100);
+  animation: bk-encaixa .35s cubic-bezier(.3, 1.6, .5, 1);
+}
+@keyframes bk-encaixa { from { transform: scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .revelado .bk-resposta { animation: none; } }
+
 /* ---------- tabuleiros ---------- */
 
 z-diagrama { display: block; max-width: 340px; margin: 1.5rem auto; }

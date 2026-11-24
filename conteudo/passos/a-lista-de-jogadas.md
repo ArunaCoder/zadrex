@@ -47,7 +47,7 @@ controle: repita (64) vezes
   controle: se <operadores: {operadores: letra (1) de {listas: item {i} de [tabuleiro ▾]}} = {meusblocos: time}> então
     meusblocos: calcular destinos de {i}
     variaveis: mude [k ▾] para (1)
-    controle: repita {listas: tamanho de [destinos ▾]} vezes
+    controle: repita ??{listas: tamanho de [destinos ▾]} vezes
       listas: adicione {i} a [todas as saídas ▾]
       listas: adicione {listas: item {k} de [destinos ▾]} a [todas as chegadas ▾]
       variaveis: adicione (1) a [k ▾]

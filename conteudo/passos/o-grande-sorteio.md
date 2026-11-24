@@ -20,7 +20,7 @@ controle: se <operadores: {listas: tamanho de [todas as saídas ▾]} = (0)> ent
   variaveis: mude [vez ▾] para [fim]
   eventos: transmita [computador sem jogadas ▾]
   controle: pare [este script ▾]
-variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [todas as saídas ▾]}}
+variaveis: mude [sorteio ▾] para ??{operadores: número aleatório entre (1) e {listas: tamanho de [todas as saídas ▾]}}
 // mostra qual Esquisito foi sorteado e pra onde vai
 variaveis: mude [origem ▾] para {listas: item {sorteio} de [todas as saídas ▾]}
 listas: adicione {listas: item {sorteio} de [todas as chegadas ▾]} a [destinos ▾]
