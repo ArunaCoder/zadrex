@@ -125,5 +125,9 @@ assets/js/esquisitos.js    desenhos das peças e diagramas
 assets/vendor/marked.umd.js  Markdown (marked v18, licença MIT)
 conteudo/trilha.js         capítulos, passos e progresso
 conteudo/passos/           missões
-recursos/                  fantasias SVG prontas para carregar no Scratch
+recursos/                  desenhos do nosso jogo, prontos para carregar no Scratch
+  casas/, esquisitos/      fantasias da Casa e da Peça (uma por arquivo)
+  atores/                  Peca.sprite3 e Placa.sprite3 (atores com fantasias, sem blocos),
+                           narrador.svg, jogar.svg, cerebro.svg e as placas soltas
+  cenarios/                jogo.svg e tela-inicial.svg
 ```

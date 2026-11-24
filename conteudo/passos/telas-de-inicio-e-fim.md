@@ -13,9 +13,21 @@ No **Palco**, crie um cenário novo chamado `tela inicial`. Capriche! Algumas id
 Na aba Fantasias da Peça, clique com o botão direito numa fantasia e escolha **exportar**. Depois, no cenário, use **Carregar Cenário**… ou simplesmente redesenhe os Esquisitos gigantes na tela inicial.
 :::
 
+:::dica Kit de emergência: a nossa tela inicial
+Quer ver como ficou a nossa, ou usar ela enquanto a sua não fica pronta? Carregue com **Carregar Cenário**: o arquivo já se chama `tela inicial`.
+
+<p><a class="botao botao-contorno" href="recursos/cenarios/tela-inicial.svg" download="tela inicial.svg">⬇️ tela inicial.svg</a></p>
+
+<img src="recursos/cenarios/tela-inicial.svg" alt="A tela inicial do nosso Zadrex: ZADREX em letras douradas, os Esquisitos enfileirados e as instruções do jogo" width="360">
+:::
+
 ## 2. O botão Jogar
 
-Crie um ator **Botão Jogar** (um retângulo arredondado escrito JOGAR, por exemplo). No Botão Jogar:
+Crie um ator **Botão Jogar** (um retângulo arredondado escrito JOGAR, por exemplo). Se preferir, carregue o nosso botão com **Carregar Ator** e mude o nome para **Botão Jogar**:
+
+<p><a class="botao botao-contorno" href="recursos/atores/jogar.svg" download="jogar.svg">⬇️ jogar.svg</a></p>
+
+No Botão Jogar:
 
 ```blocos
 eventos: quando ⚑ for clicado
@@ -76,6 +88,18 @@ aparencia: mostre
 ## 4. A placa de fim
 
 Crie um ator **Placa** com três fantasias: `vitória`, `derrota` e `empate`. Desenhe placas bem chamativas: "VOCÊ VENCEU!", "O SORTEIO VENCEU…", "EMPATE!". E escreva embaixo, em todas: *clique pra jogar de novo*.
+
+:::dica Kit de emergência: a nossa Placa
+A Placa do nosso jogo vem pronta, com as três fantasias e os nomes certos, e **sem nenhum bloco**. Use **Carregar Ator**:
+
+<p><a class="botao botao-contorno" href="recursos/atores/Placa.sprite3" download="Placa.sprite3">⬇️ Ator Placa pronto (3 fantasias)</a></p>
+
+<p class="kit-fila">
+<img src="recursos/atores/placa-vitoria.svg" alt="Placa vitória: VOCÊ VENCEU!" width="180">
+<img src="recursos/atores/placa-derrota.svg" alt="Placa derrota: O SORTEIO VENCEU…" width="180">
+<img src="recursos/atores/placa-empate.svg" alt="Placa empate: EMPATE!" width="180">
+</p>
+:::
 
 Na Placa, crie em **Meus Blocos → Criar um Bloco** o bloco `aparecer`. Desta vez **não** marque "Executar sem atualização de tela": a placa precisa crescer devagar, na frente de todo mundo.
 

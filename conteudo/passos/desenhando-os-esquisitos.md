@@ -53,7 +53,13 @@ Contornos grossos e escuros deixam os Esquisitos fáceis de ver em casas claras 
 
 ## Kit de emergência 🚑
 
-Sem tempo ou sem inspiração hoje? Dá pra usar os desenhos desta página e trocar por desenhos seus depois (é só substituir a fantasia mantendo o nome). Baixe e use **Carregar Fantasia**. Eles já vêm do tamanho de uma casa e centralizados:
+Sem tempo ou sem inspiração hoje? Dá pra usar os desenhos do nosso jogo e trocar por desenhos seus depois (é só substituir a fantasia mantendo o nome).
+
+**O jeito mais rápido: o ator Peça pronto.** Ele vem com as 13 fantasias, já com os nomes certos, e **sem nenhum bloco** (a programação é com você). Baixe o arquivo e, na área dos atores, passe o mouse no botão do gatinho azul e escolha **Carregar Ator** (a setinha pra cima). Se você já tinha criado uma Peça com Pintar, apague a vazia antes.
+
+<p><a class="botao" href="recursos/atores/Peca.sprite3" download="Peça.sprite3">⬇️ Ator Peça pronto (13 fantasias)</a></p>
+
+**Ou uma fantasia de cada vez.** Baixe e use **Carregar Fantasia** na Peça. Elas já vêm do tamanho de uma casa e centralizadas:
 
 <p>
 <a class="botao botao-contorno" href="recursos/esquisitos/livre.svg" download>⬇️ livre</a>
