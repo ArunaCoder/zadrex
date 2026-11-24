@@ -458,6 +458,8 @@ z-elenco { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px,
 .md strong { font-weight: 800; }
 .md hr { border: 0; height: 10px; margin: 2rem 0; background: conic-gradient(var(--casa-escura) 25%, transparent 0 50%, var(--casa-escura) 0 75%, transparent 0) 0 0 / 20px 20px; opacity: .6; border-radius: 3px; }
 .md img { border: var(--borda); border-radius: 12px; }
+.md .kit-fila { display: flex; flex-wrap: wrap; gap: 10px; }
+.md .kit-fila img { width: 160px; max-width: calc(50% - 5px); height: auto; border: 0; border-radius: 0; }
 .md blockquote { margin: 1.2rem 0; padding: .6rem 1.1rem; border-left: 6px solid var(--roxo); background: var(--roxo-claro); border-radius: 0 12px 12px 0; }
 
 .md code {

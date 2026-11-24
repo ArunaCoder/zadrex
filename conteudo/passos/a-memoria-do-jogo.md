@@ -4,6 +4,10 @@ Os Esquisitos estão desenhados, mas o jogo ainda não sabe **onde** cada um est
 
 Crie um ator novo com **Pintar** e dê o nome **Cérebro**. Pode desenhar um cérebro, uma lâmpada ou deixar vazio — ele vai ficar **escondido** o jogo inteiro. O trabalho dele é pensar, não aparecer.
 
+Se quiser o cérebro rosinha do nosso jogo, carregue esta fantasia com **Carregar Fantasia**:
+
+<p><a class="botao botao-contorno" href="recursos/atores/cerebro.svg" download="cérebro.svg">⬇️ cérebro.svg</a></p>
+
 ## 2. Crie a lista tabuleiro
 
 Com o Cérebro selecionado, vá em **Variáveis → Criar uma Lista**. Dê o nome `tabuleiro` e deixe marcado **Para todos os atores** (a Casa e a Peça também vão precisar ler essa lista).

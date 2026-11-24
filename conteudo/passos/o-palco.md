@@ -30,6 +30,16 @@ Olhe no mapa acima: o centro da **casa 1** (a do canto de cima, na esquerda) fic
 Os quadradinhos do tabuleiro **não** vão ser desenhados no cenário. Eles vão ser clones — e é justamente assim que o jogo vai saber em qual casa você clicou. Deixe a área da esquerda com uma cor lisa.
 :::
 
+:::dica Kit de emergência: o cenário do nosso jogo
+Se hoje não der tempo de pintar, use o cenário que a gente fez. Ele já deixa o espaço do tabuleiro certinho na esquerda. No **Palco**, aba **Cenários**, passe o mouse no botão de cenário (embaixo, à esquerda) e escolha **Carregar Cenário**. O nome vem do arquivo, então ele já chega chamado `jogo`.
+
+<p><a class="botao botao-contorno" href="recursos/cenarios/jogo.svg" download="jogo.svg">⬇️ jogo.svg</a></p>
+
+<img src="recursos/cenarios/jogo.svg" alt="O cenário jogo: fundo roxo-escuro com a área do tabuleiro na esquerda e ZADREX escrito no cantinho da direita" width="360">
+
+Depois dá pra trocar por um desenho seu, é só manter o nome `jogo`.
+:::
+
 ## Experimento rápido
 
 Quer ver o x e o y funcionando? Escolha qualquer ator da biblioteca, arraste ele pelo palco e olhe os números **x** e **y** mudando embaixo do palco. Arraste até o cantinho de cima na esquerda: os números chegam perto de -240 e 180? Depois pode apagar esse ator.

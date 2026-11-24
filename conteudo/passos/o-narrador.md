@@ -4,6 +4,10 @@ Todo jogo fica melhor com alguém comentando. Neste passo, o Zadrex ganha um **N
 
 Crie um ator novo e dê o nome **Narrador**. Pode escolher da biblioteca (um papagaio, um robô, um dinossauro de terno…) ou desenhar. Ele vai morar no **cantinho da direita** do palco, fora do tabuleiro.
 
+Ou use o robô narrador do nosso jogo: crie o ator com **Carregar Ator** escolhendo este arquivo, e mude o nome para **Narrador**.
+
+<p><a class="botao botao-contorno" href="recursos/atores/narrador.svg" download="narrador.svg">⬇️ narrador.svg</a></p>
+
 Diminua o tamanho dele até caber direitinho lá, tipo em x: 170, y: -110.
 
 ## 2. A variável vez
