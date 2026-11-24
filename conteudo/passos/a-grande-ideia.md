@@ -83,7 +83,7 @@ controle: sempre
   controle: se <operadores: {origem} = {minha casa}> então
     aparencia: mude para a fantasia [escolhida ▾]
   senão
-    controle: se <listas: [destinos ▾] contém {minha casa}?> então
+    controle: se ??<listas: [destinos ▾] contém {minha casa}?> então
       aparencia: mude para a fantasia {operadores: junte {minha cor} com [-ponto]}
     senão
       aparencia: mude para a fantasia {minha cor}

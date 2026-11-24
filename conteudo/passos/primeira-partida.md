@@ -15,7 +15,7 @@ No **Cérebro**, adicione no **fim** do bloco `mover`, embaixo das duas substitu
 ```blocos
 controle: se <operadores: {operadores: letra (2) de {capturado}} = [A]> então
   variaveis: mude [vez ▾] para [fim]
-  controle: se <operadores: {operadores: letra (1) de {capturado}} = [C]> então
+  controle: se <operadores: {operadores: letra (1) de {capturado}} = ??[C]> então
     eventos: transmita [jogador venceu ▾]
   senão
     eventos: transmita [computador venceu ▾]
@@ -30,7 +30,7 @@ variaveis: mude [capturado ▾] para {listas: item {meusblocos: chegada} de [tab
 listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {listas: item {meusblocos: saída} de [tabuleiro ▾]}
 listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
 controle: se <operadores: {operadores: letra (2) de {capturado}} = [A]> então
-  variaveis: mude [vez ▾] para [fim]
+  ?? variaveis: mude [vez ▾] para [fim]
   controle: se <operadores: {operadores: letra (1) de {capturado}} = [C]> então
     eventos: transmita [jogador venceu ▾]
   senão
@@ -79,7 +79,7 @@ controle: se <operadores: {vez} = [jogador]> então
       meusblocos: mover de {origem} para {casa clicada}
       variaveis: mude [origem ▾] para (0)
       listas: apague todos os itens de [destinos ▾]
-      controle: se <operadores: não <operadores: {vez} = [fim]>> então
+      controle: se ??<operadores: não <operadores: {vez} = [fim]>> então
         variaveis: mude [vez ▾] para [computador]
         eventos: transmita [vez do computador ▾]
     senão
@@ -96,7 +96,7 @@ controle: se <operadores: {vez} = [jogador]> então
 eventos: quando eu receber [vez do computador ▾]
 controle: espere (0.5) seg
 meusblocos: listar jogadas do time [C]
-controle: se <operadores: {listas: tamanho de [todas as saídas ▾]} = (0)> então
+controle: se <operadores: ??{listas: tamanho de [todas as saídas ▾]} = (0)> então
   variaveis: mude [vez ▾] para [fim]
   eventos: transmita [computador sem jogadas ▾]
   controle: pare [este script ▾]

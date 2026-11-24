@@ -19,7 +19,7 @@ variaveis: mude [origem ▾] para (0)
 meusblocos: arrumar os esquisitos
 eventos: transmita [montar tabuleiro ▾] e espere
 eventos: transmita [boas-vindas ▾] e espere
-variaveis: mude [vez ▾] para [jogador]
+?? variaveis: mude [vez ▾] para [jogador]
 eventos: transmita [vez do jogador ▾]
 ```
 
@@ -39,7 +39,7 @@ No **Cérebro**, crie este script:
 ```blocos
 eventos: quando eu receber [clique ▾]
 controle: se <operadores: {vez} = [jogador]> então
-  controle: se <operadores: {operadores: letra (1) de {listas: item {casa clicada} de [tabuleiro ▾]}} = [J]> então
+  controle: se ??<operadores: {operadores: letra (1) de {listas: item {casa clicada} de [tabuleiro ▾]}} = [J]> então
     variaveis: mude [origem ▾] para {casa clicada}
 ```
 
@@ -61,7 +61,7 @@ aparencia: mostre
 aparencia: vá para a camada [de trás ▾]
 controle: sempre
   controle: se <operadores: {origem} = {minha casa}> então
-    aparencia: mude para a fantasia [escolhida ▾]
+    aparencia: mude para a fantasia ??[escolhida ▾]
   senão
     aparencia: mude para a fantasia {minha cor}
 ```

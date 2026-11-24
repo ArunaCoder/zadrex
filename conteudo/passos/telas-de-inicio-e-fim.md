@@ -47,7 +47,7 @@ variaveis: mude [origem ▾] para (0)
 variaveis: mude [voo saída ▾] para (0)
 listas: apague todos os itens de [destinos ▾]
 meusblocos: arrumar os esquisitos
-controle: se <operadores: {tabuleiro montado} = [não]> então
+controle: se ??<operadores: {tabuleiro montado} = [não]> então
   eventos: transmita [montar tabuleiro ▾] e espere
   variaveis: mude [tabuleiro montado ▾] para [sim]
 eventos: transmita [boas-vindas ▾] e espere
@@ -112,7 +112,7 @@ aparencia: vá para a camada [da frente ▾]
 aparencia: defina o tamanho como (10) %
 aparencia: mostre
 controle: repita (10) vezes
-  aparencia: mude (10) no tamanho
+  ?? aparencia: mude (10) no tamanho
 ```
 
 ## Teste!

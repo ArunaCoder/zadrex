@@ -13,7 +13,7 @@ meusblocos: defina movimentos da geladeira {meusblocos: casa}
 meusblocos: andar de {meusblocos: casa} direção (-1) (0) até (7) passos // cima
 meusblocos: andar de {meusblocos: casa} direção (1) (0) até (7) passos // baixo
 meusblocos: andar de {meusblocos: casa} direção (0) (-1) até (7) passos // esquerda
-meusblocos: andar de {meusblocos: casa} direção (0) (1) até (7) passos // direita
+?? meusblocos: andar de {meusblocos: casa} direção (0) (1) até (7) passos // direita
 ```
 
 Só isso! Quatro direções da tabela, cada uma até 7 passos.
@@ -28,7 +28,7 @@ listas: apague todos os itens de [destinos ▾]
 variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro ▾]}
 variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
-  meusblocos: movimentos da geladeira {meusblocos: casa}
+  ?? meusblocos: movimentos da geladeira {meusblocos: casa}
 ```
 
 :::dica Por que o meu time é calculado aqui?
@@ -44,7 +44,7 @@ eventos: quando eu receber [clique ▾]
 controle: se <operadores: {vez} = [jogador]> então
   controle: se <operadores: {operadores: letra (1) de {listas: item {casa clicada} de [tabuleiro ▾]}} = [J]> então
     variaveis: mude [origem ▾] para {casa clicada}
-    meusblocos: calcular destinos de {origem}
+    ?? meusblocos: calcular destinos de {origem}
   senão
     controle: se <operadores: {origem} > (0)> então
       meusblocos: mover de {origem} para {casa clicada}

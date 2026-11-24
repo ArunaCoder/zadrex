@@ -21,6 +21,11 @@
  *   // comentário        → recadinho amarelo no fim da linha
  *   Linhas com mais espaços na frente ficam DENTRO do bloco de cima.
  *   Linha em branco separa scripts diferentes.
+ *
+ * Peça que falta (quebra-cabeça):
+ *   ??{operadores: ...}  → a peça logo depois do ?? some e vira um buraco tracejado
+ *   ?? controle: ...     → no começo da linha: o bloco inteiro some
+ *   A pilha ganha os botões "Dica" e "Ver a resposta".
  */
 (function (raiz) {
   "use strict";
@@ -61,7 +66,7 @@
    * Devolve { html, pos, soUmElemento }.
    */
   function analisar(s, pos, fim) {
-    var html = "", texto = "", pedacos = 0, elementos = 0;
+    var html = "", texto = "", pedacos = 0, elementos = 0, falta = false;
 
     function soltarTexto() {
       if (!texto) return;
@@ -69,7 +74,11 @@
       html += esc(texto).replace(/⚑/g, function () { pedacos++; return BANDEIRA; });
       texto = "";
     }
-    function elemento(h) { soltarTexto(); html += h; pedacos++; elementos++; }
+    function elemento(h, tipo, cat) {
+      soltarTexto();
+      if (falta) { h = buraco(h, tipo, cat); falta = false; }
+      html += h; pedacos++; elementos++;
+    }
 
     while (pos < s.length) {
       var ch = s[pos];
@@ -79,9 +88,15 @@
         return { html: html, pos: pos + 1, soUmElemento: pedacos === 1 && elementos === 1 };
       }
 
+      if (ch === "?" && s[pos + 1] === "?" && /[({[<]/.test(s[pos + 2] || "")) {
+        falta = true;
+        pos += 2;
+        continue;
+      }
+
       if (ch === "(") {
         var dentro = analisar(s, pos + 1, ")");
-        elemento(dentro.soUmElemento ? dentro.html : '<span class="bk-slot">' + (dentro.html || "&nbsp;") + "</span>");
+        elemento(dentro.soUmElemento ? dentro.html : '<span class="bk-slot">' + (dentro.html || "&nbsp;") + "</span>", "slot");
         pos = dentro.pos;
         continue;
       }
@@ -91,7 +106,7 @@
         if (fecha > pos) {
           var conteudo = s.slice(pos + 1, fecha);
           var menu = /▾\s*$/.test(conteudo);
-          elemento('<span class="' + (menu ? "bk-menu" : "bk-texto") + '">' + esc(conteudo) + "</span>");
+          elemento('<span class="' + (menu ? "bk-menu" : "bk-texto") + '">' + esc(conteudo) + "</span>", menu ? "menu" : "slot");
           pos = fecha + 1;
           continue;
         }
@@ -99,14 +114,14 @@
 
       if (ch === "{") {
         var rep = analisarReporter(s, pos + 1, "}", "bk-rep");
-        elemento(rep.html);
+        elemento(rep.html, "rep", rep.cat);
         pos = rep.pos;
         continue;
       }
 
       if (ch === "<" && temCategoriaNaFrente(s.slice(pos + 1))) {
         var bool = analisarReporter(s, pos + 1, ">", "bk-bool");
-        elemento(bool.html);
+        elemento(bool.html, "bool", bool.cat);
         pos = bool.pos;
         continue;
       }
@@ -126,7 +141,89 @@
       pos += m[0].length;
     }
     var r = analisar(s, pos, fim);
-    return { html: '<span class="bk ' + classe + " bk-" + cat + '">' + r.html + "</span>", pos: r.pos };
+    return { html: '<span class="bk ' + classe + " bk-" + cat + '">' + r.html + "</span>", pos: r.pos, cat: cat };
+  }
+
+  /* ------------------------- Peça que falta ------------------------- */
+
+  /**
+   * O buraco tem o tamanho exato da peça: a peça fica lá dentro, invisível
+   * (.bk-fantasma), e o contorno tracejado é desenhado por cima.
+   */
+  function buraco(html, tipo, cat) {
+    return '<span class="bk-falta bk-falta-' + tipo + (cat ? " bk-" + cat : "") + '" data-tipo="' + tipo + '"' +
+      (cat ? ' data-cat="' + cat + '"' : "") + ">" +
+      '<span class="bk-fantasma" role="img" aria-label="peça escondida">' + html + '<span class="bk-interrogacao" aria-hidden="true">?</span></span>' +
+      '<span class="bk-resposta">' + html + "</span></span>";
+  }
+
+  function buracoDeBloco(html, cat) {
+    return '<div class="bk-falta bk-falta-bloco bk-' + cat + '" data-tipo="bloco" data-cat="' + cat + '">' +
+      '<div class="bk-fantasma" role="img" aria-label="bloco escondido">' + html + '<span class="bk-interrogacao" aria-hidden="true">?</span></div>' +
+      '<div class="bk-resposta">' + html + "</div></div>";
+  }
+
+  var CORES = {
+    movimento: "azul", aparencia: "roxo", som: "rosa-choque", eventos: "amarelo", controle: "laranja-claro",
+    sensores: "azul-claro", operadores: "verde", variaveis: "laranja", listas: "laranja-escuro",
+    meusblocos: "rosa", caneta: "verde-água"
+  };
+  var FORMAS = {
+    bloco: "um bloco de encaixar na pilha",
+    rep: "um bloco redondo",
+    bool: "um bloco pontudo (de verdadeiro ou falso)",
+    menu: "uma escolha de menu ▾",
+    slot: "um valor pra digitar no espacinho branco"
+  };
+
+  function textoDaDica(tipo, cat) {
+    var t = "É " + FORMAS[tipo];
+    if (cat && tipo !== "menu" && tipo !== "slot") {
+      t += ', da categoria <b class="bk-dica-cat bk-' + cat + '">' + CATEGORIAS[cat] + "</b> (" + CORES[cat] + ")";
+    }
+    return t + ".";
+  }
+
+  function comQuebraCabeca(areaHtml, faltas) {
+    var dicas = faltas.map(function (f) { return "<li>" + textoDaDica(f.tipo, f.cat) + "</li>"; }).join("");
+    var uma = faltas.length === 1;
+    return '<div class="bk-quebra">' +
+      '<div class="bk-quebra-barra">' +
+      '<p class="bk-quebra-titulo"><span aria-hidden="true">🧩</span> ' + (uma ? "Falta uma peça!" : "Faltam " + faltas.length + " peças!") +
+      " <span>" + (uma ? "Qual peça vai no buraco tracejado?" : "Quais peças vão nos buracos tracejados?") + "</span></p>" +
+      '<div class="bk-quebra-botoes">' +
+      '<button type="button" class="bk-botao" data-quebra="dica" aria-expanded="false">💡 Dica</button>' +
+      '<button type="button" class="bk-botao bk-botao-resposta" data-quebra="resposta" aria-pressed="false">👀 Ver a resposta</button>' +
+      "</div>" +
+      '<ul class="bk-quebra-dica" hidden>' + dicas + "</ul>" +
+      "</div>" + areaHtml + "</div>";
+  }
+
+  function lerFaltas(html) {
+    var faltas = [], re = /class="bk-falta bk-falta-(\w+)[^"]*" data-tipo="\w+"(?: data-cat="(\w+)")?/g, m;
+    while ((m = re.exec(html))) faltas.push({ tipo: m[1], cat: m[2] || null });
+    // cada buraco aparece uma vez (o html da resposta fica dentro do mesmo span, sem repetir a classe de fora)
+    return faltas;
+  }
+
+  if (typeof document !== "undefined" && !raiz.__blocosQuebraCabeca) {
+    raiz.__blocosQuebraCabeca = true;
+    document.addEventListener("click", function (ev) {
+      var botao = ev.target.closest && ev.target.closest("[data-quebra]");
+      if (!botao) return;
+      var caixa = botao.closest(".bk-quebra");
+      if (botao.getAttribute("data-quebra") === "dica") {
+        var abrir = !caixa.classList.contains("com-dica");
+        caixa.classList.toggle("com-dica", abrir);
+        caixa.querySelector(".bk-quebra-dica").hidden = !abrir;
+        botao.setAttribute("aria-expanded", String(abrir));
+      } else {
+        var mostrar = !caixa.classList.contains("revelado");
+        caixa.classList.toggle("revelado", mostrar);
+        botao.setAttribute("aria-pressed", String(mostrar));
+        botao.textContent = mostrar ? "🙈 Esconder de novo" : "👀 Ver a resposta";
+      }
+    });
   }
 
   function conteudoDoBloco(texto) {
@@ -163,6 +260,12 @@
         conteudo = "";
       }
 
+      var falta = false;
+      if (/^\?\?\s/.test(conteudo)) {
+        falta = true;
+        conteudo = conteudo.replace(/^\?\?\s+/, "");
+      }
+
       while (abertos[abertos.length - 1].nivel >= nivel) abertos.pop();
       var pai = abertos[abertos.length - 1];
 
@@ -179,7 +282,7 @@
         }
       }
 
-      var no = { cat: sep ? cat : (conteudo ? "controle" : "comentario"), texto: corpo, comentario: comentario, filhos: [], senao: null };
+      var no = { cat: sep ? cat : (conteudo ? "controle" : "comentario"), texto: corpo, comentario: comentario, filhos: [], senao: null, falta: falta };
       pai.alvo.push(no);
       abertos.push({ nivel: nivel, alvo: no.filhos });
     });
@@ -200,7 +303,8 @@
 
     var coment = no.comentario ? '<span class="bk-coment">' + esc(no.comentario) + "</span>" : "";
     var html = '<div class="' + classes.join(" ") + '">';
-    html += '<div class="bk-linha"><span class="bk-corpo">' + conteudoDoBloco(t) + "</span>" + coment + "</div>";
+    // no bloco escondido, o recadinho fica do lado de fora do buraco (ele é a pista)
+    html += '<div class="bk-linha"><span class="bk-corpo">' + conteudoDoBloco(t) + "</span>" + (no.falta ? "" : coment) + "</div>";
     if (ehC) {
       html += '<div class="bk-boca">' + no.filhos.map(desenharNo).join("") + "</div>";
       if (no.senao) {
@@ -209,14 +313,19 @@
       }
       html += '<div class="bk-pe"></div>';
     }
-    return html + "</div>";
+    html += "</div>";
+    if (!no.falta) return html;
+    var buracoHtml = buracoDeBloco(html, no.cat);
+    return coment ? '<div class="bk-linha bk-falta-linha">' + buracoHtml + coment + "</div>" : buracoHtml;
   }
 
   function pilha(texto) {
     var scripts = texto.replace(/\r/g, "").split(/\n\s*\n/).filter(function (s) { return s.trim(); });
-    return '<div class="bk-area">' + scripts.map(function (s) {
+    var html = '<div class="bk-area">' + scripts.map(function (s) {
       return '<div class="bk-pilha">' + lerLinhas(s).map(desenharNo).join("") + "</div>";
     }).join("") + "</div>";
+    var faltas = lerFaltas(html);
+    return faltas.length ? comQuebraCabeca(html, faltas) : html;
   }
 
   raiz.Blocos = { inline: inline, pilha: pilha, CATEGORIAS: CATEGORIAS };

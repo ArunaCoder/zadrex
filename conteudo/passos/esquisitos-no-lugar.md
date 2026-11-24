@@ -26,7 +26,7 @@ eventos: quando eu começar como um clone
 aparencia: mostre
 aparencia: vá para a camada [da frente ▾]
 controle: sempre
-  aparencia: mude para a fantasia {listas: item {minha casa} de [tabuleiro ▾]}
+  aparencia: mude para a fantasia ??{listas: item {minha casa} de [tabuleiro ▾]}
 ```
 
 :::robo Em português de robô

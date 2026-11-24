@@ -38,6 +38,13 @@ Porque no Scratch existe o bloco [[operadores: letra (1) de [JG]]]. Com ele, o j
 
 Isso vai ser usado o tempo todo nas regras.
 
+Teste em qualquer ator: este script tem que dizer **G**, a letra do Esquisito. Que número falta?
+
+```blocos
+eventos: quando ⚑ for clicado
+aparencia: diga {operadores: letra ??(2) de [JG]}
+```
+
 ## O tabuleiro no começo do jogo
 
 Assim fica a lista quando a partida começa. O Computador em cima, o Jogador embaixo:

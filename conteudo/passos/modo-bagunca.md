@@ -27,7 +27,7 @@ Crie também a variável `capturado` (para todos os atores). Ela vai guardar que
 meusblocos: defina mover de {meusblocos: saída} para {meusblocos: chegada}
 variaveis: mude [capturado ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
 listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {listas: item {meusblocos: saída} de [tabuleiro ▾]}
-listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
+?? listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
 ```
 
 :::dica Como pegar o "saída" e o "chegada"
@@ -45,7 +45,7 @@ controle: se <operadores: {vez} = [jogador]> então
     variaveis: mude [origem ▾] para {casa clicada}
   senão
     controle: se <operadores: {origem} > (0)> então
-      meusblocos: mover de {origem} para {casa clicada}
+      ?? meusblocos: mover de {origem} para {casa clicada}
       variaveis: mude [origem ▾] para (0)
 ```
 

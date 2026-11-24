@@ -34,7 +34,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
   meusblocos: movimentos da sombra {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
   meusblocos: movimentos da geladeira {meusblocos: casa}
-  meusblocos: movimentos da sombra {meusblocos: casa}
+  ?? meusblocos: movimentos da sombra {meusblocos: casa}
 ```
 
 </details>

@@ -28,7 +28,7 @@ meusblocos: arrumar os esquisitos
 eventos: transmita [montar tabuleiro ▾] e espere
 eventos: transmita [boas-vindas ▾] e espere
 variaveis: mude [vez ▾] para [jogador]
-eventos: transmita [vez do jogador ▾]
+?? eventos: transmita [vez do jogador ▾]
 ```
 
 :::dica Por que começar com "fim"?

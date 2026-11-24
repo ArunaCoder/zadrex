@@ -12,7 +12,7 @@ No **Cérebro**, crie o bloco **`movimentos da almofada (casa)`** (entrada `casa
 
 ```blocos
 meusblocos: defina movimentos da almofada {meusblocos: casa}
-meusblocos: andar de {meusblocos: casa} direção (-1) (0) até (1) passos
+meusblocos: andar de {meusblocos: casa} direção (-1) (0) até ??(1) passos
 meusblocos: andar de {meusblocos: casa} direção (1) (0) até (1) passos
 meusblocos: andar de {meusblocos: casa} direção (0) (-1) até (1) passos
 meusblocos: andar de {meusblocos: casa} direção (0) (1) até (1) passos
@@ -44,7 +44,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
 controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
   meusblocos: movimentos da geladeira {meusblocos: casa}
   meusblocos: movimentos da sombra {meusblocos: casa}
-controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
+controle: se <operadores: {operadores: letra (2) de {peça}} = ??[A]> então
   meusblocos: movimentos da almofada {meusblocos: casa}
 ```
 

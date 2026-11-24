@@ -13,7 +13,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
   meusblocos: movimentos da geladeira {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
   meusblocos: movimentos da sombra {meusblocos: casa}
-controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
+controle: se <operadores: {operadores: letra (2) de {peça}} = ??[B]> então
   meusblocos: movimentos da geladeira {meusblocos: casa}
   meusblocos: movimentos da sombra {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
@@ -37,7 +37,7 @@ controle: se <operadores: {vez} = [jogador]> então
     variaveis: mude [origem ▾] para {casa clicada}
     meusblocos: calcular destinos de {origem}
   senão
-    controle: se <operadores: <operadores: {origem} > (0)> e <listas: [destinos ▾] contém {casa clicada}?>> então
+    controle: se <operadores: <operadores: {origem} > (0)> e ??<listas: [destinos ▾] contém {casa clicada}?>> então
       meusblocos: mover de {origem} para {casa clicada}
     variaveis: mude [origem ▾] para (0)
     listas: apague todos os itens de [destinos ▾]

@@ -71,7 +71,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [B]> então
 controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
   meusblocos: movimentos da almofada {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
-  meusblocos: movimentos da mola {meusblocos: casa}
+  ?? meusblocos: movimentos da mola {meusblocos: casa}
 ```
 
 </details>

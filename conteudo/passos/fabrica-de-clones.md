@@ -58,7 +58,7 @@ controle: repita (8) vezes
     senão
       variaveis: mude [minha cor ▾] para [escura]
     aparencia: mude para a fantasia {minha cor}
-    controle: crie clone de [este ator ▾]
+    ?? controle: crie clone de [este ator ▾]
     variaveis: adicione (1) a [minha coluna ▾]
   variaveis: adicione (1) a [minha linha ▾]
 

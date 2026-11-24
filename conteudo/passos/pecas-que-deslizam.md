@@ -44,7 +44,7 @@ movimento: vá para x: {vx} y: {vy}
 aparencia: vá para a camada [da frente ▾]
 aparencia: mostre
 meusblocos: calcular posição da casa {voo chegada}
-movimento: deslize por (0.3) segs. até x: {vx} y: {vy}
+?? movimento: deslize por (0.3) segs. até x: {vx} y: {vy}
 
 eventos: quando eu receber [pousou ▾]
 aparencia: esconda
@@ -59,7 +59,7 @@ eventos: quando eu começar como um clone
 aparencia: mostre
 aparencia: vá para a camada [da frente ▾]
 controle: sempre
-  controle: se <operadores: {minha casa} = {voo saída}> então
+  controle: se ??<operadores: {minha casa} = {voo saída}> então
     aparencia: mude para a fantasia [livre ▾]
   senão
     aparencia: mude para a fantasia {listas: item {minha casa} de [tabuleiro ▾]}
@@ -73,7 +73,7 @@ E no script da bandeira do **Cérebro**, coloque [[variaveis: mude [voo saída �
 ```blocos
 eventos: quando ⚑ for clicado
 aparencia: esconda
-variaveis: mude [voo saída ▾] para (0)
+?? variaveis: mude [voo saída ▾] para (0)
 variaveis: mude [vez ▾] para [fim]
 variaveis: mude [origem ▾] para (0)
 listas: apague todos os itens de [destinos ▾]
@@ -94,7 +94,7 @@ No **Cérebro**, crie o bloco **`deslizar de (saída) para (chegada)`** — e de
 meusblocos: defina deslizar de {meusblocos: saída} para {meusblocos: chegada}
 variaveis: mude [voo chegada ▾] para {meusblocos: chegada}
 variaveis: mude [voo saída ▾] para {meusblocos: saída}
-eventos: transmita [voar ▾] e espere
+?? eventos: transmita [voar ▾] e espere
 meusblocos: mover de {meusblocos: saída} para {meusblocos: chegada}
 variaveis: mude [voo saída ▾] para (0)
 eventos: transmita [pousou ▾]
@@ -117,7 +117,7 @@ A solução: trancar os cliques **antes** de voar. São duas mudanças.
 ```blocos
 eventos: quando este ator for clicado
 controle: se <operadores: {vez} = [jogador]> então
-  variaveis: mude [casa clicada ▾] para {minha casa}
+  variaveis: mude [casa clicada ▾] para ??{minha casa}
   eventos: transmita [clique ▾]
 ```
 
@@ -137,7 +137,7 @@ controle: se <operadores: {vez} = [jogador]> então
   senão
     controle: se <operadores: <operadores: {origem} > (0)> e <listas: [destinos ▾] contém {casa clicada}?>> então
       variaveis: mude [vez ▾] para [computador] // tranca os cliques
-      meusblocos: deslizar de {origem} para {casa clicada}
+      ?? meusblocos: deslizar de {origem} para {casa clicada}
       variaveis: mude [origem ▾] para (0)
       listas: apague todos os itens de [destinos ▾]
       controle: se <operadores: não <operadores: {vez} = [fim]>> então
@@ -168,7 +168,7 @@ variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {
 variaveis: mude [origem ▾] para {listas: item {sorteio} de [todas as saídas ▾]}
 listas: adicione {listas: item {sorteio} de [todas as chegadas ▾]} a [destinos ▾]
 controle: espere (0.7) seg
-meusblocos: deslizar de {origem} para {listas: item {sorteio} de [todas as chegadas ▾]}
+?? meusblocos: deslizar de {origem} para {listas: item {sorteio} de [todas as chegadas ▾]}
 variaveis: mude [origem ▾] para (0)
 listas: apague todos os itens de [destinos ▾]
 controle: se <operadores: não <operadores: {vez} = [fim]>> então

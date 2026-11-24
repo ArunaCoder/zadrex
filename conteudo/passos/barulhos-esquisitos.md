@@ -33,7 +33,7 @@ No bloco `mover` do Cérebro, encaixe isto **logo depois das duas substituiçõe
 controle: se <operadores: {capturado} = [livre]> então
   som: toque o som [passo ▾]
 senão
-  som: toque o som {operadores: junte [captura ] com {operadores: letra (2) de {capturado}}}
+  som: toque o som ??{operadores: junte [captura ] com {operadores: letra (2) de {capturado}}}
 ```
 
 <details>
@@ -45,7 +45,7 @@ variaveis: mude [capturado ▾] para {listas: item {meusblocos: chegada} de [tab
 listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {listas: item {meusblocos: saída} de [tabuleiro ▾]}
 listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
 // sons
-controle: se <operadores: {capturado} = [livre]> então
+controle: se ??<operadores: {capturado} = [livre]> então
   som: toque o som [passo ▾]
 senão
   som: toque o som {operadores: junte [captura ] com {operadores: letra (2) de {capturado}}}

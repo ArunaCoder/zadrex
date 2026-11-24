@@ -28,7 +28,7 @@ No **Cérebro**, crie a variável `peça movida`. No bloco `mover`, **logo depoi
 variaveis: mude [peça movida ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
 controle: se <operadores: {operadores: letra (2) de {peça movida}} = [Z]> então
   controle: se <operadores: <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [J]> e <operadores: {meusblocos: chegada} < (9)>> ou <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [C]> e <operadores: {meusblocos: chegada} > (56)>>> então
-    listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {operadores: junte {operadores: letra (1) de {peça movida}} com [B]}
+    listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por ??{operadores: junte {operadores: letra (1) de {peça movida}} com [B]}
     eventos: transmita [zé cresceu ▾]
 ```
 
@@ -44,7 +44,7 @@ meusblocos: defina mover de {meusblocos: saída} para {meusblocos: chegada}
 variaveis: mude [capturado ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
 listas: substitua o item {meusblocos: chegada} de [tabuleiro ▾] por {listas: item {meusblocos: saída} de [tabuleiro ▾]}
 listas: substitua o item {meusblocos: saída} de [tabuleiro ▾] por [livre]
-variaveis: mude [peça movida ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
+?? variaveis: mude [peça movida ▾] para {listas: item {meusblocos: chegada} de [tabuleiro ▾]}
 // Estirão do Zé
 controle: se <operadores: {operadores: letra (2) de {peça movida}} = [Z]> então
   controle: se <operadores: <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [J]> e <operadores: {meusblocos: chegada} < (9)>> ou <operadores: <operadores: {operadores: letra (1) de {peça movida}} = [C]> e <operadores: {meusblocos: chegada} > (56)>>> então

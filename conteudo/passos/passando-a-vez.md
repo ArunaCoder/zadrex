@@ -24,7 +24,7 @@ controle: se <operadores: {vez} = [jogador]> então
       variaveis: mude [origem ▾] para (0)
       listas: apague todos os itens de [destinos ▾]
       variaveis: mude [vez ▾] para [computador]
-      eventos: transmita [vez do computador ▾]
+      ?? eventos: transmita [vez do computador ▾]
     senão
       variaveis: mude [origem ▾] para (0)
       listas: apague todos os itens de [destinos ▾]
@@ -41,7 +41,7 @@ Ainda não sabemos fazer o computador jogar. Então, por enquanto, ele só finge
 ```blocos
 eventos: quando eu receber [vez do computador ▾]
 controle: espere (1) seg // "pensando"...
-variaveis: mude [vez ▾] para [jogador]
+?? variaveis: mude [vez ▾] para [jogador]
 eventos: transmita [vez do jogador ▾]
 ```
 

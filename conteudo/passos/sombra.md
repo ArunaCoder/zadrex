@@ -53,7 +53,7 @@ variaveis: mude [peça ▾] para {listas: item {meusblocos: casa} de [tabuleiro 
 variaveis: mude [meu time ▾] para {operadores: letra (1) de {peça}}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [G]> então
   meusblocos: movimentos da geladeira {meusblocos: casa}
-controle: se <operadores: {operadores: letra (2) de {peça}} = [S]> então
+controle: se ??<operadores: {operadores: letra (2) de {peça}} = [S]> então
   meusblocos: movimentos da sombra {meusblocos: casa}
 ```
 

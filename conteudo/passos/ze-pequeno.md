@@ -50,7 +50,7 @@ variaveis: mude [zc ▾] para {operadores: {operadores: resto de {operadores: {m
 controle: se <operadores: <operadores: {operadores: {zl} + {frente}} < (1)> ou <operadores: {operadores: {zl} + {frente}} > (8)>> então
   controle: pare [este script ▾]
 // 1) andar pra frente
-variaveis: mude [z alvo ▾] para {operadores: {meusblocos: casa} + {operadores: {frente} * (8)}}
+variaveis: mude [z alvo ▾] para ??{operadores: {meusblocos: casa} + {operadores: {frente} * (8)}}
 controle: se <operadores: {listas: item {z alvo} de [tabuleiro ▾]} = [livre]> então
   listas: adicione {z alvo} a [destinos ▾]
   variaveis: mude [z alvo ▾] para {operadores: {meusblocos: casa} + {operadores: {frente} * (16)}}
@@ -101,7 +101,7 @@ controle: se <operadores: {operadores: letra (2) de {peça}} = [A]> então
 controle: se <operadores: {operadores: letra (2) de {peça}} = [M]> então
   meusblocos: movimentos da mola {meusblocos: casa}
 controle: se <operadores: {operadores: letra (2) de {peça}} = [Z]> então
-  meusblocos: movimentos do zé {meusblocos: casa}
+  ?? meusblocos: movimentos do zé {meusblocos: casa}
 ```
 
 </details>

@@ -67,7 +67,7 @@ controle: repita até que <operadores: {passos} = {meusblocos: máx}>
     controle: pare [este script ▾] // saiu pelos lados
   variaveis: mude [alvo ▾] para {operadores: {operadores: {operadores: {l} - (1)} * (8)} + {c}}
   variaveis: mude [quem está lá ▾] para {listas: item {alvo} de [tabuleiro ▾]}
-  controle: se <operadores: {quem está lá} = [livre]> então
+  controle: se ??<operadores: {quem está lá} = [livre]> então
     listas: adicione {alvo} a [destinos ▾]
   senão
     controle: se <operadores: não <operadores: {operadores: letra (1) de {quem está lá}} = {meu time}>> então
@@ -85,7 +85,7 @@ Ainda não tem nenhum Esquisito usando esse bloco. Então vamos testar com um sc
 
 ```blocos
 eventos: quando a tecla [t ▾] for pressionada
-listas: apague todos os itens de [destinos ▾]
+?? listas: apague todos os itens de [destinos ▾]
 variaveis: mude [meu time ▾] para [J]
 meusblocos: andar de (36) direção (-1) (0) até (7) passos
 ```

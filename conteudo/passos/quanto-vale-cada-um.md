@@ -35,7 +35,7 @@ controle: se <operadores: <operadores: {operadores: letra (2) de {meusblocos: c�
 controle: se <operadores: {operadores: letra (2) de {meusblocos: código}} = [G]> então
   variaveis: mude [valor ▾] para (5)
 controle: se <operadores: {operadores: letra (2) de {meusblocos: código}} = [B]> então
-  variaveis: mude [valor ▾] para (9)
+  variaveis: mude [valor ▾] para ??(9)
 ```
 
 (Pro `livre`, a letra 2 é `i`, então o valor fica 0. A Almofada Fantasma manda lembranças.)
@@ -60,7 +60,7 @@ variaveis: mude [melhor nota ▾] para (-1)
 variaveis: mude [j ▾] para (1)
 controle: repita {listas: tamanho de [todas as saídas ▾]} vezes
   meusblocos: valor de {listas: item {listas: item {j} de [todas as chegadas ▾]} de [tabuleiro ▾]}
-  controle: se <operadores: {valor} > {melhor nota}> então
+  controle: se ??<operadores: {valor} > {melhor nota}> então
     listas: apague todos os itens de [melhores saídas ▾]
     listas: apague todos os itens de [melhores chegadas ▾]
     variaveis: mude [melhor nota ▾] para {valor}
@@ -80,7 +80,7 @@ Na vez do computador, troque o `separar capturas` e o sorteio guloso por: [[meus
 eventos: quando eu receber [vez do computador ▾]
 controle: espere (0.5) seg
 meusblocos: listar jogadas do time [C]
-meusblocos: escolher melhores jogadas
+?? meusblocos: escolher melhores jogadas
 variaveis: mude [sorteio ▾] para {operadores: número aleatório entre (1) e {listas: tamanho de [melhores saídas ▾]}}
 variaveis: mude [sorteio saída ▾] para {listas: item {sorteio} de [melhores saídas ▾]}
 variaveis: mude [sorteio chegada ▾] para {listas: item {sorteio} de [melhores chegadas ▾]}

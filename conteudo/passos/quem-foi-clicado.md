@@ -14,7 +14,7 @@ Coloque este script **no ator Casa** e **também no ator Peça** (dá pra arrast
 
 ```blocos
 eventos: quando este ator for clicado
-variaveis: mude [casa clicada ▾] para {minha casa}
+variaveis: mude [casa clicada ▾] para ??{minha casa}
 eventos: transmita [clique ▾]
 ```
 

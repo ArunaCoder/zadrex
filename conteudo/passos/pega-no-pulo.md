@@ -38,7 +38,7 @@ controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}}
 // B) guarda o pulo desta jogada (ou zera)
 variaveis: mude [casa do pulo ▾] para (0)
 controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}} = [Z]> e <operadores: {operadores: [módulo ▾] de {operadores: {meusblocos: chegada} - {meusblocos: saída}}} = (16)>> então
-  variaveis: mude [casa do pulo ▾] para {operadores: {operadores: {meusblocos: saída} + {meusblocos: chegada}} / (2)}
+  variaveis: mude [casa do pulo ▾] para ??{operadores: {operadores: {meusblocos: saída} + {meusblocos: chegada}} / (2)}
 ```
 
 :::robo Por que + 8 e − 8?
@@ -67,7 +67,7 @@ controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}}
     variaveis: mude [capturado ▾] para {listas: item {operadores: {meusblocos: chegada} - (8)} de [tabuleiro ▾]}
     listas: substitua o item {operadores: {meusblocos: chegada} - (8)} de [tabuleiro ▾] por [livre]
 // B) guarda o pulo desta jogada
-variaveis: mude [casa do pulo ▾] para (0)
+?? variaveis: mude [casa do pulo ▾] para (0)
 controle: se <operadores: <operadores: {operadores: letra (2) de {peça movida}} = [Z]> e <operadores: {operadores: [módulo ▾] de {operadores: {meusblocos: chegada} - {meusblocos: saída}}} = (16)>> então
   variaveis: mude [casa do pulo ▾] para {operadores: {operadores: {meusblocos: saída} + {meusblocos: chegada}} / (2)}
 // Estirão do Zé
@@ -131,7 +131,7 @@ controle: se <operadores: {listas: item {z alvo} de [tabuleiro ▾]} = [livre]> 
 controle: se <operadores: {zc} > (1)> então
   variaveis: mude [z alvo ▾] para {operadores: {operadores: {meusblocos: casa} + {operadores: {frente} * (8)}} - (1)}
   variaveis: mude [z quem ▾] para {listas: item {z alvo} de [tabuleiro ▾]}
-  controle: se <operadores: <operadores: <operadores: não <operadores: {z quem} = [livre]>> e <operadores: não <operadores: {operadores: letra (1) de {z quem}} = {meu time}>>> ou <operadores: {z alvo} = {casa do pulo}>> então
+  controle: se <operadores: <operadores: <operadores: não <operadores: {z quem} = [livre]>> e <operadores: não <operadores: {operadores: letra (1) de {z quem}} = {meu time}>>> ou ??<operadores: {z alvo} = {casa do pulo}>> então
     listas: adicione {z alvo} a [destinos ▾]
 // 3) capturar na diagonal da direita
 controle: se <operadores: {zc} < (8)> então
